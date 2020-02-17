@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta charset="utf-8">
+	<title>【新世界日语】日本语入门篇-平假名大作战~</title>
+	<style type="text/css"></style>
+	<script src="/riyu/js/jquery-1.11.1.min.js"></script>
+	<script src="/riyu/js/xsjcommon.js"></script>
+<style>
+/*去掉iPhone按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none; outline-style: none ;}
+input{
+		text-indent:0;
+		background:transparent;
+		border:0 none;
+		border-radius:0;
+		resize:none; 
+		outline:none;  /*清除选中效果的默认蓝色边框 */
+		-webkit-appearance:none;  /*清除浏览器默认的样式 */
+		line-height: normal;    
+	}
+	input::-webkit-input-placeholder { /* WebKit browsers */
+		line-height:2;   
+	}
+	input:focus {
+		color: #8b8791;
+	}
+textarea{-webkit-appearance: none;}
+/*去掉iPhone按钮样式over*/
+body{width:100%;max-width:750px;color:#333;padding:0px;margin:0px; overflow-x:hidden;font-size:100%;line-height:2;}
+img{border:0px;vertical-align:bottom;max-width:100%;height:auto;}
+div{display:block;}
+font{font-size:100%;line-height:2;}
+p{padding:0;margin:0;}
+
+.fl{float:left;}
+.fr{float:right;}
+.ov{overflow:hidden;}
+
+.p-re{position:relative;}
+.p-ab{position:absolute;}
+
+
+/*--页面样式--*/
+.wap-register{
+	width:80%;
+	margin-left:10%;
+}
+.wap-register p{
+	font-size:110%; 
+	color:#0075b5;
+	font-weight:bold;	
+	text-align:center;
+}
+.wap-register-input{
+	width:100%;
+	font-size:100%;
+	line-height:2;
+	background-color:#fff;
+	text-indent:10px;
+	margin-top:3%;
+	border:2px solid #0075b5;
+	-moz-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+	border-radius:30px;
+}
+#code-control{
+	width:100%;
+	font-size:100%;
+	line-height:2;
+	text-align:center;
+	margin-top:3%;
+}
+#code-control .wap-code{
+	width:48%;
+	line-height:2;
+	font-size:100%;
+	text-indent: 10px;
+	border:2px solid #0075b5;
+	-moz-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+	border-radius:30px;
+}
+.hqyzm{
+	border:none;
+	width:48%;
+	line-height:2;
+	font-size:100%;
+	color:#fff; 
+	background-color:#007ebb;
+	border:2px solid #0075b5;
+	-moz-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+	border-radius:30px;
+}
+.wapBtn{
+	border:none;
+	width:100%;
+	line-height:2;
+	background-color:#e60012;
+	color:#fff; 
+	font-size:120%; 
+	font-weight:bold;
+	letter-spacing:2px; 
+	text-align:center;
+	border:2px solid #c62a56;
+	box-shadow:inset 0 3px 0 rgba(255,255,255,0.2),
+				inset 0 -3px 0 rgba(0,0,0,0.2);
+	-moz-border-radius:30px;
+	-ms-border-radius:30px;
+	-o-border-radius:30px;
+	border-radius:30px;
+	margin-top:3%;
+}
+#footer{background:#6d6d6d;}
+#footer p{
+	text-align:center;
+	color:#fff;
+	font-size:80%;
+	line-height:1.5;
+	margin:0;
+	padding:5px 0;
+}
+
+.form-group {
+	width:88%;
+	margin-left:6%;
+	margin-bottom:4%;
+}
+.question {
+	width:76%;
+}
+.answer{
+	width:24%;
+
+}
+#content01,#content02,#content03{
+	width:20%;
+	font-size:100%;
+	text-align:center;
+	color:#e60012;
+	font-weight:bold;
+	border-bottom:2px solid #0075b5;
+}
+.mt-2{margin-top:-2px;}
+.select{
+	cursor:pointer;
+	width:90%;
+	border:2px solid #ccc;
+	text-align:center;
+}
+#labelId{
+	display: inline-block;
+	width:100%;
+}
+.checked{
+	background-color:#e60012;
+	color:#fff;	
+}
+
+
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".select").on("click",function(){
+			$(this).find("label").addClass("checked");
+			$(this).siblings('.select').find('label').removeClass('checked');
+		})
+	})
+	
+</script>
+</head>
+<body style="width:100%; max-width:750px;margin:0 auto;">
+<div id="header" class="ov">
+	<div class="fl" style="width:40%;margin:3% 0 3% 3%;">
+		<img style="width:100%;" src="images/logo.png">
+	</div>
+	<div class="fr"  style="margin:3% 3% 3% 0;line-height:2;">
+		<!-- s<b>咨询热线：400-100-2328</b> -->
+	</div>
+</div>
+<div id="container" style="background-color:#9ddef6;">
+	<div><img src="images/img_01.jpg"></div>
+	<div><img src="images/img_02.jpg"></div>
+	<div><img src="images/img_03.jpg"></div>
+	<div class="p-re" >
+		<div class="p-ab" style="width:100%;margin:0 auto;">
+			<div class="form-group ov">
+				<div class="question fl">1.李さん<input type="text" readonly="readonly" id="content01">中国人ですか。 --はい、そうです。</div>
+				<div class="answer fr">
+					<div class="select" onclick="document.getElementById('content01').value = 'は'"><label id="labelId">A.は</label></div>
+					<div class="select mt-2" onclick="document.getElementById('content01').value = 'が'"><label id="labelId">B.が</label></div>
+				</div>
+				<div class="line"></div>
+			</div>
+			<div class="form-group ov">
+				<div class="question fl">2.その本はだれ<input type="text" readonly="readonly" id="content02">ですか。</div>
+				<div class="answer fr">
+					<div class="select" onclick="document.getElementById('content02').value = 'の'"><label id="labelId">A.の</label></div>
+					<div class="select mt-2"  onclick="document.getElementById('content02').value = 'に'"><label id="labelId">B.に</label></div>
+				</div>
+				<div class="line"></div>
+			</div>
+			<div class="form-group ov">
+				<div class="question fl">3.病院は<input type="text" readonly="readonly" id="content03">ですか。<br/> --あそこです。</div>
+				<div class="answer fr">
+					<div class="select" onclick="document.getElementById('content03').value = 'どれ'"><label id="labelId">A.どれ</label></div>
+					<div class="select mt-2" onclick="document.getElementById('content03').value = 'どこ'"><label id="labelId">B.どこ</label></div>
+				</div>
+			</div>	
+		</div>
+		<img src="images/img_04.jpg">
+		<img src="images/img_04.jpg">
+		<img src="images/img_04.jpg">
+		
+	</div>
+	<div><img src="images/img_05.jpg"></div>
+	<div class="p-re">
+		<div class="p-ab" style="width:100%;margin:0 auto;" >
+			<div class="wap-register">
+				<p>只要答对两题并提交正确的联系方式，就能获赠以下学习大礼包~</p>
+				<div><input class="wap-register-input" name="names" id="Orders_Name" type="text" placeholder="请输入您的姓名"/></div>
+				<div><input class="wap-register-input" name="mb" id="Orders_Tel" type="text" size="14" maxlength="20" placeholder="请输入您的手机号"/></div>
+				<div id="code-control" class="yzm">
+					<input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="请输入验证码">
+					<input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+				</div>
+				<button class="wapBtn" id="btnsubmitYZM">立即提交</button>				
+			</div>
+			<div style="width:86%;margin-left:4%;background-color:#64cef5;box-shadow:inset 0 0 0 2px #0075b5;margin-top:10%;margin-bottom:10%;padding:3%;text-align:center;" >
+				<h2 style="font-size:120%;text-align:center;color:#0075b5;">★   新世界日语大礼包   ★</h2>		
+				<div style="width:90%;margin-left:5%"><img src="images/gifts.png" width="100%"></div>
+			</div>
+			<!-- <div id="footer">
+				<p>Copyright©2019 上海日樱管理咨询有限公司版权所有 All Rights Reserved 沪ICP备08018177号</p>
+			</div> -->
+		</div>
+		<img src="images/img_06.jpg">	
+		<img src="images/img_06.jpg">
+		<img src="images/img_06.jpg">	
+		<img src="images/img_06.jpg">
+		<img src="images/img_06.jpg">
+		<img src="images/img_06.jpg">	
+		<img src="images/img_06.jpg">
+		<img src="images/img_06.jpg">
+		<img src="images/img_06.jpg">
+<img src="images/img_06.jpg">		
+	</div>
+</div>
+
+<!--乐语探头：新世界日语 代码-->
+<!-- <script type="text/javascript" charset="utf-8" src="https://op.jiain.net/20000967/10108928.js"></script> -->
+<!--百度统计：新世界日语代码-->
+<script> 
+var _hmt = _hmt || []; 
+(function() { 
+var hm = document.createElement("script"); 
+hm.src = "https://hm.baidu.com/hm.js?28e63777048763fa8a1510dee1dc6914"; 
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s); 
+})(); 
+</script> 
+</body>
+</html>
