@@ -31,11 +31,18 @@ $(function () {
 		
 		$(".zc").on("click",function(){
 			$("#bg,.zck").css("display","block"); //点击页面出现遮罩层
-			$("body").css({overflow:"hidden"})
+			// $("body").css({overflow:"hidden"})
+			var tops = $(document).scrollTop()
+			$(document).bind("scroll",function (){
+
+				$(document).scrollTop(tops);
+				
+				});
 			})
 			$("#bg").on("click",function(){
 				$("#bg,.zck").css("display","none");//点击遮罩层，遮罩层消失
-				$("body").css({overflow:"visible"})
+				// $("body").css({overflow:"visible"})
+				$(document).unbind("scroll");
 			})
 	  }
 
