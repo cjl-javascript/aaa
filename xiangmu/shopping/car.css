@@ -1,0 +1,269 @@
+@charset "utf-8";
+/* CSS Document */
+.margin{width:1190px;margin:0 auto;}
+.org:hover{
+    color:orange;
+}
+#top{
+    height:30px;
+    background:#eee;
+    }
+#top .top-l{
+    float: left;
+    height: 30px;
+}
+#top .top-l li{
+    float: left;
+    margin-right:18px;
+    font:12px/30px "";
+    color:#797776;
+}
+#top .top-l li a{
+    display: block;
+    float:left;
+}
+#top .top-l li i{
+    display: inline-block;
+    height:12px;
+    width:1px;
+    background: #ccc;
+    margin:10px 0 0 10px;   
+}
+#top .top-r{
+    float:right;
+    height:30px;
+}
+#top .top-r li{
+    float: left;
+    font:12px/30px "";
+    color:#797776;
+    margin-right:26px;
+}
+#top .top-r li  span{
+    color:red;
+}
+#top .top-r li .jie{ 
+    height:18px;
+    width:50px;  
+    color:white;    
+}
+header{
+    height:112px;
+}
+header .logo{
+    height:110px;
+    width:285px;
+    float: left;
+    margin-top:20px;
+}
+header i{
+    display: block;
+    float:right;
+    width:521px;
+    height:44px;
+    background: url(../images/flow_step.png ) no-repeat;
+    margin-top:20px;
+}
+
+table{
+    width:980px;
+    margin:10px auto;
+    
+    border:1px solid #000;
+}
+.car h2{
+    font:30px/40px "";
+    
+}
+.car h2 a{
+    color:orange;
+}
+.car tbody{
+    background:#fefef4;
+    
+}
+.car td{
+    border:1px solid #000;
+}
+.car img{
+    width:100px;
+    height:50xp;
+}
+.car .td1{
+    width:51px;
+    
+}
+.car th{
+    background:#eee;
+}
+.car .td3{
+    width:260px;
+}
+.car .td4{
+    width:50px;
+}
+.car .td5{
+    width:120px;
+    
+}
+.car .num{
+    font:16px/24px "";
+    height:30px;
+    text-align: center;
+}
+
+.car .count{
+    width:120px;
+    font:16px/24px "";
+}
+.car .delete{
+    color:red;
+    cursor: pointer;
+}
+.car .box {
+    width:980px;
+    height:30px;
+    margin:10px auto;
+    border:1px solid #000;
+    font:700 16px/30px "";
+}
+.box span{
+    float: left;
+    margin-right:5px;
+}
+.box input{
+    float:left;
+    margin-top:8px;
+}
+.box b{
+    font:700 16px/30px "";
+    float:right;
+}
+#kefu{
+    height:191px;
+    background:#f3f3f3;
+    border-top:1px solid #e7e7e7;
+    border-bottom:1px solid #e7e7e7;
+    margin-top:30px;
+}
+#kefu .s-l{
+    float:left;
+   
+    height:191px;
+}
+#kefu .s-l h3{
+    font:700 16px/26px "";
+    color:#656464;
+    margin-top:26px;
+}
+#kefu .s-l h4{
+    font:700 18px/26px "";
+    color:#e13738;
+}
+#kefu .s-l p{
+    width:154px;
+    font:12px/20px "";
+    color:#7f7e7d;
+    margin-top:10px;
+}
+#kefu .s-l input{
+    width:137px;
+    height:24px;
+    font:12px/2 "";
+    color:#464547;
+    margin-top:17px;
+}
+#kefu .line{
+    width: 0;
+    height: 130px;
+    border-left: solid 1px #e7e7e7;
+    border-right: solid 1px #fff;
+    margin: 25px 34px;
+    float: left;
+}
+#kefu dl{
+    margin-top:26px;
+    float: left;
+}
+#kefu dl dt{
+    font:700 16px/26px "";
+    color:#656464;
+}
+#kefu dl dd{
+    font:12px/2 "";
+    color:#7f7e7d;
+}
+#kefu .s-r{
+    margin-top:26px;
+    float: left;
+}
+#kefu .s-r h3{
+    font:700 16px/26px "";
+    color:#656464;
+}
+#kefu .s-r img{
+    margin:5px 0 5px 20px;
+}
+#kefu .s-r p{
+    font:12px/2 "";
+    color:#7f7e7d;
+    margin-left:5px;
+}
+#send{
+    height:94px;
+}
+#send .margin-1{
+    width:1190px;margin:0 auto;
+    height: 94px;
+    border-bottom:1px solid #e7e7e7;
+}
+#send .s-l{
+    float: left;
+    margin-top:34px;
+}
+#send .s-l .txt{
+    float: left;
+    width:159px;
+    height:25px;
+    border:1px solid #e7e7e7;
+    text-indent: 11px;
+}
+#send .s-l .sub{
+    float: left;
+    height:25px;
+    background:#cc033b;
+    width:53px;
+    border:0;
+    color:#fff;
+}
+#send ul{
+    float: left;
+    margin:34px 0 0 100px;
+}
+#send ul li{
+    float: left;
+    margin-right: 25px;
+}
+footer{
+    height:91px;
+}
+footer .f-t{
+    text-align: center;
+    margin-top:18px;
+}
+footer .f-t a{
+    color:#333;
+}
+footer .f-t span{
+    color:#a6a5a5;
+    margin:0 5px;
+}
+footer p{
+    text-align: center;
+    font-size: 12px;
+    margin-top:6px;
+    color:#868584;
+}
+footer p a{
+    color:#868584;
+}

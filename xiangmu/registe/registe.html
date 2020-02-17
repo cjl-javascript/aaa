@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public.css">
+    <link rel="stylesheet" href="registe.css">
+</head>
+
+<body>
+    <header>
+        <div class="margin">
+            <a href=""><img src="../images/logo.png" alt=""></a>
+            <span>欢迎注册</span>
+
+        </div>
+
+    </header>
+    <main>
+        <div class="margin">
+            <div class="reg">
+               <div class="reg-l">
+                <h3>注册新用户</h3>
+                
+                <div class="user">
+                    <span>帐户名：</span>
+                    <input type="text" name="user" class="txt_user txt" placeholder="4-8位用户名" >
+                    <span class="tip_user tip"></span>
+                </div>
+                <div class="pass1">
+                    <span>设置密码：</span>
+                    <input type="password" name="pass1" class="txt_pass1 txt" placeholder="6-16位密码" >
+                    <span class="tip_pass1 tip"></span>
+                </div>
+                <div class="pass2">
+                    <span>确认密码：</span>
+                    <input type="password" name="pass2" class="txt_pass2 txt" placeholder="确认密码">
+                    <span class="tip_pass2 tip"></span>
+                </div>
+                <div class="phone">
+                    <span>手机：</span>
+                    <input type="text" name="" class="txt_phone txt" placeholder="手机号">
+                    <span class="tip_phone tip"></span>
+                </div>
+                <div class="yz">
+                    <span>验证码：</span>
+                    <input type="text" id ="Txtidcode" class ="txtVerification txt_yz">
+                    <span id="idcode"></span>
+                    <span class="tip_yz tip" ></span>
+                </div>
+                <div class="dx">
+                    <span>短信验证码：</span>
+                    <input type="text" name="" class="txt">
+                    
+                </div>
+                <p class="alt"></p>
+                <div class="xy">
+                    <input type="checkbox" name="" class="">
+                    <span>我已看过并接受《<a href="">用户协议</a>》</span>                
+                </div>
+                <input type="button" name="" class="btn" value="注册">
+               </div>
+               
+               <div class="reg-r">
+                    <span>已经有帐号？请直接登录</span>
+                    <a href="../login/login.html">登&nbsp;&nbsp;录</a>
+               </div>
+            
+            </div>
+        </div>
+
+    </main>
+    <footer>
+            <div class="margin">
+                <div class="f-t">
+                    <a href="" class="org">OJO首页</a><span>|</span>
+                    <a href="" class="org">眼镜知识</a><span>|</span>
+                    <a href="" class="org">框架眼镜</a><span>|</span>
+                    <a href="" class="org">太阳眼镜</a><span>|</span>
+                    <a href="" class="org">眼镜片</a><span>|</span>
+                    <a href="" class="org">友情链接</a><span>|</span>
+                    <a href="" class="org">联系我们</a><span>|</span>
+                    <a href="" class="org">投诉建议</a><span>|</span>
+                    <a href="" class="org">网站地图</a>
+                </div>
+                <p>&copy; 2005-2019 OJO眼镜网 版权所有，并保留所有权利。</p>
+                <p>E-mail: service@o-j-o.cn</p>
+                <p> ICP备案证书号:<a href="" class="org">苏ICP备14046264号-1</a></p>
+            </div>
+    
+        </footer>
+        
+</body>
+<script src="../jquery.js"></script>
+<script src="registe.js"></script>
+<script src="../jquery.idcode.js"></script>
+<script>
+    $.idcode.setCode();
+    var IsBy = $.idcode.validateCode() 
+    console.log($("#idcode").children()[0].childNodes) 
+</script>
+</html>

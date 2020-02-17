@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* CSS Document */
+
+.margin{width:1190px;margin:0 auto;}
+.org:hover{
+    color:orange;
+}
+header{
+    height:95px;
+    
+    box-shadow: 1px 1px 5px rgba(98,105,109,0.5);
+}
+
+header a{
+    margin-top: 20px;
+    float:left;
+}
+header span{
+    
+    font:20px/44px "";
+    margin: 26px 0px 0px 15px;
+    float: right;
+    padding: 0px 15px;
+}
+main{
+    height:792px;
+}
+
+main .reg{
+    width: 980px;
+    height:647px;
+    margin:0 auto;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px rgba(98,105,109,0.5);
+    border-radius: 5px;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 40px;
+    padding-right: 0;
+    
+}
+main .reg .reg-l{
+    
+    border-right:1px dashed #eee;
+    width:631px;
+    height:556px;
+    float: left;
+
+}
+main .reg .reg-l h3{
+    font:20px/38px "";
+}
+main .reg .reg-l .txt{
+    width:251px;
+    height:40px;
+    text-indent: 5px;
+}
+main .reg .reg-l span{
+    font:14px/40px "";
+    display:inline-block ;
+    width:100px;
+    text-align: right;
+}
+main .reg .reg-l .tip{
+    font:14px/40px "";
+    text-align:center ;
+}
+main .reg .reg-l>div{
+    width:630px;
+    margin-top:20px;
+    height: 55px;
+}
+
+main .reg .reg-l .yz{
+    position: relative;
+}
+main .reg .reg-l .yz input{
+    width:165px;
+    
+}
+main .reg .reg-l .yz .yzm{
+    display: block;
+    width:70px;
+    height:30px;
+    text-align: center;
+    background: #a6a5a5;
+    position: absolute;
+    left: 290px;
+    top: 6px;
+}
+main .btn{
+    width:250px;
+    height:35px;
+    font:14px/35px "";
+    color:white;
+    background:#F62648;
+    border:0;
+    margin-left:100px;
+}
+
+main .yz span{
+    float: left;
+}
+main .yz .txt_yz{
+    float: left;
+    margin-left:5px;
+    height:40px;
+}
+#idcode{
+    float: left;
+    height: 42px;
+    width:60px;
+    background: #d7d7d7;
+    text-align: center;
+    margin-left: 10px;
+}
+main .reg .reg-l p{
+    font:20px/26px "";
+    color:#0f0;
+    text-align: center;
+}   
+main .reg .reg-l .xy{
+    margin:10px 0 0 100px;
+}
+main .reg .reg-l .xy span{
+    display: inline;
+}
+main .reg .reg-l .xy a{
+    color:blue;
+}
+main .reg .reg-r{
+    float: right;
+    padding:40px 20px 0 60px ;
+    font:16px/36px "";
+}
+main .reg .reg-r span{
+    float: left;
+    font-size: 12px;
+}
+main .reg .reg-r a{
+    float: left;
+    display: block;
+    height: 38px;
+    width:90px;
+    
+    text-align: center;
+    background: #eee;
+}
+
+footer{
+    height:91px;
+    margin-top:20px;
+}
+footer .f-t{
+    text-align: center;
+    margin-top:18px;
+}
+footer .f-t a{
+    color:#333;
+}
+footer .f-t span{
+    color:#a6a5a5;
+    margin:0 5px;
+}
+footer p{
+    text-align: center;
+    font-size: 12px;
+    margin-top:6px;
+    color:#868584;
+}
+footer p a{
+    color:#868584;
+}

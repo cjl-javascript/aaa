@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+.margin{width:1190px;margin:0 auto;}
+.org:hover{
+    color:orange;
+}
+header{
+    height:95px;
+}
+header a{
+    margin-top: 20px;
+    float:left;
+}
+header span{
+    
+    font:20px/44px "";
+    margin: 26px 0px 0px 15px;
+    float: right;
+    padding: 0px 15px;
+}
+#banner{
+    height:475px;
+    background:url(../images/login-banner.jpg) no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+}
+
+.login {
+    padding:20px;
+    width:326px;
+    height:380px;
+    background: #fff;
+    float: right;
+    margin-top:30px;
+    position: relative;
+}
+.login h3{
+    font:20px/44px "";
+}
+.login h3 a{
+    font:12px/44px "";
+    color: #E31939;
+    float: right;
+}
+
+.login .user,.pass{
+    width:264px;
+    height:38px;
+    margin:10px 0;
+    padding-left:40px;
+}
+
+.login  .i5{
+    background: url(../images/user-icon.png) no-repeat;
+    background-position: -1px -16px;
+    display:block;
+    width:16px;
+    height:18px;
+    position: absolute;
+    z-index: 11;
+   left:33px;
+   top:84px;
+}
+.login  .i6{
+    background: url(../images/user-icon.png) no-repeat;
+    background-position: -1px -36px;
+    display:block;
+    width:16px;
+    height:20px;
+    position: absolute;
+    z-index: 11;
+   left:33px;
+   top:145px;
+}
+.login  .i7{
+    background: url(../images/user-icon.png) no-repeat;
+    background-position: 0 -60px;
+    display:block;
+    width:20px;
+    height:15px;
+    position: absolute;
+    z-index: 11;
+   left:33px;
+   top:210px;
+}
+.login .yz{
+    margin:10px 0;
+    width:304px;
+    height:38px;
+    
+}
+.login .yz .yzm{
+    width:60px;
+    height:18px;
+    padding: 10px 0 10px 40px;
+    float: left;
+}
+/* .login .yz span{
+    display: block;
+    width:70px;
+    height: 30px;
+    background:#a6a5a5;
+    float: left;
+    margin:5px 0 0 5px;
+} */
+#idcode{
+    display: block;
+    width:70px;
+    height: 30px;
+    background:#eee;
+    float: left;
+    margin:5px 0 0 5px;
+    font:14px/30px "";
+    text-align: center;
+}
+.login .zidong{
+    width:304px;
+    height:38px;
+    
+}
+.login .zidong .ckb{
+    float: left;
+    margin:10px 0;
+}
+.login .zidong span{
+    float: left;
+    margin:10px 0;
+    cursor: pointer;
+}
+.login .zidong a{
+    float: right;
+    margin:10px 0;
+}
+.login .btn{
+    display: block;
+    width:300px;
+    height:35px;
+    text-align: center;
+    font:14px/35px "";
+    color: #FFF;
+    background: #E31939;
+   border:0;
+    margin-bottom:30px;
+}
+.login ul{
+    width:304px;
+    height:24px;
+}
+.login ul li{
+    float: left;
+}
+.login ul li a{
+    display: block;
+    width:60px;
+    height:24px;
+    margin-right: 15px;
+    font:12px/2 "";
+    position: relative;
+    text-indent: 12px;
+}
+i{
+    display: block;
+    width:22px;
+    height:22px;
+    position: absolute;
+    background: url(../images/user-icon.png) no-repeat;  
+}
+.i1{
+    background-position: -24px -1px;
+}
+.i2{
+    background-position: -24px -25px;
+}
+.i3{
+    background-position: -24px -51px;
+}
+.i4{
+    background-position: -24px -77px;
+}
+footer{
+    height:91px;
+    margin-top:70px;
+}
+footer .f-t{
+    text-align: center;
+    margin-top:18px;
+}
+footer .f-t a{
+    color:#333;
+}
+footer .f-t span{
+    color:#a6a5a5;
+    margin:0 5px;
+}
+footer p{
+    text-align: center;
+    font-size: 12px;
+    margin-top:6px;
+    color:#868584;
+}
+footer p a{
+    color:#868584;
+}

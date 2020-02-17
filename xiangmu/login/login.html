@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <header>
+        <div class="margin">
+            <a href=""><img src="../images/logo.png" alt=""></a>
+            <span>欢迎登录</span>
+
+        </div>
+
+    </header>
+    <div id="banner">
+        <div class="margin">
+            <div class="login">
+                <h3>
+                    用户登录
+                    <a href="../registe/registe.html" class="org">立即注册></a>
+                </h3>
+                <i class="i5"></i> <input type="text" class="user" placeholder="手机号/用户名/邮箱">
+                <i class="i6"></i> <input type="password" name="" class="pass" placeholder="密码">
+                <div class="yz">
+                    <i class="i7"></i> <input type="text" name="" class="yzm">
+                    <span id="idcode"></span>
+                </div>
+                <div class="zidong">
+                    <input type="checkbox" name="" class="ckb"><span>自动登录</span>
+                    <a href="" class="org">手机短信找回密码？</a>
+                </div>
+                <input type="button" class="btn" value="登录">
+                <ul>
+                    <li><i class="i1"></i><a href="" class="org"><img src="" alt="">微信</a></li>
+                    <li><i class="i2"></i><a href="" class="org"><img src="" alt="">QQ</a></li>
+                    <li><i class="i3"></i><a href="" class="org"><img src="" alt="">新浪</a></li>
+                    <li><i class="i4"></i><a href="" class="org"><img src="" alt="">支付宝</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="margin">
+            <div class="f-t">
+                <a href="" class="org">OJO首页</a><span>|</span>
+                <a href="" class="org">眼镜知识</a><span>|</span>
+                <a href="" class="org">框架眼镜</a><span>|</span>
+                <a href="" class="org">太阳眼镜</a><span>|</span>
+                <a href="" class="org">眼镜片</a><span>|</span>
+                <a href="" class="org">友情链接</a><span>|</span>
+                <a href="" class="org">联系我们</a><span>|</span>
+                <a href="" class="org">投诉建议</a><span>|</span>
+                <a href="" class="org">网站地图</a>
+            </div>
+            <p>&copy; 2005-2019 OJO眼镜网 版权所有，并保留所有权利。</p>
+            <p>E-mail: service@o-j-o.cn</p>
+            <p> ICP备案证书号:<a href="" class="org">苏ICP备14046264号-1</a></p>
+        </div>
+
+    </footer>
+</body>
+<script src="../jquery.js"></script>
+<script src="../jquery.idcode.js"></script>
+<script src="login.js"></script>
+<script>
+ $.idcode.setCode();
+</script>
+</html>
