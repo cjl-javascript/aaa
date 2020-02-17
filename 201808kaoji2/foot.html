@@ -1,0 +1,21 @@
+
+<div class="footer">
+    <a href="/policy.html" rel="nofollow" target="_blank">隐私条款</a>　|　
+    <a href="/zongzhi/" rel="nofollow" target="_blank">关于我们</a>　|　
+    <a href="/hezuo/" rel="nofollow" target="_blank">合作办学</a>　|　
+    <a href="/" target="_blank">全国首页</a>
+    本活动最终解释权归上海日樱管理咨询有限公司所有<br />
+    Copyright &copy; 2006 by Sakura International Japanese .Allright Reserved   <br />
+    <a href="http://www.miibeian.gov.cn/">沪ICP备08018177号</a><br />
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102003839" target="_blank"><img src="/templates/main/public/images/beian.png" />沪公网安备 31010102003839号</a>
+</div>
+
+
+$if(citycode=="quanguo")
+	$set(model2=cmd.GetCityModel("shanghai"))
+	$model2.jshtml
+$else
+	$model.jshtml
+$end
+
+$load("gajs.html")

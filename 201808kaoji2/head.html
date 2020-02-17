@@ -1,0 +1,28 @@
+﻿$set(citycode=cmd.QueryString("cityid","quanguo"))
+$set(model=cmd.GetCityModel(citycode))
+<div id="top" style="text-align:center;">
+    <div id="logo">
+        <div id="logo_left"><a href="/" target="_blank" ><img src="/templates/main/public/images/logo.jpg" /></a></div>
+        <div id="logo_center"><span class="blk16" id="blk16">
+			$if(citycode=="quanguo")
+				全国
+			$else
+				$model.cityname
+			$end
+		</span></div>
+        <div id="logo_right">
+            <div class="icon_right">
+                <ul>
+                    <li><img src="/templates/main/public/images/phone01.jpg" /></li>
+                    <li><span class="blk14" style=" vertical-align:top;">全国咨询热线：</span>
+					<span class="red16B" style="vertical-align:top;line-height: 20px;font-size: 18px;">4001-800-111</span></li>
+                    <li><img src="/templates/main/public/images/icon_collection.jpg" /></li> 
+                    <li><img src="/templates/main/public/images/icon_chat.jpg" /></li> 
+                    <li><a href="http://weibo.com/sakurajpweb"><img src="/templates/main/public/images/icon_blog.jpg" /></a></li> 
+                </ul>
+            </div>
+            <div class="code"><img src="/templates/main/public/images/code.jpg" /></div>
+        </div>
+    </div>
+    <div style="height:12px; display:block; background:#ec0092;"></div>
+</div>

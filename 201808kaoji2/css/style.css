@@ -1,0 +1,47 @@
+body{font-family: "Arial","Microsoft YaHei",sans-serif;color: #333;line-height: 1;padding: 0px;margin: 0px;overflow-x: hidden; height: 100%;position: relative; }
+#form1{width:800px;margin:0 auto; font-size:20px;padding-top:20px; font-weight:bold;color: #fff;}
+.bgcl{width:200px;font-size:20px;line-height:2;border:1px solid #ccc;text-indent:5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; margin-bottom:20px;margin-right: 20px;background-color: #efefef;}
+.btn{width:180px;font-size:20px;background-color:#b60e0e;font-weight: bold;line-height:2.4;color:#000;text-align:center;border: none;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;cursor: pointer;outline:none;color: #fff;margin-left: 44px;}
+.div1{height: 520px;background: url(/templates/main/public/201808kaoji2/images/banner.jpg) center no-repeat;}
+.xuqiu{width: 1100px;margin: 0 auto;overflow: hidden;margin-top: 65px;    position: relative;left: 50px;margin-bottom: 80px;}
+.xuqiu>div{width: 150px;height: 200px;float: left;margin: 0 8px;cursor: pointer;}
+.xuqiu span{display: inline-block;font-size: 15px;margin-top: 10px;}
+.xuqiu>div>div{display: none;}
+.div2{height: 700px;background: url(/templates/main/public/201808kaoji2/images/setting.jpg) center no-repeat;}
+.box{width: 1000px;margin: 0 auto;position: relative;}
+.box div{width: 140px;height: 60px;position: absolute;cursor: pointer;}
+.div3{text-align: center;padding-top: 50px;padding-bottom: 70px}
+.div4 {overflow: hidden;}
+.div4 div{width: 220px;height: 120px;float: left;margin: 0 15px;cursor: pointer;}
+.div4 div img{display: none;}
+
+/* 遮罩层 */
+
+#doyoo_panel{
+  display: none !important;
+}
+#bg{
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  }
+  .zck{
+    width:270px;
+    height:180px;
+    position: fixed;
+    border:2px solid #b60e0e;
+    padding:50px;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    z-index:102;
+    background-color: #fff;
+    display:none;
+  }
