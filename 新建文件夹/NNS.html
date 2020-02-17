@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta charset="utf-8">
+<title>【新世界日语】一证在手，未来更上一层楼！</title>
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/xsjcommon.js"></script>
+<style>
+/*去掉iPhone按钮样式*/
+input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+textarea {-webkit-appearance: none;}
+/*去掉iPhone按钮样式over*/
+
+body{max-width:640px; margin:0 auto;}
+font{font-size:100%;line-height:1.8;}
+img{border:0px;vertical-align:middle;max-width:100%;height:auto;}
+div{display:block;}
+
+.left {float: left;}
+.right {float: right;}
+.overflow {overflow: hidden;}
+
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+
+/*form开始*/
+.bgcl {
+	width: 80%;
+	float: right;
+	background: #caebdb;	
+	border: 1px solid #f0f0f0;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	text-indent: 10px;
+	margin-bottom: 8%;
+	font-size: 16px;
+	line-height: 2;
+	background-color: #fff;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.btn {
+	width: 100%;
+	background: #ffa800;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	line-height: 2.4;
+	border: none;
+	font-weight: bold;
+	outline: none;
+	letter-spacing: 1px;
+	letter-spacing: 5px;
+}
+
+.mc {
+	display: block;
+	float: left;
+	width: 20%;
+	line-height: 2.4;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000;
+}
+
+/*form结束*/
+</style>
+</head>
+
+<body>
+	<div id="header">
+		<img style="width:100%;" src="./images/NNS/kaozhengriyu_xsj_01.jpg">	
+	</div>
+	<div id="content">
+		<div><img src="./images/NNS/kaozhengriyu_xsj_02.jpg"></div>
+		<div>
+			<!-- <a href="javascript:void(0);" onclick="doyoo.util.openChat('g=10057741');return false;"><img src="./images/NNS/kaozhengriyu_xsj_03.jpg"></a> -->
+			<img src="./images/NNS/kaozhengriyu_xsj_03.jpg" onclick="goBottom()">
+		</div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_04.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_05.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_06.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_07.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_08.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_09.jpg"></div>
+		<!-- <div><a href="#go"><img src="./images/NNS/kaozhengriyu_xsj_10.jpg"></a></div>
+		<div><a href="#go"><img src="./images/NNS/kaozhengriyu_xsj_11.jpg"></a></div>
+		<div><a href="#go"><img src="./images/NNS/kaozhengriyu_xsj_12.jpg"></a></div>
+		<div><a href="#go"><img src="./images/NNS/kaozhengriyu_xsj_13.jpg"></a></div> -->
+		<div><img src="./images/NNS/kaozhengriyu_xsj_10.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_11.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_12.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_13.jpg"></div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_14.jpg"></div>
+		<div id="go">
+			 <div style="position: relative;">
+				<div style="width: 100%; color: #000; padding: 7% 0%; position: absolute;">
+					<div style="width: 70%; margin: 0 auto;padding:0 3%">
+						<!-- <div style="overflow: hidden;">
+							<div class="mc">姓名:</div>
+							<input name="names" class="bgcl" id="Orders_Name" type="text" />
+						</div>
+						<div style="overflow: hidden;">
+							<div class="mc">手机:</div>
+							<input name="mb" class="bgcl" id="Orders_Tel" type="text" maxlength="14" />
+						</div>
+						<input type="button" id="btnsubmit" name="btn" value="免 费 领 取" class="btn" />
+					</div> -->
+					<div><input class="wap-register-input" name="names" id="Orders_Name" type="text" placeholder="请输入您的姓名" style="width:90%;height:24px;font-size:15px;line-height:24px;margin-bottom:10px;padding:0 5px;" οnfοcus="inputFocus()"/></div>
+			<div><input class="wap-register-input" name="mb" id="Orders_Tel" type="text" size="14" maxlength="20" placeholder="请输入您的手机号" style="width:90%;height:24px;font-size:15px;line-height:24px;margin-bottom:10px;padding:0 5px;" οnfοcus="inputFocus()"/></div>
+			<div id="code-control" class="yzm">
+				<input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="请输入验证码" style="width:50%;height:24px;font-size:15px;line-height:24px;margin-bottom:10px;padding:0 5px;" οnfοcus="inputFocus()">
+				<input type="button" id="btncode" class="fr hqyzm" value="获取验证码" style="width:40%;height:24px;font-size:15px;line-height:24px;border:none;background: #ffa800;
+				-moz-border-radius: 25px;
+				-webkit-border-radius: 25px;
+				border-radius: 25px;"/>
+			</div>
+			<button class="wapBtn" id="btnsubmitYZM" style="width:90%;height:24px;font-size:15px;line-height:24px;border:none;background: #ffa800;
+			-moz-border-radius: 25px;
+			-webkit-border-radius: 25px;
+			border-radius: 25px;">免 费 领 取</button>				
+				</div>
+            </div>
+			<img src="./images/NNS/kaozhengriyu_xsj_15.jpg" />
+        </div>
+		<div><img src="./images/NNS/kaozhengriyu_xsj_16.jpg"></div>
+		<div></div>
+	</div>
+	<!-- <div id="footer">
+		<p>Copyright©2019 上海日樱管理咨询有限公司版权所有 All Rights Reserved 沪ICP备08018177号</p>
+	</div> -->
+<!--新世界日语 代码-->
+<!-- <script type="text/javascript" charset="utf-8" src="https://op.jiain.net/20000967/10108928.js"></script> -->
+<!--百度统计：新世界日语代码-->
+<script> 
+var _hmt = _hmt || []; 
+(function() { 
+var hm = document.createElement("script"); 
+hm.src = "https://hm.baidu.com/hm.js?28e63777048763fa8a1510dee1dc6914"; 
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s); 
+})(); 
+</script> 
+<!-- 乐语统计代码end -->
+</body>
+</html>
