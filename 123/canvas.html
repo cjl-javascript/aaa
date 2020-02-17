@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>绘制笑脸</title>
+</head>
+ 
+<body>
+  <canvas width="1000" height="1000" id="canvas" style="border: 1px solid red;"></canvas>
+</body>
+ 
+ 
+<script>
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  
+ 
+  // ctx.beginPath();
+  // ctx.lineWidth = 1;
+  // ctx.arc(75, 75, 50, 0, Math.PI * 2, false); // 绘制
+  // ctx.moveTo(110, 75);
+  // ctx.arc(75, 75, 35, 0, Math.PI, false); // 口(顺时针)
+  // ctx.moveTo(65, 65);
+  // ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // 左眼
+  // ctx.moveTo(95, 65);
+  // ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // 右眼
+  // ctx.stroke();
+ 
+ 
+    //1. 绘制左上角的第一个长方形 设置线宽 
+    ctx.lineWidth=2;    //宽度
+    ctx.strokeStyle="red";  //颜色
+    ctx.moveTo(10,10);  //起点
+    ctx.lineTo(200,10) //下一点
+    ctx.lineTo(200,100) //下一点
+    ctx.lineTo(10,100) //下一点
+    ctx.lineTo(10,10) //下一点
+    ctx.fillStyle="blue";   //填充色
+    ctx.fill();//执行填充
+    ctx.stroke();//执行绘制线条
+//————————————————————————————————————————————————————————————————————————
+    //2.三角形  重新开始绘制 
+    ctx.beginPath();    //开始
+    ctx.moveTo(300,300);  //起点
+    ctx.lineTo(400,400) //下一点
+    ctx.lineTo(300,400) //下一点
+    ctx.lineTo(300,300) //下一点
+    ctx.stroke();//执行绘制线条
+    ctx.closePath();//闭合
+//————————————————————————————————————————————————————————————————————————
+    //3.绘制右边的大长方形
+    ctx.beginPath();    //开始
+    //绘制空心
+    ctx.strokeRect(520,100,200,300);    //X,Y,长,宽
+//————————————————————————————————————————————————————————————————————————
+    //4 绘制实心正方形 绘制实心 需要先上色再绘制 
+    ctx.fillStyle = 'red';
+    ctx.fillRect(300,100,150,150);
+//————————————————————————————————————————————————————————————————————————
+    //5.渐变
+    ctx.beginPath();    //开始
+    var grd = ctx.createLinearGradient(0,0,150,0);//渐变点开始的x,开始的y,结束的x,结束的y
+    grd.addColorStop(0,'red');
+    grd.addColorStop(0.5,'white');
+    grd.addColorStop(1,'blue');
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,120,150,150);//x,y轴 长宽
+ //————————————————————————————————————————————————————————————————————————   
+    //清除某个地方 清除第4个实心正方形中的一块
+    ctx.clearRect(350,150,50,50);
+ 
+    //6.绘制圆
+    ctx.arc(150,500,100,0,Math.PI*2); //X,y轴 起始半径，周长
+    ctx.stroke();
+    //7.文字———————————————————————————————————————————————————————————————
+    ctx.font = "50px '微软雅黑'";
+    ctx.shadowColor = '#0f0';
+    //设置阴影
+    ctx.shadowOffsetX = 5;
+    ctx.shadowOffsetY = 5;
+    ctx.shadowBlur = 10;//引影模糊
+    //实心
+    ctx.fillStyle="red";  //颜色
+    ctx.fillText('hello world',600,50);
+    //空心
+    ctx.strokeStyle="pink";  //颜色
+    ctx.strokeText('hello world',600,150);
+
+
+ 
+</script>
+ 
+</html>

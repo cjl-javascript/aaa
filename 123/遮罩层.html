@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.min.js"></script>
+  <style>
+#bg{
+position: absolute;
+background-color: rgba(0,0,0,0.5);
+z-index: 100;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+display: none;
+}
+.zck{
+  width:250px;
+  height:150px;
+  position: absolute;
+  border:2px solid #b60e0e;
+  padding:50px;
+  left: 0;
+  top:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  z-index:102;
+  background-color: #fff;
+  display:none;
+}
+.btn{width:100%;background:#b50d0d;-moz-border-radius:50px;-webkit-border-radius:50px;border-radius:50px;font-size:16px;color:#000; text-align:center; line-height:2.4; border: none;font-weight: bold;outline:none;letter-spacing: 1px;color: #fff;letter-spacing: 3px;}
+.mc{ display:block;float:left;width:20%; line-height:2.4;font-weight: bold;font-size:16px;}
+		.bgcl{width:80%; float:right; border:1px solid #333;-moz-border-radius:50px;-webkit-border-radius:50px;border-radius:50px;text-indent:18px;margin-bottom:8%;font-size:16px;line-height:2;background-color: #fff;box-sizing: border-box;outline: none;}
+  </style>
+</head>
+<body>
+ 
+    <div class="zc">111</div>
+    
+    <div id="bg">
+    </div> 
+    <div class="zck">
+      <div ><div class="mc">姓名:</div><input name="names" class="bgcl" id="names" type="text"></div>
+      <div ><div class="mc">手机:</div><input name="mb" class="bgcl" id="mb" type="text" maxlength="14"></div>
+    
+    <div style="text-align: center;"><input type="button" id="btn" name="btn" value="立即报名" class="btn"/></div>
+      
+    
+  </div>
+</body>
+<script>
+ 
+ $(".zc").on("click",function(){
+    $("#bg,.zck").css("display","block"); //点击页面出现遮罩层
+    
+    })
+    $("#bg").on("click",function(){
+      $("#bg,.zck").css("display","none");//点击遮罩层，遮罩层消失
+    })
+</script>
+</html>

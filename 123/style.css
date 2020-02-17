@@ -1,0 +1,17 @@
+/* html{font-size:13.889vw;}100除以 设计图的百分之一 （vw）  */
+body{
+  box-sizing:border-box;
+}
+
+#box{
+  
+  overflow: auto;
+
+  width:600px;
+  height: 500px;
+  border:2px solid #000;
+  font:36px/2 "";
+}
+.d-block{
+  height:500px;
+}
