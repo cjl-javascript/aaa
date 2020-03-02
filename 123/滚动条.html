@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.min.js"></script>
+  <style>
+    #bg{
+      display: none;
+    }
+  </style>
+</head>
+<body style="height: 3000px;">
+  <div class="zc">
+
+    1111
+  </div>
+  <!--弹出层时背景层DIV-->
+
+<div id="bg" style="display: none;background-color: bisque;height: 300px;">
+</div> 
+		<div  class="zck" style="display: none;">
+			姓名：<input name="names" class="bgcl" id="names3" type="text"><br>
+			电话：<input name="mb" class="bgcl" id="mb3" type="text" size="14" maxlength="20"><br>
+			<input type="button" id="btnsubmit3" name="btn" value="立即开抢" class="btn"/>
+		</div>
+	
+</div>
+</body>
+<script>
+  //遮罩层
+	var htmlwidth;
+	var fadewidth;
+	var scrollwidth;
+	window.onload=function () {
+		htmlwidth=$('html').width();
+		$(".zc").on("click",function(){
+			$("#bg,.zck").css("display","block"); //点击页面出现遮罩层
+			 $("body").css({overflow:"hidden"})//隐藏滚动条
+			  fadewidth=$("#bg").width();
+			 scrollwidth=fadewidth-htmlwidth;
+			})
+			$("#bg").on("click",function(){
+				$("#bg,.zck").css("display","none");//点击遮罩层，遮罩层消失
+				$("body").css({marginLeft:scrollwidth})
+			})
+	  }
+
+
+</script>
+</html>

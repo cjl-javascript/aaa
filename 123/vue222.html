@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title> 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    .active {
+        color: red;
+    }
+</style>
+</head>
+<body>
+  <div id="app">
+    <ul>
+        <li v-for="(m,item) in movies">
+            <a @click="btnClick(item)" :key="item" :class="{active:i===item}">{{item}}--{{m}}</a></li>
+    </ul>
+</div>
+
+<script>
+    //创建Vue实例,得到 ViewModel
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            movies: ['海王', '星际穿越', '大话西游', '少年派', '盗梦空间'],
+            i: 0,
+        },
+        methods: {
+            btnClick: function (index) {
+                this.i = index;
+            },
+        }
+    });
+</script>
+
+</body>
+</html>
