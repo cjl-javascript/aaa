@@ -11,7 +11,7 @@
 import Follow from './pages/Follow'
 export default {
   components:{
-    // Home,
+    // Home
     Follow
   }
 }
