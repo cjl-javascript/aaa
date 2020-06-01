@@ -5,7 +5,7 @@
       <router-link
         tag="li"
         :to="'/detail/'+item._id+'?dataName=' +dataName "
-        v-for="(item,index) of listData"
+        v-for="(item) of listData"
         :key="item._id"
       >
         <a href="javascript:;">

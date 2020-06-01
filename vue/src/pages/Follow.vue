@@ -25,29 +25,8 @@
     <div class="nav">
       <div class="margin">
         <ul>
-          <li>
-            <a href="#"  class="active">首页</a>
-          </li>
-          <li>
-            <a href="#" >产品中心</a>
-          </li>
-          <li>
-            <a href="#">品检流程</a>
-          </li>
-          <li>
-            <a href="#" >研发优势</a>
-          </li>
-          <li>
-            <a href="#" >下载流程</a>
-          </li>
-          <li>
-            <a href="#">新闻中心</a>
-          </li>
-          <li>
-            <a href="#" >关于我们</a>
-          </li>
-          <li>
-            <a href="#" >联系我们</a>
+          <li v-for="(m,item) in nav" :key=item>
+            <a @click="btnClick(item)" :class="{active:i===item}">{{m}}</a>
           </li>
         </ul>
       </div>
@@ -279,7 +258,7 @@ body {
 .nav ul li:nth-child(1) {
   margin-left: 15px;
 }
-.nav ul li a:hover,
+/* .nav ul li a:hover, */
 .active {
   color: #666;
   background: #dadada;
@@ -439,7 +418,23 @@ body {
 }
 </style>
 <script>
-export default {
- 
-};
+
+ export default{
+   
+   data(){
+     return{
+       nav:['首页','产品中心','品检流程','研发优势','下载流程','新闻中心','关于我们','联系我们'],
+      i:0
+     } 
+   },
+    
+   methods:{
+     btnClick:function  (index){
+       this.i=index;
+       
+     }
+    
+   }
+ }
+
 </script>

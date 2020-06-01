@@ -15,7 +15,8 @@
   <div id="app">
     <ul>
         <li v-for="(m,item) in movies">
-            <a @click="btnClick(item)" :key="item" :class="{active:i===item}">{{item}}--{{m}}</a></li>
+            <a @click="btnClick(item)" :key="item" :class="{active:i===item}">{{item}}--{{m}}</a>
+        </li>
     </ul>
 </div>
 
