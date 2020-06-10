@@ -342,7 +342,7 @@ function setCookie(name, value, expires, path, domain, secure) {
 //不遮挡输入框
 
 function inputFocus() {
-    console.log(2222)
+    
     setTimeout(function () {
         window.scrollTo(0, document.body.clientHeight);
     }, 500);
