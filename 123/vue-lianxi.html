@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+
+</head>
+<body>
+  <div id="app">
+    <p>
+
+      <router-link to="/foo">go to foo</router-link>
+      <router-link to="/bar">go to bar</router-link>
+
+    </p>
+    <router-view></router-view>
+  </div>
+</body>
+<script>
+  const foo={template:'<div>foo</div>'}
+  const bar={template:'<div>bar</div>'}
+  const routes=[
+    {path:'/foo',component:foo},
+    {path:'/bar',component:bar}
+  ]
+  const router= new VueRouter({
+    routes
+  })
+ var app= new Vue({
+   router
+  }).$mount('#app')
+</script>
+</html>
