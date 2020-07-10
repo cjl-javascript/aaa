@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <meta name="viewport" content="user-scalable=no,width=375" /> -->
   <title>Document</title>
+  <script src="./jquery-3.4.1.min.js"></script>
   <style>
-   html{
-     font-size: 13.33vw;
-   }
-    span{
-      font:.20rem/.36rem "";
+    /* html{
+     font-size: 13.3333vw,1rem=100px;
+   } */
+
+
+    .currentli {
+      color: #186ecc;
 
     }
   </style>
 </head>
+
 <body>
-  <span>dsadsadsadsa</span>
+  <dl id="gmenu">
+     <dt>1、你知道“轰！逗你”的日语单词是什么吗？</dt>
+      <dd>A、ほんとうに（真的） </dd>
+                      
+    <dd>B、ほどうに （真的？）</dd>
+                      
+    <dd>C、ほど（大约）</dd>
+                  
+  </dl>
 </body>
+
+<script>
+  $("dd").click(function () {
+    console.log(1111)
+    $("dd").removeClass();
+    $(this).addClass("currentli");
+  })
+  // window.onload = window.onresize = function () {
+  //   var w = document.documentElement.clientWidth;
+  //   if (w > 600) {
+  //     document.body.style.width = '600px';
+  //     document.body.style.margin = '0 auto';
+  //     document.documentElement.style.fontSize = 20 * 600 / 750 + 'px';
+  //     document.body.style.fontSize = 20 * 600 / 750 + 'px';
+  //     // console.log(document.body.style.fontSize);
+  //   } else {
+  //     document.body.style.width = w + 'px';
+  //     document.body.style.margin = '0 auto';
+  //     document.documentElement.style.fontSize = 20 * w / 750 + 'px';
+  //     document.body.style.fontSize = 20 * 600 / 750 + 'px';
+  //     // console.log(document.body.style.fontSize);
+  //   }
+  // };
+
+</script>
 
 </html>

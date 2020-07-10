@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title> 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./vuecdn.js"></script>
   <style>
     .active {
         color: red;
@@ -13,11 +13,18 @@
 </head>
 <body>
   <div id="app">
-    <ul>
-        <li v-for="(m,item) in movies">
-            <a @click="btnClick(item)" :key="item" :class="{active:i===item}">{{item}}--{{m}}</a>
-        </li>
-    </ul>
+    <dl>
+        <dt>1、你知道“轰！逗你”的日语单词是什么吗？</dt>
+        <dd v-for="(m,item) in movies">
+            <a @click="btnClick(item)" :key="item" :class="{active:i===item}">{{m}}</a>
+        </dd>
+    </dl>
+    <dl>
+        <dt>1、你知道“轰！逗你”的日语单词是什么吗？</dt>
+        <dd v-for="(m,item2) in movies2">
+            <a @click="btnClick2(item2)" :key="item2" :class="{active:j===item2}">{{m}}</a>
+        </dd>
+    </dl>
 </div>
 
 <script>
@@ -25,12 +32,17 @@
     var vm = new Vue({
         el: '#app',
         data: {
-            movies: ['海王', '星际穿越', '大话西游', '少年派', '盗梦空间'],
+            movies: ['A、ほんとうに（真的）', 'B、ほどうに （真的？）', 'C、ほど（大约）'],
+            movies2: ['A、哥哥', 'B、姐姐'],
             i: 0,
+            j:0,
         },
         methods: {
             btnClick: function (index) {
                 this.i = index;
+            },
+            btnClick2: function (index2) {
+                this.j = index2;
             },
         }
     });
