@@ -14,41 +14,53 @@
     <br>
     <span>姓名：</span><input type="text" name="" id="ipt"><br><br>
     <span>手机：</span><input type="text" name="" id="phone"><br>
-    <button id="btn">确认</button>
+    <button id="btn" >确认</button>
 </body>
 <script>    
-    var ipt=false;
-    var phone = false;
-    $("#ipt").blur(function(){
-        if(!$("#ipt").val().match(/^[\u4e00-\u9fa5]{2,5}$/) ){
+   
+   function res(){
+    // let isError=true;
+   var phoneVal=/^0{0,1}(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|19[0-9])[0-9]{8}$/
+    if(!$("#ipt").val().match(/^[\u4e00-\u9fa5]{2,5}$/) ){
             layer.tips('输入有误，请输入2到5位汉字','#ipt',{time:2000});
-            return false;
-        }else{
-            return ipt=true;
+            // isError=false;
+            return ;
         }
-        
-        
-    })
-    $("#phone").blur(function(){
-        let phoneVal=/^0{0,1}(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|19[0-9])[0-9]{8}$/
-        if(phoneVal.test($("#phone").val())==false){
+    if(phoneVal.test($("#phone").val())==false){
             layer.tips("输入有误，请输入11位手机号码",'#phone',{time:2000})
-            return false;
-        }else{
-            return phone=true;
+            // isError=false
+            return ;
         }
+        alert("注册成功");
+        window.location="http://www.baidu.com";       
+   }
+    
+    // $("#ipt").blur(function(){
+    //     if(!$("#ipt").val().match(/^[\u4e00-\u9fa5]{2,5}$/) ){
+    //         layer.tips('输入有误，请输入2到5位汉字','#ipt',{time:2000});
+    //         return false;
+    //     }else{
+    //         return ipt=true;
+    //     }
+        
+        
+    // })
+    // $("#phone").blur(function(){
+    //     let phoneVal=/^0{0,1}(13[0-9]|14[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|19[0-9])[0-9]{8}$/
+    //     if(phoneVal.test($("#phone").val())==false){
+    //         layer.tips("输入有误，请输入11位手机号码",'#phone',{time:2000})
+    //         return false;
+    //     }else{
+    //         return phone=true;
+    //     }
        
+    // })
+    
+
+    $("#btn").click(function (){
+        res()
     })
-    $("#btn").click(function(){
-        if(ipt && phone){
-            alert("注册成功！")
-            $("#ipt,#phone").val("")
-             ipt,phone = false;
-             return window.location="http://www.baidu.com"
-        }else{
-            alert("请重新输入")
-            return;
-        }
-    })
+    
+    
 </script>
 </html>

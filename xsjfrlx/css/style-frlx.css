@@ -1,0 +1,146 @@
+html {
+  font-size: 13.3333vw;
+}
+input {
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+.margin,.img{
+  width:7.5rem;
+  margin:0 auto;
+}
+.sel{
+  background: url('../img/3_03.png')  center no-repeat;
+  background-size: 7.5rem 17.19rem;
+  width: 7.5rem;
+  height:17.19rem;
+  overflow: hidden;
+  position: relative;
+  padding-bottom:.2rem;
+}
+.box{
+  margin:.7rem .6rem;  
+}
+label span{
+  content: "";
+  width:.26rem;
+  height:.26rem;
+  border-radius: 50%;
+  border: 1px solid #000 ;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: .07rem;
+}
+label{
+  display: inline-block;
+  min-width: 33%;
+}
+label b{
+  width:.13rem;
+  height:.13rem;
+  background:#000;
+  border-radius: 50%;
+  position: absolute;
+  left: .065rem;
+  top: .065rem;
+  right:.065rem;
+  bottom:.065rem;
+  display: none;
+}
+.box input{
+  display: none;
+}
+.box input:checked + span  b{
+  display: inline-block;
+}
+.box1 p{
+  font:700 .26rem/.36rem ""
+}
+.box1 .sel-t {
+  overflow: hidden;
+  margin-top:.29rem;
+}
+
+.box1 .sel-2,.sel-3{
+  font:.26rem/.58rem "";
+  display: flex;
+  justify-content: space-between;
+}
+.sel-3{
+  margin-bottom:.44rem;
+}
+
+#zc{
+  padding:.1rem 1rem;
+}
+.ipt-n,.ipt-p{
+  width:5.28rem;
+  height:.7rem;
+  border:.03rem solid #000;
+  border-radius: .16rem;
+  font:.3rem/.7rem "";
+  text-indent: .32rem; 
+}
+.ipt-p{
+  margin-top:.2rem;
+  margin-bottom:.36rem;
+}
+input::placeholder{
+  color:#ccc;
+}
+.btn{
+  width:5.28rem;
+  height:1.08rem;
+  background:#31b3f1;
+  font:700 .44rem/1.08rem "";
+  color:#fff;
+  border-radius: .16rem;
+}
+.btn:active,.hqyzm:active,.mfpg:active{
+  opacity: 0.5;
+}
+.mfpg{
+  width:3.84rem;
+  height:.8rem;
+  font:700 .4rem/2 "";
+  color:#fff;
+  border-radius: .16rem;
+  background:#31b3f1;
+  position: absolute;
+  top:16.5rem;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+}
+.tips,.pg-tips{
+  font:.16rem/.26rem "";
+  margin-top:.2rem;
+  margin-bottom: .76rem;
+}
+.pg-tips{
+  text-align: center;
+}
+.yzm{
+  margin-bottom:.2rem;
+}
+.wap-code,.hqyzm{
+  width:2.5rem;
+  height:.7rem;
+  border-radius: .16rem;
+  font:.3rem/.7rem "";
+}
+.wap-code{
+  border:.03rem solid #000;
+  margin-right:.2rem;
+  text-indent: .32rem; 
+}
+.hqyzm{
+  height: .78rem;
+  background:#31b3f1;
+  color:#fff;
+}
+
