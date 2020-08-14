@@ -36,37 +36,14 @@ $(function () {
 
     //获取验证码
     $("#btncode").click(function () {
-        var mobile = $.trim($("#Orders_Tel").val());
+        var mobile = $.trim($("#mb").val());
         if (mobileOnly(mobile) == false) {
            alert('请输入正确的手机号!');
             return;
         }
         time(this);
         $.ajax({
-            url: "https://www.sakurajp.com.cn/api/XsjSendMsg.ashx?mobile=" + mobile,
-            type: "get",
-            dataType: "text",
-            success: function (data) {
-                if (data == "") {
-                    alert('验证码发送失败!');
-                } else {
-
-                    setCookie("salt", data, 1, '', '', '');
-                }
-            }
-        })
-
-    })
-	
-	    $("#btncode1").click(function () {
-        var mobile = $.trim($("#Orders_Tel1").val());
-        if (mobileOnly(mobile) == false) {
-           alert('请输入正确的手机号!');
-            return;
-        }
-        time(this);
-        $.ajax({
-            url: "https://www.sakurajp.com.cn/api/XsjSendMsg.ashx?mobile=" + mobile,
+            url: "../api/LSendMsg.ashx?mobile=" + mobile,
             type: "get",
             dataType: "text",
             success: function (data) {
@@ -87,10 +64,7 @@ $(function () {
         btnwaittime(this);
         return Register("Orders_Name", "Orders_Tel");
     })
-    $("#btnsubmit4").click(function () {
-        btnwaittime(this);
-        return RegisterLX("Orders_Name", "Orders_Tel");
-    })
+
     $("#btnsubmit3").click(function () {
         btnwaittime(this);
         return Register("Orders_Name3", "Orders_Tel3");
@@ -107,39 +81,7 @@ $(function () {
 
     $("#btnsubmitYZM").click(function () {
         btnwaittime(this);
-		    if (yzm == "t") {
-        var code = $.trim($("#YZMcode").val());
-        var codeVal = getCookie("salt");
-        if (code == "") {
-            alert('请输入验证码！');
-            return false;
-        }
-        if (code != codeVal) {
-            alert('您输入的验证码不正确！');
-            return false;
-        }
-    }
         return Register("Orders_Name", "Orders_Tel");
-    })
-	
-	
-	    $("#btnsubmitYZM1").click(function () {
-        btnwaittime(this);
-		    if (yzm == "t") {
-        var code = $.trim($("#YZMcode1").val());
-        var codeVal = getCookie("salt");
-        if (code == "") {
-            alert('请输入验证码！');
-            return false;
-        }
-        if (code != codeVal) {
-            alert('您输入的验证码不正确！');
-            return false;
-        }
-    }
-		
-		
-        return Register("Orders_Name1", "Orders_Tel1");
     })
 //英语注册
     $("#btnsubmit_PEP").click(function () {
@@ -188,21 +130,20 @@ function Register(nameID, mobileID) {
     var username = $.trim(dname.val());
     var mobile = $.trim(dmobile.val());
     if (username == "") {
-        alert('请输入姓名！');
-        return false;
+        username = "无";
     }
-    if (username.length >= 8) {
-       alert('姓名长度超过8位！');
-       return false;
-    }
-    if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
-       alert('姓名不允许有特殊字符！');
-       return false;
-    }
-    if (/^[0-9]*$/.test(username)) {
-       alert('姓名不允许纯数字！');
-       return false;
-    }
+    //if (username.length >= 8) {
+    //    alert('姓名长度超过8位！');
+    //    return false;
+    //}
+    //if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
+    //    alert('姓名不允许有特殊字符！');
+    //    return false;
+    //}
+    //if (/^[0-9]*$/.test(username)) {
+    //    alert('姓名不允许纯数字！');
+    //    return false;
+    //}
     if (mobile.length != 11) {
         alert('手机号必须是11位！');
         return false;
@@ -224,56 +165,10 @@ function Register(nameID, mobileID) {
             return false;
         }
     }
+
+
 
     AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, pType);
-
-    return true;
-}
-//留学注册
-function RegisterLX(nameID, mobileID) {
-    var dname = $("#" + nameID);
-    var dmobile = $("#" + mobileID);
-    var username = $.trim(dname.val());
-    var mobile = $.trim(dmobile.val());
-    if (username == "") {
-        alert('请输入姓名！');
-        return false;
-    }
-    if (username.length >= 8) {
-       alert('姓名长度超过8位！');
-       return false;
-    }
-    if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
-       alert('姓名不允许有特殊字符！');
-       return false;
-    }
-    if (/^[0-9]*$/.test(username)) {
-       alert('姓名不允许纯数字！');
-       return false;
-    }
-    if (mobile.length != 11) {
-        alert('手机号必须是11位！');
-        return false;
-    }
-    if (mobileOnly(mobile) == false) {
-        alert('请输入正确的手机号！');
-        return false;
-    }
-
-    if (yzm == "t") {
-        var code = $.trim($("#YZMcode").val());
-        var codeVal = getCookie("salt");
-        if (code == "") {
-            alert('请输入验证码！');
-            return false;
-        }
-        if (code != codeVal) {
-            alert('您输入的验证码不正确！');
-            return false;
-        }
-    }
-
-    AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, 1);
 
     return true;
 }
@@ -286,16 +181,24 @@ function AjaxRegister(name, mobile, email, seladdr, ID, adname, act, calladdr, k
         dataType: "text",
         type: "post",
         data: { "username": name, "mobile": mobile, "email": email, "seladdr": seladdr, "ID": ID, "adname": adname, "act": act, "calladdr": calladdr, "age": 0, "keybaidu": k, "key360": key360, "P": m, "url": window.parent.location.href },
-        beforeSend: function () {  
+        beforeSend: function () {
+  
         },
         success: function (data) {
+
+            console.log(data);
             if (data == "1") {
+
                 alert("注册成功");
+
             } else if (data == "2") {
                 alert("对不起,该手机号已存在!");
+
             } else {
-                alert("注册失败");  
+                alert("注册失败");
+   
             }
+
         }
     })
 }
