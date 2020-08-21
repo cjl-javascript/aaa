@@ -20,21 +20,21 @@ input,button{
   left: 50%;
   transform: translate(-50%, 0%);
   width:3.46rem;
-  height:.7rem;
-  font:700 .24rem/.7rem "";
+  height:1rem;
+  font:700 .36rem/1rem "";
   color:#fff;
   background:#e20010;
   border-radius: .18rem;
 }
-#zc{
+.zc{
   padding:0 .8rem;
   background:#e6e6e6;
 }
-#zc p{
+.zc p{
   font:.4rem/1.16rem "";
   text-align: center;
 }
-#zc p span {
+.zc p span {
   font-weight: 700;
   color:#e70012;
 }
@@ -84,10 +84,11 @@ input::placeholder{
   float: right;
 }
 .img8{
-  background: url('../img/1_08.jpg') no-repeat center;
+  background: url('../img/yhrblx_08.jpg') no-repeat center;
   background-size:7.5rem 7.26rem;
   width: 7.5rem;
   height:7.19rem;
+  position: relative;
 }
 iframe{
   display: block;
@@ -95,5 +96,75 @@ iframe{
   height:4.6rem;
   margin:0 auto;
   padding:.1rem .3rem;
-  background: #fff;;
+  background: #fff;
+  margin-top:.2rem;
 }
+.zixun2{
+  position: absolute;
+  bottom: .3rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width:3.15rem;
+  height:1rem;
+  font:700 .36rem/1rem "";
+  color:#fff;
+  background:#e20010;
+  border-radius: .28rem;
+}
+.img12,.img14{
+  position: relative;
+}
+.zixun3{
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width:2.74rem;
+  height:1rem;
+  font:700 .36rem/1rem "";
+  color:#fff;
+  background:#e20010;
+  border-radius: .28rem;
+}
+.btn2,.hqyzm2{
+  background:#2164b2;
+}
+.tips{
+  font-size:.16rem;
+}
+.btn:active,.hqyzm:active,.mfpg:active,.zixun3:active,.zixun2:active,.zixun:active{
+  opacity: 0.5;
+}
+.zc2{
+  background:#eff6fe;
+}
+
+.frame{
+  margin:0 auto;
+  width: 6rem;
+  height: .5rem;
+  border:.03rem solid #2164b2;
+  border-radius: .1rem;
+  position: relative;
+  font:700 .4rem/.5rem "";
+  color:#fff;
+  text-align: center;
+  background:#2164b2
+}
+.triangle{
+  width: .2rem;
+  height: .2rem;
+  display: inline-block;
+  position: absolute;
+  bottom: -.12rem;
+  right: .3rem;
+  background-color: #2164b2;
+  border-top: .03rem solid #2164b2;
+  border-left: .03rem solid #2164b2;
+  transform:rotate(225deg);
+  -ms-transform:rotate(225deg);     /* IE 9 */
+  -moz-transform:rotate(225deg);    /* Firefox */
+  -webkit-transform:rotate(225deg); /* Safari 和 Chrome */
+  -o-transform:rotate(225deg);  /* Opera */
+}
+

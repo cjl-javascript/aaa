@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript" src="./jquery-3.4.1.min.js">
+  </script>
+     <style>
+         ul{
+             position: absolute;
+             z-index: 1000;
+             height: 30px;
+
+
+             overflow: hidden;
+             list-style-type: none;
+         }
+         ul li{
+
+
+             float:right;
+             margin: 0 10px;
+         }
+         .item{
+            border: solid thin #808080;
+            text-align: center;
+             display: block;
+line-height:28px;
+
+             width: 18px;
+             height: 28px;
+         }
+        .item em{
+
+
+            font-family: "Times New Roman",Georgia,Serif;
+        ;
+            font-size: 18pt;
+            font-weight: bold;
+            color: #ff0000;
+            background-color: #ffffff;
+        }
+     </style>
+  <script type="text/javascript">
+      var total,total_arr1;
+      function init() {
+          total = 100000000;
+          total_arr1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+          for (var k = 0; k < 9; k++) {
+              for (var j = 1; j < 10; j++) {
+
+
+                  $("em[t=" + j + "]:eq(" + k + ")").fadeOut();
+              }
+          }
+      }
+      function flush() {
+
+
+          var one = total % 10;                        //个位
+          var two = Math.floor(total % 100 / 10);     //十位
+          var thr = Math.floor(total % 1000 / 100);           //百位
+          var fou = Math.floor(total % 10000 / 1000);            //千位
+          var fiv = Math.floor(total % 100000 / 10000);          //万位
+          var six = Math.floor(total % 1000000 / 100000);          //十万位
+          var sev = Math.floor(total % 10000000 / 1000000);              //
+          var eig = Math.floor(total % 100000000 / 10000000);
+          var nig = Math.floor(total % 1000000000 / 100000000);
+          var arr = [one, two, thr, fou, fiv, six, sev, eig, nig];      //用一数组将这九个数字表示的九个位存起来,从左至右依次个位。。。
+
+
+
+
+          for (var i = 0; i < 9; i++) {
+                       while(total_arr1[i]!=arr[i]){                           //用arr1保存的当前位的数字，当与新的数字不同时，从当前数字开始依次递增翻转数字，直到匹配时停止遍历
+                           $("em[t="+total_arr1[i]+"]:eq("+i+")").fadeOut();
+                           total_arr1[i]=(total_arr1[i]+1)%10;
+                           $("em[t="+total_arr1[i]+"]:eq("+i+")").slideToggle();
+                 
+          }
+      }
+
+}
+      function add(){
+          total++;
+          if(total==999999999){
+              total=0;
+          }
+      }
+
+
+   $(document).ready(function(){
+        init();
+       window.setInterval('add()',100);
+      var result=window.setInterval('flush()',2000);
+  });
+  </script>
+ </head>
+ <body>
+
+
+ <ul>
+ <li class="item">
+     <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+  </li>
+  <li class="item">
+      <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+      </cite>
+  </li>
+  <li class="item">
+      <cite>
+  <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+   <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+ </cite>
+  </li>
+     <li> <span>,</span></li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li> , </li>
+     <li class="item">
+         <cite>
+             <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+             <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+         </cite>
+     </li>
+     <li class="item">
+     <cite>
+         <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+         <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+     </cite>
+ </li>
+     <li class="item">
+     <cite>
+         <em t="1">1</em> <em t="2">2</em> <em t="3">3</em> <em t="4">4</em>
+         <em t="5">5</em> <em t="6">6</em> <em t="7">7</em> <em t="8">8</em><em t="9">9</em><em t="0">0</em>
+     </cite>
+ </li>
+</ul>
+
+
+ </body>
+</html>    

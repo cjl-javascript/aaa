@@ -63,7 +63,9 @@ $(function () {
     $("#btnsubmit3").click(function () {
         return RegisterLX("names", "mb");
     })
-
+    $("#btnsubmit4").click(function () {
+        return RegisterLX2("names2", "mb2");
+    })
     $("#btnsubmit2").click(function () {
         return Register("names2", "mb2");
     })
@@ -120,6 +122,29 @@ $(function () {
 
     })
 
+    //获取验证码2
+    $("#btncode2").click(function () {
+        var mobile = $.trim($("#mb2").val());
+        if (mobileOnly(mobile) == false) {
+            layer.msg('请输入正确的手机号!', { icon: 8 });
+            return;
+        }
+        time(this);
+        $.ajax({
+            url: "/api/LSendMsg.ashx?mobile=" + mobile,
+            type: "get",
+            dataType: "text",
+            success: function (data) {
+                if (data == "") {
+                    layer.msg('验证码发送失败!', { icon: 8 });
+                } else {
+
+                    setCookie("salt", data, 1, '', '', '');
+                }
+            }
+        })
+
+    })
 
 })
 //验证码等待 60秒
@@ -256,19 +281,66 @@ function RegisterLX(nameID, mobileID) {
         var code = $.trim($("#YZMcode").val());
         var codeVal = getCookie("salt");
         if (code == "") {
-            layer.msg('请输入验证码！', $("#YZMcode"));
+            layer.msg('请输入验证码！', { icon: 8 });
             return false;
         }
         if (code != codeVal) {
-            layer.msg('您输入的验证码不正确！', $("#YZMcode"));
+            layer.msg('您输入的验证码不正确！', { icon: 8 });
             return false;
         }
     }
-
     AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, '留学');
 
     return true;
 }
+//留学注册
+function RegisterLX2(nameID, mobileID) {
+    var dname = $("#" + nameID);
+    var dmobile = $("#" + mobileID);
+    username = $.trim(dname.val());
+    mobile = $.trim(dmobile.val());
+    if (username == "") {
+        layer.msg('请输入姓名！', { icon: 8 });
+        return false;
+    }
+    if (username.length >= 8) {
+        layer.msg('姓名长度超过8位！', { icon: 8 });
+        return false;
+    }
+    if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
+        layer.msg('姓名不允许有特殊字符！', { icon: 8 });
+        return false;
+    }
+    if (/^[0-9]*$/.test(username)) {
+        layer.msg('姓名不允许纯数字！', { icon: 8 });
+        return false;
+    }
+    if (mobile.length != 11) {
+        layer.msg('手机号必须是11位！', { icon: 8 });
+        return false;
+    }
+    if (mobileOnly(mobile) == false) {
+        layer.msg('请输入正确的手机号！', { icon: 8 });
+        return false;
+    }
+
+    if (yzm == "t") {
+        var code = $.trim($("#YZMcode2").val());
+        var codeVal = getCookie("salt");
+        if (code == "") {
+            layer.msg('请输入验证码！', { icon: 8 });
+            return false;
+        }
+        if (code != codeVal) {
+            layer.msg('您输入的验证码不正确！', { icon: 8 });
+            return false;
+        }
+    }
+    AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, '留学');
+
+    return true;
+}
+
 //普通注册
 function Register2(nameID, mobileID) {
     var dname = $("#" + nameID);
