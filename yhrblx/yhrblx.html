@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>樱花日本留学申请“全攻略”</title>
   <link rel="stylesheet" href="./css/public.css">
   <link rel="stylesheet" href="./css/style-yhrblx.css">
-  <script src="./script/jquery-3.4.1.min.js"></script>
-  <script src="./script/layer/layer.js"></script>
-  <!-- <script src="./script/common1.js"></script> -->
-  <script src="./script/jquery.lazyload.min.js"></script>
-
+  <script src="../adm/script/jquery-1.11.2.min.js"></script>
+  <script src="../adm/script/layer/layer.js"></script>
+  <script src="../adm/script/common1.js"></script>
+  <script src="../adm/script/jquery.lazyload.min.js"></script>
+  <!-- <script type="text/javascript" charset="utf-8" src="http://op.jiain.net/20003150/10091887.js"></script> -->
 </head>
 
 <body>
@@ -24,10 +25,10 @@
     </div>
     <div class="pic img3">
       <img data-original="./img/yhrblx_03.jpg" alt="" class="img ">
-      <button class="zixun" onclick="goBottom()">咨询费用详情></button>
+      <button class="zixun">咨询费用详情></button>
     </div>
     <div class="pic">
-      <img data-original="./img/yhrblx_04.jpg" alt="" class="img" onclick="goBottom()">
+      <img data-original="./img/yhrblx_04.jpg" alt="" class="img img4">
     </div>
 
     <!-- 注册 -->
@@ -49,14 +50,14 @@
     </div>
     <div class="pic img6">
       <img data-original="./img/yhrblx_06.jpg" alt="" class="img">
-      <button class="zixun zixun4" onclick="goBottom()">更多专业查询></button>
+      <button class="zixun zixun4" >更多专业查询></button>
     </div>
     <div class="pic">
       <img data-original="./img/yhrblx_07.jpg" alt="" class="img">
     </div>
     <div class="pic img8">
       <img data-original="./img/yhrblx_08.jpg" alt="" class="img ">
-      <button class="zixun2" onclick="goBottom()">更多详情咨询></button>
+      <button class="zixun2" >更多详情咨询></button>
     </div>
     <div class="pic">
       <img data-original="./img/yhrblx_09.jpg" alt="" class="img">
@@ -66,7 +67,7 @@
     </div>
     <div class="pic img11">
       <img data-original="./img/yhrblx_11.jpg" alt="" class="img">
-      <button class="zixun zixun3" onclick="goBottom()">更多注意事项></button>
+      <button class="zixun zixun3">更多注意事项></button>
     </div>
     <div class="pic">
       <img data-original="./img/yhrblx_12.jpg" alt="" class="img">
@@ -92,8 +93,8 @@
   </div>
 </body>
 <script>
-  //跳转页面底部
-  function goBottom() {
+ //跳转页面底部
+ function goBottom() {
     window.scrollTo(0, document.documentElement.scrollHeight - document.documentElement.clientHeight);
   }
   //图片懒加载
@@ -106,18 +107,9 @@
       window.scrollTo(0, document.body.clientHeight);
     }, 500);
   }
-  //验证码显示和隐藏
-  $('.yzm').hide();
-  $(document).ready(function () {
-    $('.ipt-p').focus(function () {
-      $('.yzm').show();
-    })
-    $(".ipt-p").blur(function () {
-      if ($(this).val().length < 1) {
-        $('.yzm').hide();
-      }
-    })
-  })
+  
+  
+    
 </script>
 
 </html>

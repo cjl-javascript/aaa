@@ -21,11 +21,12 @@ input,button{
   transform: translate(-50%, 0%);
   width:4.46rem;
   height:.8rem;
-  font:.4rem/1 "";
-  color:#fff;
+  font-size:.4rem;
+  line-height: .82rem;
   background:#2978ba;
   border-radius: .4rem;
   color:#feffb1;
+  
 }
 .zc{
   padding:0 .8rem;
@@ -57,7 +58,7 @@ input::placeholder{
   width:5.9rem;
   height:.78rem;
   background-image: linear-gradient(#fa5036, #e60211);
-  font:.42rem/1 "";
+  font:.42rem/.8rem "";
   color:#fff;
   margin-bottom: .3rem;
 }
@@ -92,7 +93,8 @@ input::placeholder{
   transform: translate(-50%, 0%);
   width:4.46rem;
   height:.8rem;
-  font:.4rem/1 "";
+  font-size:.4rem;
+  line-height: .82rem;
   background:#fbfb39;
   border-radius: .4rem;
 }

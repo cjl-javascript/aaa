@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本名校留学巡回教育展</title>
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/style-lxjyz.css">
+  <script src="../adm/script/jquery-1.11.2.min.js"></script>
+  <script src="../adm/script/layer/layer.js"></script>
+  <script src="../adm/script/common1.js"></script>
+  <script src="../adm/script/jquery.lazyload.min.js"></script>
+</head>
+
+<body>
+  <div class="margin">
+    <div class="pic">
+      <img data-original="./img/jyz-01.jpg" alt="" class="img">
+    </div>
+    <!-- 注册 -->
+    <div class="zc" name="tz">
+      <p class="counter">
+        目前已经有<span class='count'>3631</span>人参与活动
+      </p>
+      <div class="name">
+        <p class="t-cont">请输入您的姓名<span style="color: red;">*</span></p>
+        <input type="text" class="ipt-n" id="names" οnfοcus="inputFocus()" placeholder="姓名">
+      </div>
+      <div class="phone">
+        <p class="t-cont">请输入您的电话（仅用于获取升学方案）<span style="color: red;">*</span></p>
+        <input type="text" class="ipt-p" id="mb" οnfοcus="inputFocus()" placeholder="电话">
+      </div>
+      <div id="code-control" class="yzm">
+        <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="请输入验证码"
+          οnfοcus="inputFocus()">
+        <input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+
+      </div>
+      <input class="btn" type="button" value="我要参展" id="btnsubmit3" onclick="fun(1)">
+      <span class="tips">*信息仅用于日本留学咨询，老师将在24小时之内联系您，请保持手机畅通！</span>
+    </div>
+    <div class="pic">
+      <img data-original="./img/jyz-02.jpg" alt="" class="img">
+    </div>
+    <div class="pic">
+      <img data-original="./img/jyz-04.jpg" alt="" class="img">
+    </div>
+    <div class="pic">
+      <img data-original="./img/jyz-05.jpg" alt="" class="img">
+    </div>
+    <!-- 注册 -->
+    <div class="zc" name="tz">
+      <div class="name">
+        <input type="text" class="ipt-n ipt-n2" id="names2" οnfοcus="inputFocus()" placeholder="请输入您的姓名">
+      </div>
+      <div class="phone">
+        <input type="text" class="ipt-p ipt-p2" id="mb2" οnfοcus="inputFocus()" placeholder="请输入您的电话（仅用于获取升学方案）">
+      </div>
+      <div id="code-control2" class="yzm">
+        <input type="tel" class="fl wap-code wap-code2" name="wapCode" id="YZMcode2" maxlength="6" placeholder="请输入验证码"
+          οnfοcus="inputFocus()">
+        <input type="button" id="btncode2" class="fr hqyzm hqyzm2" value="获取验证码" />
+      </div>
+      <input class="btn btn2" type="button" value="我要参展" id="btnsubmit4" onclick="fun(1)">
+      <span class="tips">*信息仅用于日本留学咨询，老师将在24小时之内联系您，请保持手机畅通！</span>
+    </div>
+    <!-- 轮播图 -->
+    <div class="wrapper">
+      <p>最新报名客户</p>
+      <div class="list">
+        <div class="main">
+          <ul>
+            <li><span>刘**</span><span>182****6524</span><span class="s3">1小时前</span></li>
+            <li><span>王**</span><span>139****2556</span><span class="s3">5小时前</span></li>
+            <li><span>张**</span><span>131****3669</span><span class="s3">1天前</span></li>
+            <li><span>范**</span><span>188****5887</span><span class="s3">2天前</span></li>
+            <li><span>林**</span><span>133****6879</span><span class="s3">3天前</span></li>
+            <li><span>周**</span><span>177****0256</span><span class="s3">3天前</span></li>
+            <li><span>周**</span><span>133****5556</span><span class="s3">5天前</span></li>
+            <li><span>许**</span><span>185****6977</span><span class="s3">5天前</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  //图片懒加载
+  $(function () {
+    $("img").lazyload();
+  });
+  //不遮挡输入框
+  function inputFocus() {
+    setTimeout(function () {
+      window.scrollTo(0, document.body.clientHeight);
+    }, 500);
+  }
+  //文字滚动
+  function lunbo(id, height) {
+    var ul = $(id);
+    var liFirst = ul.find('li:first');
+    $(id).animate({ top: height }).animate({ "top": 0 }, 0, function () {
+      var clone = liFirst.clone();
+      $(id).append(clone);
+      liFirst.remove();
+    })
+  }
+  setInterval("lunbo('ul','-.7rem')", 3000)
+
+  
+function fun(a){
+ $('.count').text(parseInt($('.count').text())+a)
+  }
+</script>
+
+</html>
