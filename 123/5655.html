@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <meta name="viewport" content="user-scalable=no,width=375" /> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <meta name="viewport" content="width=750,user-scalable=no" />
+
   <title>Document</title>
   <script src="./jquery-3.4.1.min.js"></script>
   <style>
@@ -18,10 +19,29 @@
       color: #186ecc;
 
     }
+    *{
+      margin:0;
+      padding:0;
+    }
+    img{
+      width: 750px;
+    }
+    dt{
+      font: 30px/1.2 "";
+    }
+    dd{
+      font: 24px/1.2 "";
+    }
+    .box{
+      width:200px;
+      height:400px;
+      border:1px solid #000;
+    }
   </style>
 </head>
 
 <body>
+  <img src="./201906251511272725.jpg" alt="">
   <dl id="gmenu">
      <dt>1、你知道“轰！逗你”的日语单词是什么吗？</dt>
       <dd>A、ほんとうに（真的） </dd>
@@ -31,14 +51,15 @@
     <dd>C、ほど（大约）</dd>
                   
   </dl>
+  <div class="box"></div>
 </body>
 
 <script>
-  $("dd").click(function () {
-    console.log(1111)
-    $("dd").removeClass();
-    $(this).addClass("currentli");
-  })
+  // $("dd").click(function () {
+  //   console.log(1111)
+  //   $("dd").removeClass();
+  //   $(this).addClass("currentli");
+  // })
   // window.onload = window.onresize = function () {
   //   var w = document.documentElement.clientWidth;
   //   if (w > 600) {

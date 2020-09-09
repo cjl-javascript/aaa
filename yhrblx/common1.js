@@ -113,6 +113,7 @@ $(function () {
     })
   
     }
+    //有乐语
     ly = GetParms("cityid")
     if(ly =='quanguo'){
        $("head").append('<script type="text/javascript" charset="utf-8" src="http://op.jiain.net/20003150/10091887.js"></script>');
@@ -120,6 +121,7 @@ $(function () {
         doyoo.util.openChat('g=10076787');
      })   
     }
+    //无乐语
     if(ly =='quangu'){
        
         $('.zixun,.zixun2,.img4').click(function () { 

@@ -1,0 +1,228 @@
+/*樱花首页-yinghuashouye.html*/
+.citys{width:168px; height:30px;}
+.cityMap {height:300px;}
+#feature .ps .ps_01{padding-left:0px;}
+#main_title{cursor:pointer;}
+.list{width:100%;float:left;margin-top:10px;}
+#list_ul{padding:0;}
+.reMenDongTai_span{float:right;font-size:12px;margin-top:5px;}
+.scrleft{height:520px;}
+.hot .aa{padding-top:13px;}
+.pic_link{background:#FFF;}
+.hotCitys{width:100%;height:80px;background:#efefef;margin-top:20px;position:relative;top:21px;}
+.youQingLianJie{width:100%;height:auto;background:#efefef;}
+.youQingLianJie ul li a{color:#666;font-size:12px;}
+/*关于我们——樱花国际日语-yinghuaguojiriyu.html*/
+#detail_left{padding-bottom: 8px;}
+
+.img_cursor{cursor:pointer;}
+#more_lh18{line-height: 18px;}
+#gaoduan{font-size:16px;line-height:50px;color:#EC008C;font-weight:bold;}
+.fs14_lh30{font-size:14px;line-height:30px;color:#666666;}
+.fs14_colEC{font-size:14px;color:#EC008C;}
+.fs14_lh30_colEC{font-size:14px;line-height:30px;color:#EC008C;}
+.riben{color:#EC008C;font-weight:bold;line-height:50px;}
+#lh30{line-height:30px;}
+.fs14_col666{color:#666666;font-size:14px;}
+.fs14{font-size:14px;}
+.color_ec{color:#ec008c;}
+.color_666{color:#666666;}
+.fs16_lh50{color:#ec008c;font-weight:bold;line-height:50px;font-size:16px;}
+#login_main .login_btn{margin-top:-10px;}
+/*我们的宗旨和价值观——樱花国际日语-zongzhi.html*/
+.tx_center{text-align: center;}
+/*权威认证——樱花国际日语-renzheng.html*/
+#auth_news .list_time li{text-align:left;color:#666;padding-left:10px;}
+/*学习环境——樱花国际日语-huanjing.html*/
+.xuexi{font-size: 16px;font-weight: bold;color: rgb(236,0,140);line-height: 50px;}
+.xuexiContent{font-size: 14px;color: rgb(102,102,102);line-height: 30px;}
+/*日语一级培训丨日语二级培训丨日语课程——樱花国际日语-kecheng.html*/
+#detail .tab1{color: rgb(102, 102, 102); font-family: arial;}
+#detail .h1{font-family: arial; font-size: 14px; color: rgb(236, 2, 139); font-weight: bold; line-height: 20px;}
+#detail .td1{font-family: arial;}
+#detail .p1{margin: 5px 0px; text-indent: 2em; line-height: 24px;}
+#detail .span1{font-size:12px;}
+#detail .red{color: rgb(236, 0, 140);}
+#detail .tab2{margin-bottom: 10px;}
+#detail .telzt1{font-family: 微软雅黑; font-size: 15px; border-style: solid; border-color: rgb(204, 204, 204); color: rgb(0, 0, 0); font-weight: bold;}
+#detail .line2{font-family: arial; border-style: none solid solid; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); line-height: 24px; padding: 8px;}
+#detail .td2{font-family: arial; margin-bottom: 10px;}
+/*日语教学优势——樱花国际日语-youshi.html*/
+#advantage{clear: both; width: 730px; margin-bottom: 15px; vertical-align: middle; padding-top: 20px; padding-bottom: 20px; padding-right: 15px; font-family: 微软雅黑;font-size:16px; background-color: rgb(253, 239, 245);}
+.advantage_pic{float: left; width: 110px; padding-left: 40px;}
+.red14B{font-size: 14px; font-family: 微软雅黑, Times, serif; line-height: 30px; color: rgb(236, 0, 140); font-weight: bold;}
+.blk14_h30{font-size: 14px; font-family: 微软雅黑, Times, serif; line-height: 30px; color: rgb(102, 102, 102);}
+/*日语教师丨日语老师——樱花国际日语-jiaoshi.html*/
+.red16B_lh50{font-size:16px;font-family:微软雅黑, Times, serif;line-height:50px;color:#EC008C;font-weight:bold;}
+.blk14_h30_co66{font-size:14px;font-family:微软雅黑, Times, serif;line-height:30px;color:#666666;}
+.fs16{font-family:微软雅黑;font-size:16px;}
+#table_teacher_left{text-align:center;}
+.span_red14B{font-size:14px;font-family:微软雅黑, Times, serif;line-height:30px;color:#EC008C;font-weight:bold;}
+#teacher_detail{font-size:12px;color:#999999;text-align:left;margin-left:5px;padding:10px;background-color:#F2F2F2;}
+.fs12_color999{font-size:12px;color:#999999;text-align:left;margin-left:5px;padding:10px;background-color:#F2F2F2;}
+.name{color:#EC008C;font-size:14px;border:1px solid #CCCCCC;text-align:center;font-weight:bold;background-color:#FFFFFF;}
+.str_colEC0{font-family:微软雅黑, sans-serif;color:#EC008C;}
+.str_fs16{font-size:16px;}
+.fs85pt{font-size:8.5pt;font-family:宋体;color:#666666;}
+.fs7pt{font-size:7pt;}
+.ff_col666{font-size: 8.5pt;color:#666666;}
+/*日语学习效果保障——樱花国际日语-baozhang.html*/
+.red14_h30{font-size: 14px; font-family: 微软雅黑, Times, serif; color: rgb(236, 0, 140);}
+.span_fs85pt{font-size: 8.5pt; font-family: 微软雅黑, sans-serif; color: rgb(236, 0, 140);}
+.span_fs14{font-size:14px;font-family: 微软雅黑, sans-serif; color: rgb(236, 0, 140);}
+.fs14_rgb102{font-size:14px;font-family: 微软雅黑, sans-serif; color: rgb(102, 102, 102);}
+.font14{font-size: 14px;}
+.line{border-bottom-width: 1px; border-bottom-style: dotted; border-bottom-color: rgb(204, 204, 204); padding-right: 10px; padding-left: 10px; margin-bottom: 15px; margin-top: 20px; font-family: 微软雅黑;font-size:16px;}
+/*日语学习学员心得——樱花国际日语-xinde.html*/
+.clear{clear:both;}
+/*申请免费日语课程——樱花国际日语-mianfei.html*/
+.apply{width: 1090px;padding-top: 0px;clear: both;height: auto;overflow: hidden;border: 1px solid #CCC;margin-top: 0;margin-right: auto;margin-bottom: 20px;margin-left: auto;padding-bottom: 0px;}
+.apply_content{width: 1090px;padding-right: 20px;padding-left: 20px;padding-top: 20px;}
+.blu14_h24{font-size: 14px;font-family: "微软雅黑", Times, serif;line-height: 24px;color: #8097cc;text-decoration: none;}
+.blu14{font-size: 14px;font-family: "微软雅黑", Times, serif;color: #8097cc;text-decoration: none;}
+.wht14{font-size: 14px;font-family: "微软雅黑", Times, serif;color: #fff;text-decoration: none;}
+a.wht14:hover{font-size: 14px;font-family: "微软雅黑", Times, serif;color: #ec008c;text-decoration: underline;}
+.bg_apply{padding: 30px;height: 321px;width: 990px;background-image: url(../images/bg.gif);background-repeat: no-repeat;margin-top: 15px;margin-bottom: 15px;}
+.bg_apply_left{width: 380px;margin-right: 30px;float: left;}
+.bg_apply_right{width: 580px;float: left;}
+.bg_blue{background-color: #dae7ef;padding: 15px;margin-top: 10px;font-size: 14px;font-family: "微软雅黑", Times, serif;line-height: 30px;color: #666;text-decoration: none;}
+.bg_gry{background-color: #f2f2f2;padding: 10px;margin-top: 10px;font-size: 14px;font-family: "微软雅黑", Times, serif;line-height: 22px;color: #666;text-decoration: none;}
+.bg_blk{background-color: #787878;padding: 20px;margin-top: 10px;font-size: 14px;font-family: "微软雅黑", Times, serif;line-height: 22px;color: #fff;text-decoration: none;width: 1090px;}
+.bg_text{margin-top: 40px;font-size: 14px;font-family: "微软雅黑", Times, serif;width: 500px;color: #FFF;text-decoration: none;background-image: url(../images/bg_text.gif);background-repeat: no-repeat;text-align: center;height: 27px;margin-left: 50px;}
+.left01{width: 152px;margin-right: 40px;float: left;}
+.left02{width: 230px;margin-right: 30px;float: left;}
+.left03{width: 450px;margin-right: 30px;float: left;}
+.list_apply{width: 300px;overflow: hidden;margin-bottom: 20px;}
+.btn_apply{background-image: url(../images/btn_apply.gif);height: 30px;width: 134px;text-align: center;border: 0px;margin-left: 45px;margin-top: 10px;cursor: pointer;font-family: "微软雅黑";font-size: 14px;color: #FFF;}
+.icon_apply{clear: both;overflow: hidden;}
+.icon_apply ul{list-style: none;margin: 0px;padding: 5px;}
+.icon_apply ul li{text-align: center;float: left;width:205px;border-right-width: 1px;border-right-style: dotted;border-right-color: #CCC;}
+.apply_content p{line-height: 22px;}
+.pad_bot10{padding-bottom: 10px}
+.select{width:150px; height:23px;}
+.icon_apply .wid150{width:150px;}
+.bor_hid{border:hidden;}
+.left{float: left;}
+.mar_lef10{float: left;margin-left: 10px;}
+.pad10_mar400{padding-bottom: 10px; margin-left: 400px;}
+.mar_rig50{float: right; margin-right: 50px;}
+.martop10_marbot10{margin-top: 10px; margin-bottom: 10px;}
+/*日语培训中心丨日语培训机构丨日语培训学校——樱花国际日语-center.html*/
+.center{text-align: center;}
+#map{font-size:16px;font-family:微软雅黑;}
+/*上海人民广场日语培训班丨上海人民广场日语培训学校丨上海人民广场学日语——樱花国际日语-renminguangchang。html*/
+#login_main #tj{margin-top: 10px;}
+#detail .map1{height: 480px;width: 550px;border: 1px solid rgb(188, 188, 188);float: left;overflow: hidden;position: relative;
+	z-index: 0;background-color: rgb(243, 241, 236);color: rgb(0, 0, 0);text-align: left;}
+/*日语多媒体基础课——樱花国际日语-duomeiti.html*/
+.text_dec{text-decoration: none;}
+/*海外课程和文化体验——樱花国际日语-haiwai.html*/
+.wid200{border:0;width:200px;}
+.span_lh50{color:#ec008c;font-family:微软雅黑, Times, serif;line-height: 50px;}
+/*申请免费日语测试——樱花国际日语-riyuceshi.html*/
+#login_test .citys{width:168px; height:30px;}
+.pad_lef30{float: left;padding-left: 30px;}
+/*樱花学员——樱花国际日语-xueyuan.html*/
+.wid_100{width: 100%;}
+.jiaru{color:rgb(236, 0, 140)}
+#jwplayer{background: transparent !important; margin:0 auto; width:720px; height:540px; overflow:hidden;}
+.xueyuan{color: rgb(236, 0, 140); font-family: 微软雅黑, Times, serif; font-weight: bold; line-height: 50px; white-space: normal;}
+.fs14_lh30_col59{font-family: 微软雅黑, Times, serif; font-size: 14px; line-height: 30px; white-space: normal;color:#595959}
+.wid220_he153{width: 220px; height: 153px;}
+.wid203_he153{width: 203px;height: 153px;}
+.wid197_he153{width: 197px;height: 153px;}
+/*特惠活动——樱花国际日语-tehui.html*/
+#activity #list_right .font_pad50{padding:5px 0px;}
+.img_cursor{cursor:pointer}
+.wid750_pad13{width:750px;padding-left:13px;height:auto; overflow:hidden;}
+/*日语培训专题活动——樱花国际日语-zhuanti.html*/
+#activity_left.wid734{padding:0px;border:0px;width:734px;}
+/*日本游学丨日本游学机构丨日本游学团——樱花国际日语-youxue.html*/
+#nav{height:5px;}
+.mar_top20{margin-top: 20px;}
+.wid480_flo{width: 470px; float: left;}
+.product_picbox{margin-left: 15px;}
+.wid400_flo{width: 400px; float: left;}
+#footer.foot{width: 100%;}
+/*【樱花日语培训问答】最全面的日语培训费用、机构、方法等信息——樱花国际日语-question.html*/
+.top1{position:relative;z-index:1}
+#nav_main.wid_1000{width: 1000px;}
+#nav_right.wid_300{width:300px;position:relative;}
+#nav_right .dingzhi1{background:none;color:#FFF;position:absolute;left:-100px;display:block;}
+#dingzhisub{position:absolute;left:-120px;top:34px;z-index:9999;display:none;}
+#nav_right li a{color: #FFFFFF;background: #f358b4;line-height:35px;height:35px;}
+.mar_lef30{margin-left:30px;}
+.tag{background:#FFF;}
+.wenzhangtags_6736{padding:0;margin:0;}
+.text-center{width:500px;margin:20px auto;}
+.wenda{margin:0 auto}
+/*【樱花日语培训百科】最全面的日语培训人物、机构、资源、学校等信息——樱花国际日语-baike.html*/
+#dingzhisub.sub1{left:96px;}
+/*footer*/
+#footer{background:#CCC;width:100%;}
+#menu2{padding-top:6px;}
+.beizhu{display:block;width:100%; margin:0 auto; font-size:12px; line-height:20px; color:#575757;text-align:center;}
+/*myModal*/
+
+#myModal{position:fixed;}
+.reveal-modal-bg { position: fixed; height: 100%; width: 100%; z-index: 100; display: none; top: 0; left: 0; background:rgba(00, 00, 00, 0.5) }
+/* .reveal-modal { visibility: hidden; top: 120px; left: 50%; margin-left: -300px; width: 520px; position: absolute; z-index: 101; padding: 30px 40px 34px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); -box-shadow: 0 0 10px rgba(0,0,0,.4); background-color: #fff;    } */
+.reveal-modal { visibility: hidden; top: 120px; left: 50%; margin-left: -300px; width: 520px; position: absolute; z-index: 101;  -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; -moz-box-shadow: 0 0 10px rgba(0,0,0,.4); -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4); -box-shadow: 0 0 10px rgba(0,0,0,.4); background-color: #FFF;    }
+.reveal-modal.small { width: 200px; margin-left: -140px;}
+.reveal-modal.medium { width: 400px; margin-left: -240px;}
+.reveal-modal.large { width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge { width: 840px; margin-left: -470px;}
+.reveal-modal .close-reveal-modal { font-size: 22px; line-height: 0.5; position: absolute; top: 8px; right: 11px; color: #333; text-shadow: 0 -1px 1px rbga(0,0,0,.6); font-weight: bold; cursor: pointer;    } 
+.pop{font-family: "微软雅黑";font-size: 14px;line-height: 30px;color: #333;background-image: url(/templates/main/images/bg_pop.gif);background-repeat: no-repeat;background-position: right bottom;height: 400px;width: 720px;border: 10px solid #ffd6ee;padding: 10px 70px 30px 30px;}
+.topsheng{width:100%; margin-top:20px;}
+.topsheng ul{padding:0;margin:0;}
+.topsheng ul li{float:left;padding-right:20px;}
+.topsheng ul li a{color:#ec008c;font-size:16px; font-weight:bold; }
+
+.topcity{width:100%;margin-top:5px;}
+.topcity .toparea{}
+.topcity .redpop{
+    float:left;
+    font-size: 16px;
+    font-family: "微软雅黑", Times, serif;
+    line-height: 30px;
+    color: #ec008c;
+    text-decoration: none;
+    font-weight: bold;
+
+    background-color: #fff3fa;
+}
+.redpop{
+    float:left;
+    font-size: 16px;
+    font-family: "微软雅黑", Times, serif;
+    line-height: 30px;
+    color: #ec008c;
+    text-decoration: none;
+    font-weight: bold;
+
+    background-color: #fff3fa;
+}
+.topcity ul{padding:0;margin-left:20px; float:left;}
+.topcity ul li{float:left;margin-left:10px;margin-right:10px;}
+.topcity ul li a{font-size:14px; font-family:"微软雅黑";}
+
+.line_pop{border-bottom-width: 1px;border-bottom-style: dotted; border-bottom-color: #ffd6ee;margin-bottom: 10px;margin-top: 10px;}
+.btn_close{float: right; }
+
+
+.question .slideBox{ width:700px; height:240px; overflow:hidden; position:relative;}
+.question .slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.question .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.question .slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer;border-radius:50%; }
+.question .slideBox .hd ul li.on{ background:#f00; color:#fff;  border-radius:50%;}
+.question .slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.question .slideBox .bd li{ zoom:1; vertical-align:middle; }
+.question .slideBox .bd img{ width:700px; height:240px; display:block;  }
+.question .slideBox .prev,
+.question .slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+.question .slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+.question .slideBox .prev:hover,
+.question .slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+.question .slideBox .prevStop{ display:none;  }
+.question .slideBox .nextStop{ display:none;  }

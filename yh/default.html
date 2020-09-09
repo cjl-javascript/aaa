@@ -1,0 +1,264 @@
+﻿$set(citycode=cmd.QueryString("cityid","quanguo"))
+$set(cityid=cmd.GetCityId(citycode))
+$cmd.SetCookie("cityid",citycode)
+$if(cmd.IsNullOrEmpty(cmd.GetCookie("cityid")))
+     $set(modelcity=cmd.GetCityModel(citycode))
+$else
+    $set(modelcity=cmd.GetCityModel(cmd.GetCookie("cityid")))
+$end
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   $if(citycode=="quanguo")
+    <title>$site.seo_title</title>
+    <meta name="keywords" content="$site.seo_keywords" />
+    <meta name="Description" content="$site.seo_description" />
+    $else
+<title>$modelcity.seotitle</title>
+<meta name="keywords" content="$modelcity.seokeywords" />
+  <meta name="Description" content="$modelcity.seodescription" />
+$end
+<link  rel="shortcut icon" href="/templates/main/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="/templates/main/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="/templates/main/css/word.css"/>
+<link rel="stylesheet" type="text/css" href="/templates/main/css/sakura.css"/>
+<script type="text/javascript" src="/templates/main/js/jquery.min.js" ></script>
+<script type="text/javascript" src="/templates/main/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="/templates/main/js/jquery.SuperSlide.2.1.1.source.js"></script>
+<script type="text/javascript" src="/templates/main/js/common.js"></script>
+<script type="text/javascript" src="/templates/main/js/jquery.reveal.js"></script>
+<script src="/templates/main/layer/layer.js"></script>
+<script src="/templates/main/js/yzm.js"></script>
+</head>
+
+<body>
+$Load("dialog.html")
+<div id="top">
+  $Load("_header.html")
+<div id="nav">
+    $Load("_Navigation.html")
+</div>
+</div>
+<div id="banner">
+	<div id="banner_pic">
+		<div id="slideBox" class="slideBox">
+			<div class="hd">
+			   <ul>
+					  $if(citycode=="zhejiang")
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid=7","sortid asc,ID desc"))
+					  $elseif(citycode=="shandong")
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid=17","sortid asc,ID desc"))
+					  $elseif(citycode=="fujian")
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid=22","sortid asc,ID desc"))
+					  $elseif(citycode=="jiangsu")
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid=6","sortid asc,ID desc"))
+					  $elseif(citycode=="guangdong")
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid=4","sortid asc,ID desc"))
+					  $else
+						$set(banner=cmd.Execute(0,"sk_banner","ID,title,IndexPic,linkurl"," groupid=1 and islock=1 and cityid="+cityid,"sortid asc,ID desc"))
+                      $end
+					  $foreach(item in banner)
+                      <li></li>
+                      $end  
+                </ul>
+			</div>
+			<div class="bd">
+				<ul>  
+					
+                    $foreach(item in banner)
+                         <li><a href="$item.linkurl" rel="nofollow" target="_blank"><img src="$item.IndexPic" /></a></li>
+                    $end  
+				</ul>
+			</div>
+			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+	</div>
+    <script type="text/javascript">
+			jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+    </script>
+   <div id="login">
+    	<div id="login_top"><img src="/templates/main/images/pic_login.jpg" /></div>
+        $load("regiser.html")
+   </div> 
+</div>
+<div id="main">
+	<div id="left">
+	$if(citycode=="quanguo")
+   <div id="about us" class="cityMap">
+    <br />
+       <img src=" /templates/main/images/index_32.gif" usemap="#Map" alt="樱花国际日语" />
+        <map name="Map" id="Map">
+        <area shape="rect" coords="250, 74, 282, 93" href="/-dalian/"  target="_blank"/>
+        <area shape="rect" coords="189, 90, 221, 108" href="/-beijing/"target="_blank" />
+        <area shape="rect" coords="253, 125, 286, 144" href="/-qingdao/" target="_blank"/>
+        <area shape="rect" coords="198, 109, 230, 127" href="/-tianjin/" target="_blank"/>
+        <area shape="rect" coords="207, 133, 242, 151" href="/-nanjing/" target="_blank"/>
+        <area shape="rect" coords="255, 148, 291, 165" href="/-nantong/" target="_blank" />
+        <area shape="rect" coords="210, 150, 241, 166" href="/-suzhou/" target="_blank" />
+        <area shape="rect" coords="226, 165, 257, 181" href="/-wuxi/" target="_blank" />
+        <area shape="rect" coords="269, 163, 301, 181" href="/-shanghai/" target="_blank" />
+        <area shape="rect" coords="219, 181, 253, 198" href="/-hangzhou/" target="_blank" />
+        <area shape="rect" coords="268, 189, 305, 209" href="/-ningbo/" target="_blank"/>
+        <area shape="rect" coords="151,184,184,203" href="/-chongqing/" target="_blank"/>
+        <area shape="rect" coords="186,183,219,203" href="/-wuhan/" target="_blank"/>
+        <area shape="rect" coords="178, 220, 212, 238" href="/-guangzhou/" target="_blank"/>
+        <area shape="rect" coords="223, 244, 259, 266" href="/-shenzhen/" target="_blank"/>
+        <area shape="rect" coords="131, 159, 168, 180" href="/-chengdu/" target="_blank"/>
+        <area shape="rect" coords="222,203,256,222" href="/-xiamen/" target="_blank" />
+        <area shape="rect" coords="177,150,210,168" href="/-kunshan/" target="_blank" />
+        <area shape="rect" coords="195,166,227,183" href="/-hefei/" target="_blank" />
+        <area shape="rect" coords="176,133,207,152" href="/-changzhou/" target="_blank"/>
+        <area shape="rect" coords="184,238,219,257" href="/-foshan/" target="_blank"/>
+        <area shape="rect" coords="266,208,303,229" href="/-fuzhou/" target="_blank"/>
+        <area shape="rect" coords="193,203,223,219" href="-changsha/"  target="_blank"/>
+        </map>
+  </div>
+	$else
+	<div id="about us">
+		<div id="main_title">
+		$modelcity.cityname樱花
+		</div>
+		<div id="about_main">
+		<span class="blk12_h22">　　
+		樱花国际日语始终相信舒适的学习环境与教学系统同样重要，因此，我们在硬件设施上的投资超过其他任何一所学校。
+		</span>
+		<span class="red12_h22"><a href="/yinghuaguojiriyu/" target="_blank" rel="nofollow">[更多]</a></span></div>
+		<div id="about_main_sub">
+				  <ul>
+						$set(center=cmd.Execute("select * from sk_city where parentid="+cityid+" order by sortid asc"))
+						$foreach(item in center)
+						<li><h3><a href="/$citycode/${item.citycode}.html" target="_blank">$item.cityname.replace("中心","")</a></h3></li>
+						$end
+					
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+	$end
+  <div id="feature">
+    	<div id="main_title">个人学习</div>
+    	<div class="feature_top"><img src="/templates/main/images/ps.jpg" /></div>
+        <div class="ps">
+            <a href="/xuexifa/" target="_blank"><img class="ps_01" src="/templates/main/images/ps1.jpg" alt="独创多维学习法" rel="nofollow" title="独创多维学习法" /></a>
+            <a href="/duomeiti/" target="_blank"><img src="/templates/main/images/ps2.jpg" alt="原创多媒体基础课" rel="nofollow" title="原创多媒体基础课" /></a>
+            <a href="/xiaobanke/" target="_blank"><img src="/templates/main/images/ps3.jpg" alt="日式1-4人小班课" rel="nofollow" title="日式1-4人小班课" /></a>
+        </div>
+  </div>
+    <div id="main_title">热门动态</div>
+    <div class="list">
+	   <ul id="list_ul">        
+        $set(question=cmd.Execute("select top 6 id,category_id,cityid,title,tags,zhaiyao,content,add_time from sk_channel_article_question order by NEWID() "))
+        $foreach(item in question)
+		 ${set(node=cmd.GetCateModel(" id="+item.category_id))}
+		 <li><span class="reMenDongTai_span">[$cmd.DateFormat(item.add_time.ToString(),0)]</span> 
+		 <a href="/question/$node.call_index/${item.id}.html" target="_blank">
+		 $if(item.title.Length>20)
+			$item.title.SubString(0,18) ...
+		 $else
+			$item.title
+		 $end
+		 </a></li>    
+		$end
+       </ul>
+	</div>
+</div>
+	<div id="right" class="fgs">
+		<div id="main_act_totle">
+      <div id="main_title_1">精彩活动</div>
+      <div id="main_act_btn">
+        <div class="hd">
+            <a  href="javascript:" class="next"><img src="/templates/main/images/btn_left.jpg"></a>
+            <a  href="javascript:" class="prev"><img src="/templates/main/images/btn_right.jpg"></a>
+        </div>
+      </div>
+    </div>
+		<div class="txtScroll-left">
+    <div class="scrleft">
+    <div class="bds">
+        <ul>    
+
+            $if(citycode=="fujian")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=22 order by id desc"))
+            $elseif(citycode=="shandong")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=17 order by id desc"))
+			$elseif(citycode=="zhejiang")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=7 order by id desc"))
+			$elseif(citycode=="jiangsu")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=6 order by id desc"))
+			$elseif(citycode=="guangdong")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=4 order by id desc"))
+            $elseif(citycode=="quanguo")
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid=1  order by id desc"))
+			$else
+				$set(actlist=cmd.Execute("select id,cityid,category_id,title,call_index,img_url,link_url,add_time,[address], acttime from sk_channel_article_tehui where channel_id=19 and category_id=64 and cityid="+cityid+"  order by ID desc"))
+            $end
+            $foreach(item in actlist)
+            <li>
+                <div class="pic"><a href="/tehui.aspx/" target="_blank"><img alt="$item.title" width="122" height="82" title="$item.title" src="$item.img_url" /></a></div>
+                <div class="text">
+                    <span class="red14" >$item.title</span>
+                    <br />
+                    <font class="time">时间：$item.acttime</font>                   
+                    
+                    地点：$item.address
+                </div>
+            </li>
+            $end
+       </ul>
+    </div>
+    </div>
+</div>
+   <div class="clear"></div>
+		<script type="text/javascript">
+      jQuery(".fgs").slides({ titCell: ".hd ul", mainCell: ".bds ul", autoPage: true, effect: "top", autoPlay: true, vis: 10, easing: "easeOutCirc" });
+    </script>
+
+<div id="more">
+  <div id="main_title">更多内容</div>
+  <div class="hot">
+    <ul>
+	    <li><a href="javascript:void(0)" onclick="Diloag('学习礼物', 670, 650, '/aa.aspx')"><img src="/templates/main/images/more_1.jpg" alt="学习礼物" title="学习礼物"></a></li>
+	    <li><a href="/riyuceshi/" class="aa"><img src="/templates/main/images/more_2.jpg" alt="申请日语水平测试" title="申请日语水平测试"></a></li>
+	    <li><a href="/mianfei/" class="aa"><img src="/templates/main/images/more_3.jpg" alt="预约外教试听课" title="预约外教试听课"></a></li>
+	    
+		$if(citycode=="guangzhou" || citycode=="shenzhen" || citycode=="foshan" || citycode=="guangdong")
+		  <li><a href="/public/hd_gd/hd_gd.html " class="aa" id="more_4_url"><img id="more_4" src="/templates/main/images/more_4.jpg" alt="商户联合活动" title="商户联合活动"></a></li>
+		  
+	   $else
+	      <li><a href="/tehui/" class="aa" id="more_4_url"><img id="more_4" src="/templates/main/images/more_4.jpg" alt="商户联合活动" title="商户联合活动"></a></li>
+    
+	   $end
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>
+
+ </div>
+	<div id="link">
+    <div id="main_title">合作商户</div>
+    <div class="pic_link">
+        <img src="/templates/main/images/201504030240072453.gif" alt="松下" title="松下">  
+        <img src="/templates/main/images/201504030240245701.gif" alt="亦竹" title="亦竹">
+        <img src="/templates/main/images/201504030240518018.gif" alt="三菱" title="三菱">
+        <img src="/templates/main/images/201504030241155186.gif" alt="Kanebo" title="Kanebo">
+        <img src="/templates/main/images/201504030241351465.gif" alt="卡西欧" title="卡西欧">
+        <img src="/templates/main/images/201504030241528384.gif" alt="佳能" title="佳能">
+        <img src="/templates/main/images/201504030242171714.gif" alt="妮飘" title="妮飘">
+        <img src="/templates/main/images/201504030242372902.gif" alt="夏普" title="夏普">
+        <img src="/templates/main/images/201504030243081282.gif" alt="美合利" title="美合利">
+        <img src="/templates/main/images/201504030243275983.gif" alt="jpseek.com" title="jpseek.com">
+        <img src="/templates/main/images/201504030243495742.gif" alt="avexa" title="avexa">
+        <img src="/templates/main/images/201504030244048118.gif" alt="NEC" title="NEC">
+    </div>
+</div>
+</div>
+    <div class="clear"></div>
+    $load("_footer.html")
+</body>
+
+</html>

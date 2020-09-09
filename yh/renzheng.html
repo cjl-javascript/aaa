@@ -1,0 +1,198 @@
+﻿$set(citycode=cmd.QueryString("cityid","quanguo"))
+$set(cityid=cmd.GetCityId(citycode))
+$set(channel_id=14)
+$set(model=cmd.GetCateModel(" channel_id="+channel_id+" and id=55"))
+$if(cmd.IsNullOrEmpty(cmd.GetCookie("cityid")))
+     $set(modelcity=cmd.GetCityModel(citycode))
+$else
+    $set(modelcity=cmd.GetCityModel(cmd.GetCookie("cityid")))
+$end
+${if(cmd.IsNullOrEmpty(model))}
+    <h1>此栏目不存在！</h1>
+${else}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>${model.seo_title}——樱花国际日语</title>
+    <meta name="keywords" content="${model.seo_keywords}" />
+    <meta name="description" content="${model.seo_description}" />
+
+    <link rel="shortcut icon" href="/templates/main/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/word.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/jiathis_share.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/inside.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/sakura.css" />
+    <script type="text/javascript" src="/templates/main/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/templates/main/layer/layer.js"></script>
+    <script type="text/javascript" src="/templates/main/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/templates/main/js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="/templates/main/js/common.js"></script>
+    <script src="/templates/main/js/yzm.js"></script>
+</head>
+<body>
+    $Load("dialog.html")
+    <div id="top">
+        $Load("_header.html")
+        <div id="nav">
+            $Load("_Navigation.html")
+        </div>
+    </div>
+
+    <div id="inside">
+        <div id="inside_left">
+            <div id="pic"><img alt="" src="/templates/main/images/201505150511299579.jpg" /> </div>
+            <div id="content">
+                <div class="column">
+                    <div id="ckepop">
+                        <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                        <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                        <a class="jiathis_button_kaixin001" title="分享到开心网"><span class="jiathis_txt jtico jtico_kaixin001"></span></a>
+                        <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                        <a href="#" rel="nofollow" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"><span id="more_lh18" class="blk12_h22">更多</span></a>
+                    </div>
+                    <span class="blk12_h26">
+                        <h3 class="left">当前位置：</h3>
+                        <h3 class="left"><a href="/">首页</a> &gt; </h3>
+                        <h3 class="left"> <a href="/yinghuaguojiriyu/">樱花国际日语</a> &gt;</h3>
+                        <h3 class="left"> 权威认证</h3>
+                        <div class="clear"></div>
+                    </span>
+                </div>
+                <div id="detail">
+                    <div id="detail_left">
+                        <img src="/templates/main/images/201504160407213733.jpg" alt="" /><br />
+                    </div>
+                    <p>
+                        <span class="red16B"> 2010“回响中国”腾讯网教育年度总评榜</span><span class="blk14_h30"><br />&emsp;&emsp;12月15日，2010“回响中国”腾讯网教育年度总评榜颁奖仪式在北京香格里拉酒店举行。该活动由腾讯网主办，中国教育电视台、CCTV中学生频道、中国教育新闻网联合协办，新世界教育集团、樱花国际日语做为本次参选的全国领先日语教育机构，分别获得“中国十佳最具品牌价值小语种培训机构”奖，不言而喻，得到本次奖项，是历年来新世界教育与樱花国际日语取得的成绩与行业口碑得到了广.....<a href="#" class="blk14_h30">更多&gt;&gt;</a></span>
+                    </p>
+                    <div id="auth_news">
+                        <ul class="list_time">
+                            <li>
+                                2009樱花国际日语获十佳小语种品牌奖 [2015-02-11]
+                            </li>
+                            <li>
+                                回响中国获奖访谈--新世界教育总裁 [2015-02-11]
+                            </li>
+                            <li>
+                                新世界教育最具影响力教育集团奖 [2015-02-11]
+                            </li>
+                            <li>
+                                樱花国际日语MSN频道上线 [2015-02-11]
+                            </li>
+                        </ul>
+                    </div>
+                    <p><br /></p>
+                    <div class="bg_auth">
+                        <span class="red16B">樱花国际日语在全国的发展</span><br />
+                        <span class="red14_h30">2007年03月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语上海徐家汇中心开业。<br /></span>
+                        <span class="red14_h30">2007年06月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语上海虹桥中心开业。<br /></span>
+                        <span class="red14_h30">2007年07月</span><span class="blk14_h30">
+                            &emsp;&emsp;樱花国际日语大连天安中心开业。<br />
+                            &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;樱花在大连顶级CBD区的顶级写字楼开业，<br />
+                            &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;树立了樱花在二线城市培训业市场最高端的旗帜。<br />
+                        </span>
+                        <span class="red14_h30">2007年09月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语北京国贸中心开业。在北方区打下第一个支点。<br /></span>
+                        <span class="red14_h30">2007年09月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语上海八佰伴中心和北京国贸中心同时开业。<br /></span>
+                        <span class="red14_h30">2007年11月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语人民广场中心开业。坐落于上海市中心的黄金地段<br /></span>
+                        <span class="red14_h30">2007年12月</span><span class="blk14_h30">&emsp;&emsp;樱花国际日语苏州友邦中心开业。<br /></span>
+                        <span class="red14_h30">2008年01月</span><span class="blk14_h30">
+                            &emsp;&emsp;樱花国际日语北京中关村中心、青岛世纪大厦中心、广州天河中心、<br />
+                            &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;深圳福田中心先后开幕。<br />
+                            &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;樱花在全国的版图进一步扩大。<br />
+                        </span>
+                        <span class="red14_h30">2008年02月</span><span class="blk14_h30">&emsp;&emsp;杭州标立中心。<br /></span>
+                        <span class="red14_h30">2008年03月</span><span class="blk14_h30">&emsp;&emsp;无锡中心开业。<br /></span>
+                        <span class="red14_h30">2008年05月</span><span class="blk14_h30">
+                            &emsp;&emsp;北京东方广场中心、上海五角场中心，<br />
+                            &emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;两所中心都坐落于大学集中圈区域，他们的成功标志着樱花在学生群体中的欢迎。<br />
+                        </span>
+                        <span class="red14_h30">2008年06月</span><span class="blk14_h30">&emsp;&emsp;深圳南山中心开业。<br /></span>
+                        <span class="red14_h30">2008年10月</span><span class="blk14_h30">&emsp;&emsp;宁波中心和广州大马站中心相继开业。<br /></span>
+                        <span class="red14_h30">2010年03月</span><span class="blk14_h30">&emsp;&emsp;南通中心、天津中心、南京中心陆续开业。<br /></span>
+						<span class="red14_h30">2010年05月</span><span class="blk14_h30">&emsp;&emsp;深圳金中环中心开业。<br /></span>
+                        <span class="red14_h30">2010年12月</span><span class="blk14_h30">&emsp;&emsp;重庆中心开业。 </span><br />
+						<span class="red14_h30">2011年12月</span><span class="blk14_h30">&emsp;&emsp;合肥中心、杭州恒励中心开业。<br /></span>
+						<span class="red14_h30">2012年01月</span><span class="blk14_h30">&emsp;&emsp;昆山中心、北京招商局中心开业。<br /></span>
+						<span class="red14_h30">2012年03月</span><span class="blk14_h30">&emsp;&emsp;上海中山公园中心、广州易发街中心开心。<br /></span>
+						<span class="red14_h30">2012年04月</span><span class="blk14_h30">&emsp;&emsp;武汉中心开业。<br /></span>		
+						<span class="red14_h30">2014年04月</span><span class="blk14_h30">&emsp;&emsp;常州中心开业。<br /></span>
+						<span class="red14_h30">2014年05月</span><span class="blk14_h30">&emsp;&emsp;温州中心开业。<br /></span>
+						<span class="red14_h30">2015年05月</span><span class="blk14_h30">&emsp;&emsp;西安中心开业。<br /></span>				
+						<span class="red14_h30">2015年10月</span><span class="blk14_h30">&emsp;&emsp;南昌中心、沈阳中心开业。<br /></span>
+						<span class="red14_h30">2017年11月</span><span class="blk14_h30">&emsp;&emsp;武汉光谷中心开业。<br /></span>
+						<span class="red14_h30">2018年01月</span><span class="blk14_h30">&emsp;&emsp;镇江中心开业。<br /></span>
+						<span class="red14_h30">2018年02月</span><span class="blk14_h30">&emsp;&emsp;南京江宁中心开业。<br /></span>
+						
+
+<span class="red14_h30">2018年5月<span class="blk14_h30">&emsp;&emsp;昆明中心、杭州转塘中心开业<br /></span>
+<span class="red14_h30">2018年7月<span class="blk14_h30">&emsp;&emsp;贵阳中心开业<br /></span>
+<span class="red14_h30">2018年9月<span class="blk14_h30">&emsp;&emsp;长春中心开业<br /></span>
+<span class="red14_h30">2019年4月<span class="blk14_h30">&emsp;&emsp;烟台中心、徐州中心开业<br /></span>
+<span class="red14_h30">2019年12月<span class="blk14_h30">&emsp;&emsp;南宁中心开业	<br /></span><br />
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="about_parnter">
+                <span class="red16B">企业合作伙伴</span><br /><br />
+                <ul>
+
+                    <li><img alt='松下' src="/templates/main/images/201504030240072453.gif" /></li>
+
+                    <li><img alt='亦竹' src="/templates/main/images/201504030240245701.gif" /></li>
+
+                    <li><img alt='三菱' src="/templates/main/images/201504030240518018.gif" /></li>
+
+                    <li><img alt='Kanebo' src="/templates/main/images/201504030241155186.gif" /></li>
+
+                    <li><img alt='卡西欧' src="/templates/main/images/201504030241351465.gif" /></li>
+
+                    <li><img alt='佳能' src="/templates/main/images/201504030241528384.gif" /></li>
+
+                    <li><img alt='妮飘' src="/templates/main/images/201504030242171714.gif" /></li>
+
+                    <li><img alt='夏普' src="/templates/main/images/201504030242372902.gif" /></li>
+
+                    <li><img alt='美合利' src="/templates/main/images/201504030243081282.gif" /></li>
+
+                    <li><img alt='jpseek.com' src="/templates/main/images/201504030243275983.gif" /></li>
+
+                    <li><img alt='avexa' src="/templates/main/images/201504030243495742.gif" /></li>
+
+                    <li><img alt='NEC' src="/templates/main/images/201504030244048118.gif" /></li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="inside_right">
+            <div id="login_1">
+                <div id="login_top"><img src="/templates/main/images/pic_login.jpg" /></div>
+                $load("regiser.html")
+            </div>
+            <div id="frame">
+                <div id="menu">
+                    <h3 class="subtitle"><span>樱花国际日语</span></h3>
+                    <ul>
+                        ${catelist=cmd.Execute("select id,title,call_index from sk_article_category where channel_id="+channel_id)}
+                        ${foreach(item in catelist)}
+                        $if(model.id==item.id)
+                        <li><a class="hover" href="/${item.call_index}/" rel="nofollow">${item.title}</a></li>
+                        $else
+                        <li><a href="/${item.call_index}" rel="nofollow">${item.title}</a></li>
+                        $end
+                        ${end}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    $load("_footer.html")
+
+</body>
+</html>
+${end}

@@ -1,0 +1,220 @@
+﻿$set(citycode=cmd.QueryString("cityid","quanguo"))
+$set(cityid=cmd.GetCityId(citycode))
+$set(channel_id=15)
+
+$if(cmd.IsNullOrEmpty(cmd.GetCookie("cityid")))
+     $set(modelcity=cmd.GetCityModel(citycode))
+$else
+    $set(modelcity=cmd.GetCityModel(cmd.GetCookie("cityid")))
+$end
+$set(model=cmd.GetCateModel(" channel_id="+channel_id+" and id=59"))
+${if(cmd.IsNullOrEmpty(model))}
+<h1>此栏目不存在！</h1>
+${else}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>${model.seo_title}——樱花国际日语</title>
+    <meta name="keywords" content="${model.seo_keywords}" />
+    <meta name="description" content="${model.seo_description}" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/word.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/jiathis_share.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/inside.css" />
+    <link rel="stylesheet" type="text/css" href="/templates/main/css/sakura.css" />
+    <script type="text/javascript" src="/templates/main/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/templates/main/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/templates/main/js/jquery.reveal.js"></script>
+    <script type="text/javascript" src="/templates/main/js/common.js"></script>
+    <script type="text/javascript" src="/templates/main/layer/layer.js"></script>
+    <script src="/templates/main/js/yzm.js"></script>
+</head>
+<body>
+    $Load("dialog.html")
+    <div id="top">
+        $Load("_header.html")
+        <div id="nav">
+            $Load("_Navigation.html")
+        </div>
+    </div>
+    <div id="inside">
+        <div id="inside_left">
+            <div id="pic"><img alt="" src="/templates/main/images/201505150511299579.jpg" /> </div>
+            <div id="content">
+                <div class="column">
+                    <div id="ckepop">
+                        <a class="jiathis_button_qzone" title="分享到QQ空间"><span class="jiathis_txt jtico jtico_qzone"></span></a>
+                        <a class="jiathis_button_tsina" title="分享到微博"><span class="jiathis_txt jtico jtico_tsina"></span></a>
+                        <a class="jiathis_button_kaixin001" title="分享到开心网"><span class="jiathis_txt jtico jtico_kaixin001"></span></a>
+                        <a class="jiathis_button_renren" title="分享到人人网"><span class="jiathis_txt jtico jtico_renren"></span></a>
+                        <a href="#" rel="nofollow" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"><span id="more_lh18" class="blk12_h22">更多</span></a>
+                    </div>
+                    <span class="blk12_h26">
+                        <h3 class="left">当前位置：</h3>
+                        <h3 class="left"><a href="/">首页</a> &gt; </h3> 
+                         <h3 class="left"> <a href="/kecheng/">学习课程</a> &gt;</h3> 
+                        <h3 class="left"> 专业教师</h3>
+                        <div class="clear"></div>
+                    </span>
+                </div>
+                <div id="detail">
+                    <p>
+                        <span class="red16B_lh50">经验丰富的日语教师是系统的核心</span><br /><span>&emsp;</span><span class="blk14_h30_co66">
+                            &emsp;樱花国际日语拥有庞大的专业师资阵容，既有专业的外教老师，也有中国人教师。学员在学校里不仅学到的是单纯的语言，而是从风俗，礼节，文化，历史，地理等多角度在学习一门语言文化。外教老师经验丰富，除了拥有日本本国的教师资格外，还有些外教或拥有中文水平认证证书，或者会说流利的英语等。外教日语发音标准，能有效地锻炼口语和听力。中国人教师语法知识扎实，耐心十足，口语水平也不错，多位老师还有留日经历。特别是对于一些即将赴日的学员，会给出多方面的建议。&nbsp;<br />
+                            &emsp;&emsp;我们注重团队成员之间知识和经验的交流共享，经常开展培训和交流的活动。营造了一个激情、开放、平等、尊重、合作、创新的工作氛围，另老师们感到工作充实而愉快。&nbsp;<br />
+                            &emsp;&emsp;通过自主研发的多媒体课件，教师们把枯燥的课文演变成动漫的形式，配以纯正的日语发音，来进行基础单词、会话和语法的预习及复习。外教除具有丰富的教学经验以外，还具有深厚的日本文化底蕴，在花道、剑道、书法、茶道、空手道等方面都有一定的造诣。寓教于乐，让学生只要来到樱花就能体验到一种被日本文化包围的氛围中，轻松愉快地学习日语。
+                        </span><span class="fs16">&nbsp;</span>
+                    </p>
+                    <div id="table_teacher" class="fs16">
+                        <div id="table_teacher_left">
+                            <span class="span_red14B">日本外教</span><br />
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    小川恭史（おがわやすし）
+                                </div>
+                                愛知県出身、40歳。2009年から本校に勤めています。以前は日本企業の駐在員として上海で働いていました。私の経験や知識が日本語を学ぶ皆さんのお役に立てることを願っています。
+                            </div>
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    末光由和
+                                </div>
+                                有日企工作经验，熟悉日本企业内部流程。有强烈的存在感，上课认真负责，对各种流行及游戏颇有研究，每次文化课都能与学生展开丰富的话题。各个级别的课程都能得心应手。
+                            </div>
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    馬原&emsp;秀男
+                                </div>
+                                若いときに勉強して身につけたことは大人になっても消えない貴重な知的財産です。自分を大事にするなら今一緒に日本語を学んで一生の財産にしよう。桜にほんごで学んだことは今後様々な場面で役に立ち、皆様の人生を豊かで面白いものにしてくれるでしょう。
+                            </div>
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    佐藤亨
+                                </div>
+                                资深日语教师，有相当丰富的日语教学经验。知识渊博，精通各种日本文化，兴趣爱好广泛，上课风趣幽默，擅用各种身边的小玩具进行形象生动的教学，深受广大学员喜爱。目前负责中高级别课程及各种辅修课。<br /><br />
+                            </div>
+                        </div>
+                        <div id="table_teacher_right">
+                            <span class="red14B">中国助教</span>
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    杨晶
+                                </div>
+                                从事日语教学工作近7年，具有多年的日语教学经验，语法解析简洁明了，通俗易懂。生动形象地教授学生最地道最实用的日语。使学员在短期内就能轻松掌握。
+                            </div>
+                            <div id="teacher_detail">
+                                <div class="name">
+                                    王莹
+                                </div>
+                                在日本多年的留学经验于教学。上课严谨认真，耐心解答学生提出的问题。每堂课都对学员的优点以及不足进行点评，望其学有所成，助其精益求精。上课力求生动有趣，为学员创造轻松愉快的学习氛围，有时会加入肢体声音表演。目前可教授除翻译和商务日语之外的课程。
+                            </div>
+
+                        </div>
+                    </div>
+                    <p>
+                        <strong><span class="str_colEC0"><span class="str_fs16">&nbsp;强大专业的日本当地日语/留学教师</span></span></strong>
+                    </p>
+                    <p>
+                        <strong><span class="str_colEC0"><span class="str_fs16"><br /></span></span></strong>
+                    </p>
+                    <p>
+                        <span class="fs85pt"><span> </span>樱花国际日语与日本知名的留学升学私塾“名校志向塾”常年合作，具有相当专业和经验丰富的教师，帮助在日本的樱花学员学习日语，掌握留学升学考试的必要知识。</span>
+                    </p>
+                    <div id="teacher_detail left" class="fs12_color999">
+                        <div class="name">
+                            李镇
+                        </div>
+                        <p>
+                            <span class="ff_col666"><span class="fs7pt">&nbsp;</span></span><span class="fs85pt">日本语 资深讲师</span>
+                        </p>
+                        <p>
+                            <span class="ff_col666"><span class="fs7pt">&nbsp;</span></span><span class="fs85pt">毕业院校：东京外国语大学言语文化学部</span>
+                        </p>
+                        <p>
+                            <span class="fs85pt">潜心研究留考日语以及专业日语教学，指导学生近千，发挥自身大学研究专业优势，将日语教学的尖端理念运用到日常的课堂中。</span>
+                        </p>
+                        <br />
+                    </div>
+                    <p>
+                        <br />
+                    </p>
+                    <div id="teacher_detail left" class="fs12_color999">
+                        <div class="name">
+                            陈芨
+                        </div>
+                        <p>
+                            <span class="ff_col666"><span class="fs7pt">&nbsp;</span></span><span class="fs85pt">小论文 面试 资深讲师</span>
+                        </p>
+                        <p>
+                            <span class="ff_col666"><span class="fs7pt">&nbsp;</span></span><span class="fs85pt">毕业院校：东京大学经济学部 学士</span>
+                        </p>
+                        <p>
+                            <span class="fs85pt">外资金融机构股票分析师经验。近十年小论文及日语写作教学指导经验。每年指导学生突破东大京大校内考</span>
+                        </p>
+                        <br />
+                    </div>
+
+                </div>
+            </div>
+            <div id="about_parnter">
+                <span class="red16B">企业合作伙伴</span><br /><br />
+                <ul>
+                    <li><img alt='松下' src="/templates/main/images/201504030240072453.gif" /></li>
+
+                    <li><img alt='亦竹' src="/templates/main/images/201504030240245701.gif" /></li>
+
+                    <li><img alt='三菱' src="/templates/main/images/201504030240518018.gif" /></li>
+
+                    <li><img alt='Kanebo' src="/templates/main/images/201504030241155186.gif" /></li>
+
+                    <li><img alt='卡西欧' src="/templates/main/images/201504030241351465.gif" /></li>
+
+                    <li><img alt='佳能' src="/templates/main/images/201504030241528384.gif" /></li>
+
+                    <li><img alt='妮飘' src="/templates/main/images/201504030242171714.gif" /></li>
+
+                    <li><img alt='夏普' src="/templates/main/images/201504030242372902.gif" /></li>
+
+                    <li><img alt='美合利' src="/templates/main/images/201504030243081282.gif" /></li>
+
+                    <li><img alt='jpseek.com' src="/templates/main/images/201504030243275983.gif" /></li>
+
+                    <li><img alt='avexa' src="/templates/main/images/201504030243495742.gif" /></li>
+
+                    <li><img alt='NEC' src="/templates/main/images/201504030244048118.gif" /></li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="inside_right">
+            <div id="login_1">
+                <div id="login_top"><img src="/templates/main/images/pic_login.jpg" /></div>
+                $load("regiser.html")
+            </div>
+            <div id="frame">
+                <div id="menu">
+                    <h3 class="subtitle"><span>$model.title</span></h3>
+                    <ul>
+                        ${catelist=cmd.Execute("select id,title,call_index from sk_article_category where channel_id="+channel_id)}
+                        ${foreach(item in catelist)}
+                        $if(model.id==item.id)
+                        <li><a class="hover" href="/${item.call_index}/" rel="nofollow">${item.title}</a></li>
+                        $else
+                        <li><a href="/${item.call_index}/" rel="nofollow">${item.title}</a></li>
+                        $end
+                        ${end}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+    $load("_footer.html")
+
+</body>
+</html>
+${end}
