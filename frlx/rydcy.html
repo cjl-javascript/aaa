@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二次元日语大测验</title>
+  <link rel="icon" href="data:;base64,=">
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/style1.css">
+  <script src="./script/jquery-1.11.2.min.js"></script>
+  <script src="./script/common1.js"></script>
+  <script src="./script/layer/layer.js"></script>
+</head>
+
+<body>
+  <div class="margin">
+    <div class="d1">
+      <img src="./img/1_01.jpg" alt="" class="img">
+    </div>
+    <div class="d2">
+      <img src="./img/2_02.jpg" alt="" class="img">
+    </div>
+    <div class="d3">
+      <dl class="sel">
+        <dt class='title'>1、你知道“轰！逗你”的日语单词是什么吗？</dt>
+        <dd class="active">A、ほんとうに（真的）</dd>
+        <dd>B、ほどうに （真的？）</dd>
+        <dd>C、ほど（大约）</dd>
+      </dl>
+      <dl class='sel2'>
+        <dt class='title'>2、日语 “お兄さん”（o ni i sa n）是什么意思呢？</dt>
+        <dd class="active">A、哥哥</dd>
+        <dd>B、姐姐</dd>
+      </dl>
+      <dl class='sel3'>
+        <dt class='title'>3、你知道“她大姨妈”日语的正确表达是什么吗？</dt>
+        <dd class="active">A、だいたい （大体） </dd>
+        <dd>B、ただいま （我回来了）</dd>
+        <dd>C、おばさん （姨妈）</dd>
+      </dl>
+      <dl class='sel4'>
+        <dt class='title'>4、“好厉害”日语怎么说？</dt>
+        <dd class="active">A、すごい su go i </dd>
+        <dd>B、きれい ki rei</dd>
+      </dl>
+    </div>
+   
+    <div id="zc" name="tz">
+      <div class="name">
+        <span>姓名/昵称</span>
+        <i>*</i>
+        <input type="text" class="ipt-n" id="names" οnfοcus="inputFocus()" placeholder="同学怎么称呼啊(=3=)">
+      </div>
+      <div class="phone">
+        <span>手机号码</span>
+        <i>*</i>
+        <input type="text" class="ipt-p" id="mb" οnfοcus="inputFocus()" placeholder="上课人家会喊你的啦(^U^)">
+      </div>
+      <div id="code-control" class="yzm">
+        <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="请输入验证码" οnfοcus="inputFocus()">
+        <input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+      </div>
+      <input class="btn" type="button" value="领取樱花日语学习礼包" id="btnsubmit">
+    </div>
+  </div>
+</body>
+
+</html>

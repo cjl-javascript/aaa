@@ -1,0 +1,38 @@
+/* 弹出框 */
+body{
+  position: relative;
+}
+#bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 100;
+}
+#zc{
+  width: 6.3rem;
+  height: 6rem;
+  background:url("../img/tc.png") center no-repeat;
+  background-size: 6.3rem 6rem;
+  margin:0 auto;
+  padding:0;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 102;
+}
+.name{
+  margin-top:.8rem;
+}
+.ipt-n,.ipt-p,.wap-code,.btn{
+  margin-left: .5rem;
+}
