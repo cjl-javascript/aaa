@@ -86,13 +86,13 @@ $(function () {
     });
 
     //离线宝
-    // var _hmt = _hmt || [];
-    // (function () {
+    //var _hmt = _hmt || [];
+    //(function () {
     //    var hm = document.createElement("script");
     //    hm.src = "https://hm.baidu.com/hm.js?9afe53ca909bd0bba8e614e9f824bc1f";
     //    var s = document.getElementsByTagName("script")[0];
     //    s.parentNode.insertBefore(hm, s);
-    // })();
+    //})();
 
 
     //显示验证码
@@ -113,6 +113,7 @@ $(function () {
     })
   
     }
+    //有乐语
     ly = GetParms("cityid")
     if(ly =='quanguo'){
        $("head").append('<script type="text/javascript" charset="utf-8" src="http://op.jiain.net/20003150/10091887.js"></script>');
@@ -120,6 +121,7 @@ $(function () {
         doyoo.util.openChat('g=10076787');
      })   
     }
+    //无乐语
     if(ly =='quangu'){
        
         $('.zixun,.zixun2,.img4').click(function () { 
@@ -660,3 +662,4 @@ function Mobileleyuclick() {
             window.scrollTo(0, document.body.clientHeight);
         }, 500);  
  }
+ 

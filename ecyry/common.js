@@ -11,8 +11,6 @@ var username = "";
 var mobile = "";
 //验证码默认关闭
 var yzm = "f";
-//乐语的开启关闭
-var ly="";
 //倒计时--验证码
 var wait = 60;
 //按钮等待
@@ -62,16 +60,13 @@ $(function () {
     $("#btnsubmit").click(function () {
         return Register("names", "mb");
     })
-    $("#btnsubmit3").click(function () {
-        return RegisterLX("names", "mb");
-    })
-    $("#btnsubmit4").click(function () {
-        return RegisterLX2("names2", "mb2");
-    })
+
     $("#btnsubmit2").click(function () {
         return Register("names2", "mb2");
     })
-
+    $("#btnsubmit3").click(function () {
+        return RegisterLX("names", "mb");
+    })
     $("#btnsubmitYZM").click(function () {
         btnwaittime(this);
         return Register("names", "mb");
@@ -86,45 +81,19 @@ $(function () {
     });
 
     //离线宝
-    // var _hmt = _hmt || [];
-    // (function () {
+    //var _hmt = _hmt || [];
+    //(function () {
     //    var hm = document.createElement("script");
     //    hm.src = "https://hm.baidu.com/hm.js?9afe53ca909bd0bba8e614e9f824bc1f";
     //    var s = document.getElementsByTagName("script")[0];
     //    s.parentNode.insertBefore(hm, s);
-    // })();
+    //})();
 
 
     //显示验证码
     yzm = GetParms("vc");
     if (yzm != "t") {
-        $(".yzm").css("display","none");
-    }
-    if (yzm == "t"){
-        $('.yzm').hide();
-  
-    $('.ipt-p').focus(function () {
-      $('.yzm').show();
-    })
-    $(".ipt-p").blur(function () {
-      if ($(this).val().length < 1) {
-        $('.yzm').hide();
-      }
-    })
-  
-    }
-    ly = GetParms("cityid")
-    if(ly =='quanguo'){
-       $("head").append('<script type="text/javascript" charset="utf-8" src="http://op.jiain.net/20003150/10091887.js"></script>');
-       $('.zixun,.zixun2,.img4').click(function () { 
-        doyoo.util.openChat('g=10076787');
-     })   
-    }
-    if(ly =='quangu'){
-       
-        $('.zixun,.zixun2,.img4').click(function () { 
-            window.scrollTo(0, document.documentElement.scrollHeight - document.documentElement.clientHeight);
-         })
+        $(".yzm").hide();
     }
     //获取验证码
     $("#btncode").click(function () {
@@ -150,29 +119,6 @@ $(function () {
 
     })
 
-    //获取验证码2
-    $("#btncode2").click(function () {
-        var mobile = $.trim($("#mb2").val());
-        if (mobileOnly(mobile) == false) {
-            layer.msg('请输入正确的手机号!', { icon: 8 });
-            return;
-        }
-        time(this);
-        $.ajax({
-            url: "/api/LSendMsg.ashx?mobile=" + mobile,
-            type: "get",
-            dataType: "text",
-            success: function (data) {
-                if (data == "") {
-                    layer.msg('验证码发送失败!', { icon: 8 });
-                } else {
-
-                    setCookie("salt", data, 1, '', '', '');
-                }
-            }
-        })
-
-    })
 
 })
 //验证码等待 60秒
@@ -241,7 +187,7 @@ function Register(nameID, mobileID) {
         return false;
     }
     if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
-        layer.msg('姓名不允许有特殊字符！',{ icon: 8 });
+        layer.msg('姓名不允许有特殊字符！', { icon: 8 });
         return false;
     }
     if (/^[0-9]*$/.test(username)) {
@@ -261,11 +207,11 @@ function Register(nameID, mobileID) {
         var code = $.trim($("#YZMcode").val());
         var codeVal = getCookie("salt");
         if (code == "") {
-            layer.tips('请输入验证码！', $("#YZMcode"));
+            layer.msg('请输入验证码！', $("#YZMcode"));
             return false;
         }
         if (code != codeVal) {
-            layer.tips('您输入的验证码不正确！', $("#YZMcode"));
+            layer.msg('您输入的验证码不正确！', $("#YZMcode"));
             return false;
         }
     }
@@ -274,6 +220,7 @@ function Register(nameID, mobileID) {
 
     return true;
 }
+
 //留学注册
 function RegisterLX(nameID, mobileID) {
     var dname = $("#" + nameID);
@@ -309,20 +256,22 @@ function RegisterLX(nameID, mobileID) {
         var code = $.trim($("#YZMcode").val());
         var codeVal = getCookie("salt");
         if (code == "") {
-            layer.msg('请输入验证码！', { icon: 8 });
+            layer.msg('请输入验证码！', $("#YZMcode"));
             return false;
         }
         if (code != codeVal) {
-            layer.msg('您输入的验证码不正确！', { icon: 8 });
+            layer.msg('您输入的验证码不正确！', $("#YZMcode"));
             return false;
         }
     }
+
     AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, '留学');
 
     return true;
 }
-//留学注册
-function RegisterLX2(nameID, mobileID) {
+
+//普通注册
+function Register2(nameID, mobileID) {
     var dname = $("#" + nameID);
     var dmobile = $("#" + mobileID);
     username = $.trim(dname.val());
@@ -353,62 +302,14 @@ function RegisterLX2(nameID, mobileID) {
     }
 
     if (yzm == "t") {
-        var code = $.trim($("#YZMcode2").val());
-        var codeVal = getCookie("salt");
-        if (code == "") {
-            layer.msg('请输入验证码！', { icon: 8 });
-            return false;
-        }
-        if (code != codeVal) {
-            layer.msg('您输入的验证码不正确！', { icon: 8 });
-            return false;
-        }
-    }
-    AjaxRegister(username, mobile, '', '', ID, adname, act, '', kw, key360, '留学');
-
-    return true;
-}
-
-//普通注册
-function Register2(nameID, mobileID) {
-    var dname = $("#" + nameID);
-    var dmobile = $("#" + mobileID);
-    username = $.trim(dname.val());
-    mobile = $.trim(dmobile.val());
-    if (username == "") {
-        layer.tips('请输入姓名！', dname);
-        return false;
-    }
-    if (username.length >= 8) {
-        layer.tips('姓名长度超过8位！', dname);
-        return false;
-    }
-    if (!username.match(/^[\u4E00-\u9FA5a-zA-Z0-9_]{0,}$/)) {
-        layer.tips('姓名不允许有特殊字符！', dname);
-        return false;
-    }
-    if (/^[0-9]*$/.test(username)) {
-        layer.tips('姓名不允许纯数字！', dname);
-        return false;
-    }
-    if (mobile.length != 11) {
-        layer.tips('手机号必须是11位！', dmobile);
-        return false;
-    }
-    if (mobileOnly(mobile) == false) {
-        layer.tips('请输入正确的手机号！', dmobile);
-        return false;
-    }
-
-    if (yzm == "t") {
         var code = $.trim($("#YZMcode").val());
         var codeVal = getCookie("salt");
         if (code == "") {
-            layer.tips('请输入验证码！', $("#YZMcode"));
+            layer.msg('请输入验证码！', $("#YZMcode"));
             return false;
         }
         if (code != codeVal) {
-            layer.tips('您输入的验证码不正确！', $("#YZMcode"));
+            layer.msg('您输入的验证码不正确！', $("#YZMcode"));
             return false;
         }
     }
@@ -419,8 +320,8 @@ function Register2(nameID, mobileID) {
 
 //注册方法
 function AjaxRegister(name, mobile, email, seladdr, ID, adname, act, calladdr, k, key360, m) {
-
     $.ajax({
+        // 定义当前对象
         url: "/Api/actionResult.ashx?action=register",
         dataType: "text",
         type: "post",
@@ -465,7 +366,7 @@ function AjaxRegister(name, mobile, email, seladdr, ID, adname, act, calladdr, k
                 }
 
             } else if (data == "2") {
-                layer.msg('您已提交过信息，经鉴定是真爱!', { icon: 8 });
+                layer.msg('对不起,该手机号已存在!', { icon: 8 });
             } else {
                 layer.msg("注册失败!", { icon: 8 })
             }
@@ -635,28 +536,3 @@ function Mobileleyuclick() {
     doyoo.util.openChat('g=10076787');
 }
 
- //选择变色
- $(document).ready(function(){
-    $(".sel dd").click(function () {
-        $(".sel dd").removeClass();
-        $(this).addClass("active");
-    })
-    $(".sel2 dd").click(function () {
-        $(".sel2 dd").removeClass();
-        $(this).addClass("active");
-    })
-    $(".sel3 dd").click(function () {
-        $('.sel3 dd').removeClass();
-        $(this).addClass("active");
-    })
-    $(".sel4 dd").click(function () {
-        $(".sel4 dd").removeClass();
-        $(this).addClass("active");
-    })
- })
- //不遮挡输入框
- function inputFocus(){
-        setTimeout(function () {
-            window.scrollTo(0, document.body.clientHeight);
-        }, 500);  
- }
