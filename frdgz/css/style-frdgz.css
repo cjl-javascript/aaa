@@ -33,9 +33,13 @@ input,button{
   margin-top:.3rem;
 }
 .t-cont{
-  font:.24rem/1 "";
+  font:.28rem/1 "";
   color:#4b4b4b;
   text-indent: .1rem; 
+}
+.t-cont2{
+  font:.28rem/1 "";
+  color:#4b4b4b;
 }
 .ipt-n,.ipt-p{
   width:5.9rem;
