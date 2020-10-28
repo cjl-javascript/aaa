@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>第32届新世界日本留学展—新世界教育</title>
+</head>
+<body>
+    <div class="banner">
+        <img src="./imgs/banner.jpg" alt="">
+        <a href="tel:4001810505"></a>
+    </div>
+    <div class="con">
+        <img src="./imgs/616.jpg" alt="">
+    </div>
+    <div class="from">
+        <div>
+            <span>姓名：</span>
+            <input type="text" class="inpname">
+        </div>
+        <div>
+            <span>电话：</span>
+            <input type="text" class="inptel">
+        </div>
+        <div>
+            <span>留学目标：</span>
+            <select>
+                <option value="">请选择</option>
+                <option value="">语言学校</option>
+                <option value="">日本高中</option>
+                <option value="">专门学校</option>
+                <option value="">日本大学</option>
+                <option value="">大学院、专升硕</option>
+                <option value="">本升博</option>
+                <option value="">旁听生</option>
+            </select>
+        </div>
+        <button class="btn">提交领取</button>
+    </div>
+    <div class="neir">
+        <img src="./imgs/neir.jpg" alt="">
+    </div>
+    <div class="pic s4">
+        <img src="./imgs/tit.jpg" alt="">
+    </div>
+    <div>
+        <div class="swiper-container swiper-container2">
+            <div class="swiper-wrapper swiper-wrapper2">
+                <div class="swiper-slide">
+                    <div class="s_wrap">
+                        <div><img src="./imgs/1.png" alt=""></div>
+                        <div><img src="./imgs/2.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s_wrap">
+                        <div><img src="./imgs/3.png" alt=""></div>
+                        <div><img src="./imgs/4.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s_wrap">
+                        <div><img src="./imgs/5.png" alt=""></div>
+                        <div><img src="./imgs/6.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="s_wrap">
+                        <div><img src="./imgs/7.png" alt=""></div>
+                        <div><img src="./imgs/8.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination2"></div>
+        </div>
+        <div class="btn_all">
+            <div class="dao" onclick="doyoo.util.openChat('g=10084377');return false;">了解更多展会信息></div>
+            <div class="zhi" onclick="doyoo.util.openChat('g=10084377');return false;">立即预约领取门票></div>
+        </div>
+    </div>
+    <div class="pic last_p">
+        <img src="./imgs/pic_13.jpg" alt="">
+    </div>
+    <footer onclick="doyoo.util.openChat('g=10084377');return false;">免费领取门票</footer>
+
+  <!--   <script type="text/javascript" charset="utf-8" src="https://gate.soperson.com/20000967/10054224.js"></script>
+   <script type="text/javascript" charset="utf-8" src="https://gate.soperson.com/20000967/10054209.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="https://op.jiain.net/20000967/10108920.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        (function () {
+            window.addEventListener("orientation" in window ? "deviceorientation" : "resize", setSize);
+            setSize();
+            function setSize() {
+                var html = document.documentElement;
+                var hWidth = html.getBoundingClientRect().width;
+                html.style.fontSize = hWidth / 15 + "px"
+            }
+        })()
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container2', {
+            pagination: {
+                el: '.swiper-pagination2'
+            }
+        });
+    </script>
+    <script>
+        $(".btn").on('click', function () {
+            var tel = $(".inptel").val();
+            var name = $(".inpname").val();
+            if (name == "") {
+                alert('请输入姓名');
+                return false;
+            }
+            if (tel.length == 0) {
+                alert('请输入手机号码！');
+                return false;
+            }
+            if (tel.length != 11) {
+                alert('请输入有效的手机号码！');
+                return false;
+            }
+            var myreg = /^[1]([3-9])[0-9]{9}$/;
+            if (!myreg.test(tel)) {
+                alert('请输入有效的手机号码!！');
+                return false;
+            }
+
+          			$.ajax({
+					url: "https://admin.sakurajp.com.cn/API/Sakura/xsj",
+					dataType: "json",
+					data: { "Name": name, "Phone": tel },
+					type: "get",
+					success: function (data) {
+					console.log(data.Code);
+						if (data.Code == 200) {
+							alert("提交成功");
+							  $(".inptel").val('');
+							$(".inpname").val('');
+						} else {
+							alert("手机重复");
+						}
+					}
+				})
+        });
+    </script>
+</body>
+</html>

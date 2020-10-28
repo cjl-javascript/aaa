@@ -1,0 +1,152 @@
+input {
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+
+header{
+  height:343px;
+  background:url('../img/rydcypc_01.jpg')  center no-repeat;
+  background-size: 1920px 343px;
+}
+.main1{
+  height: 172px;
+  background:url('../img/rydcypc_02.jpg')  center no-repeat;
+  background-size: 1920px 172px;
+}
+.main2{
+  height: 577px;
+  background:url('../img/rydcypc_03.jpg')  center no-repeat;
+  background-size: 1920px 577px;
+}
+.main3{
+  height: 288px;
+  background:url('../img/rydcypc_04.jpg')  center no-repeat;
+  background-size: 1920px 288px;
+}
+.main4{
+  height: 158px;
+  background:url('../img/rydcypc_05.jpg')  center no-repeat;
+  background-size: 1920px 158px;
+}
+.margin{
+  margin:0 auto;
+  padding:0 130px;
+  width:518px;
+}
+
+.title{
+  font:22px/1.4 "";
+  color: #8C484A;
+  margin-bottom: 10px;
+}
+.title-3{
+  margin-left:50px;
+}
+.sel2{
+  overflow: hidden;
+  border-bottom: #CCCCCC 1px dotted ;
+  margin-bottom:20px;
+  padding:20px 0;
+}
+label{
+  font:18px/18px "";
+  display: block;
+  margin-bottom:16px;
+  color: #495060;
+  float: left;
+  min-width: 228px;
+}
+
+label span{
+  content: "";
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  border: 2px solid #c5c5c6 ;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top:2px;
+}
+label b{
+  width:10px;
+  height:10px;
+  background:#E50D65;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: none;
+}
+.sel label input{
+  display: none;
+}
+.sel label input:checked + span  b{
+  display: inline-block;
+}
+.sel label input:checked + span {
+  border: 2px solid #E50D65 ;
+}
+
+.zc{
+  margin-top: 40px;
+  margin:0 auto;
+}
+.ipt-n,.ipt-p{
+  width:300px;
+  height:40px;
+  border:2px solid #fe8aad;
+  font:20px/2 "";
+  text-indent: 10px; 
+  border-radius: 10px;
+}
+.name,.phone{
+  margin-left:50px;
+}
+.phone{
+  margin-top:15px;
+}
+.ipt-p{
+  margin-bottom:15px;
+}
+input::placeholder{
+  color:#ccc;
+}
+.btn{
+  width:300px;
+  height:46px;
+  background:#fe8aad;
+  font:28px/46px "";
+  color:#fff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-left:142px;
+}
+.yzm{
+  margin-bottom:15px;
+  overflow: hidden;
+}
+.wap-code,.hqyzm{
+  width:130px;
+  height:40px;
+  font:20px/40px "";
+  /* margin-left:123px; */
+}
+.wap-code{
+  border:2px solid #fe8aad;
+  border-radius: 10px;
+  text-indent: 10px; 
+}
+.hqyzm{
+  height: 42px;
+  background:#fe8aad;
+  color:#fff;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+.btn:active,.hqyzm:active,.mfpg:active,.zixun3:active,.zixun2:active,.zixun:active{
+  opacity: 0.5;
+}

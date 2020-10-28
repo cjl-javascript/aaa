@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>单选按钮取消选中的三种方式</title>
+    <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js">
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $('input:radio').click(function(){
+                //alert(this.checked);
+                //
+              
+                var domName = $(this).attr('name');
+
+                var $radio = $(this);
+                // if this was previously checked
+                if ($radio.data('waschecked') == true){
+                    $radio.prop('checked', false);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                    //$radio.data('waschecked', false);
+                } else {
+                    $radio.prop('checked', true);
+                    $("input:radio[name='" + domName + "']").data('waschecked',false);
+                    $radio.data('waschecked', true);
+                }
+            });
+            document.onselectstart = function(){return false;}; //取消字段选择功能
+        });
+    </script>
+    <style>
+      #ie{
+        width: 20px;
+        height: 20px;
+        border: #000 2px solid;
+      }
+    </style>
+</head>
+<body>
+<p>您喜欢哪款浏览器？</p>
+
+<form>
+    <input style="display:none;" id="hidebrowser" type="radio" name="browser" value="">
+    <input type="radio" name="browser" value="Internet Explorer" id='ie'><label for="ie">Internet Explorer </label> <br />
+    <input type="radio" name="browser" value="Firefox">Firefox<br />
+    <input type="radio" name="browser" value="Netscape">Netscape<br />
+    <input type="radio" name="browser" value="Opera">Opera<br />
+</form>
+<p>您喜欢哪款浏览器？</p>
+
+<form>
+    <input style="display:none;" id="hidebrowser" type="radio" name="browser" value="">
+    <input type="radio" name="browser" value="Internet Explorer" id='ie2'><label for="ie2">Internet Explorer </label><br />
+    <input type="radio" name="browser" value="Firefox">Firefox<br />
+    <input type="radio" name="browser" value="Netscape">Netscape<br />
+    <input type="radio" name="browser" value="Opera">Opera<br />
+</form>
+</body>
+</html>  
