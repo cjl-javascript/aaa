@@ -1,59 +1,191 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>单选按钮取消选中的三种方式</title>
     <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js">
     </script>
 
     <script type="text/javascript">
-        $(function(){
-            $('input:radio').click(function(){
-                //alert(this.checked);
-                //
-              
-                var domName = $(this).attr('name');
-
-                var $radio = $(this);
-                // if this was previously checked
-                if ($radio.data('waschecked') == true){
-                    $radio.prop('checked', false);
-                    $("input:radio[name='" + domName + "']").data('waschecked',false);
-                    //$radio.data('waschecked', false);
-                } else {
-                    $radio.prop('checked', true);
-                    $("input:radio[name='" + domName + "']").data('waschecked',false);
-                    $radio.data('waschecked', true);
-                }
-            });
-            document.onselectstart = function(){return false;}; //取消字段选择功能
+   
+        $(document).ready(function(){
+            $('input').siblings("div").children("span").hide()
+            $("input").click(function () {
+                $(this).parent('div').siblings("div").children("div").children('span').hide();
+            $(this).siblings("div").children("span").toggle();
+            
         });
+        })
+       
     </script>
     <style>
-      #ie{
-        width: 20px;
-        height: 20px;
-        border: #000 2px solid;
-      }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 50px;
+        }
+
+        input {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .fruit:before {
+            content: "";
+            display: table;
+        }
+
+        .fruit:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .fruit>div {
+            position: relative;
+            float: left;
+            margin-right: 50px;
+            width: 80px;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .fruit>div:last-child {
+            margin-right: 0;
+        }
+
+        .fruit label {
+            display: block;
+            width: 50px;
+            height: 40px;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        .fruit input {
+            z-index: 3;
+            display: block;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .fruit .user-defined {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            margin: auto;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .fruit .user-defined span.circle {
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin-top: 7px;
+            margin-left: 7px;
+            /* background-color: transparent; */
+            border-radius: 50%;
+            background-color: #000;
+            
+        }
+
+      
     </style>
 </head>
+
 <body>
-<p>您喜欢哪款浏览器？</p>
-
-<form>
-    <input style="display:none;" id="hidebrowser" type="radio" name="browser" value="">
-    <input type="radio" name="browser" value="Internet Explorer" id='ie'><label for="ie">Internet Explorer </label> <br />
-    <input type="radio" name="browser" value="Firefox">Firefox<br />
-    <input type="radio" name="browser" value="Netscape">Netscape<br />
-    <input type="radio" name="browser" value="Opera">Opera<br />
-</form>
-<p>您喜欢哪款浏览器？</p>
-
-<form>
-    <input style="display:none;" id="hidebrowser" type="radio" name="browser" value="">
-    <input type="radio" name="browser" value="Internet Explorer" id='ie2'><label for="ie2">Internet Explorer </label><br />
-    <input type="radio" name="browser" value="Firefox">Firefox<br />
-    <input type="radio" name="browser" value="Netscape">Netscape<br />
-    <input type="radio" name="browser" value="Opera">Opera<br />
-</form>
+   
+    <form action="">
+        <div class="fruit">
+            <div class="apple">
+                <label for="apple">苹果</label>
+                <input type="radio" name="fruit" id="apple">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="banana">
+                <label for="banana">香蕉</label>
+                <input type="radio" name="fruit" id="banana">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="orange">
+                <label for="orange">橘子</label>
+                <input type="radio" name="fruit" id="orange">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="">
+        <div class="fruit">
+            <div class="apple">
+                <label for="apple3">苹果</label>
+                <input type="radio" name="fruit" id="apple3">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="banana">
+                <label for="banana3">香蕉</label>
+                <input type="radio" name="fruit" id="banana3">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="orange">
+                <label for="orange3">橘子</label>
+                <input type="radio" name="fruit" id="orange3">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form action="">
+        <div class="fruit">
+            <div class="apple">
+                <label for="apple2">苹果</label>
+                <input type="radio" name="fruit" id="apple2">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="banana">
+                <label for="banana2">香蕉</label>
+                <input type="radio" name="fruit" id="banana2">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+            <div class="orange">
+                <label for="orange2">橘子</label>
+                <input type="radio" name="fruit" id="orange2">
+                <div class="user-defined">
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </div>
+    </form>
 </body>
-</html>  
+
+</html>
