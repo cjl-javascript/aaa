@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    :root {
+      --ratio: 2.5;
+      --box-w: 600px;
+      --box-h: 400px;
+      --outbox-w: calc(var(--box-w) * var(--ratio));
+      --outbox-h: calc(var(--box-h) * var(--ratio));
+    }
+
+    .bruce {
+      margin-top: 50px;
+    }
+
+    .magnifier {
+      --x: 0;
+      --y: 0;
+      overflow: hidden;
+      position: relative;
+      width: var(--box-w);
+      height: var(--box-h);
+      background: url('./201906251511272725.jpg') no-repeat center/100% 100%;
+      cursor: grabbing;
+    }
+
+    .magnifier::before {
+      --size: 0;
+      --scale-x: calc(var(--size) / var(--ratio) - var(--ratio) * var(--x));
+      --scale-y: calc(var(--size) / var(--ratio) - var(--ratio) * var(--y));
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      /* border-radius: 100%; */
+      width: var(--size);
+      height: var(--size);
+      background: #333 url("./201906251511272725.jpg") no-repeat var(--scale-x) var(--scale-y)/var(--outbox-w) var(--outbox-h);
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+      content: "";
+      will-change: left, top;
+      transform: translate(-50%, -50%);
+    }
+
+    .magnifier:hover::before {
+      --size: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bruce">
+    <div class="magnifier"></div>
+  </div>
+</body>
+<script>
+  let magnifier = document.querySelector(".magnifier");
+  magnifier.addEventListener("mousemove", e => {
+    //控制“镜子”小圆圈的移动
+    e.target.style.setProperty("--x", `${e.offsetX}px`);
+    e.target.style.setProperty("--y", `${e.offsetY}px`);
+  });
+
+</script>
+</html>
