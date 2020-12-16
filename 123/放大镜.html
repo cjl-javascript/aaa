@@ -8,15 +8,16 @@
   
   <style>
     :root {
-      --ratio: 2.5;
-      --box-w: 600px;
-      --box-h: 400px;
+      --ratio: 2;
+      --box-w: 700px;
+      --box-h: 500px;
       --outbox-w: calc(var(--box-w) * var(--ratio));
       --outbox-h: calc(var(--box-h) * var(--ratio));
     }
 
     .bruce {
       margin-top: 50px;
+      margin-left: 50px;
     }
 
     .magnifier {
@@ -37,13 +38,13 @@
       position: absolute;
       left: var(--x);
       top: var(--y);
-      /* border-radius: 100%; */
+      border-radius: 100%;
       width: var(--size);
       height: var(--size);
-      background: #333 url("./201906251511272725.jpg") no-repeat var(--scale-x) var(--scale-y)/var(--outbox-w) var(--outbox-h);
+      background: url("./201906251511272725.jpg") no-repeat var(--scale-x) var(--scale-y)/var(--outbox-w) var(--outbox-h);
       box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
       content: "";
-      will-change: left, top;
+      /* will-change: left, top; */
       transform: translate(-50%, -50%);
     }
 

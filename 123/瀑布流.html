@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.min.js"></script>
+  <script src="./pubuliu.js"></script>
+  <style>
+    img {
+      display: block;
+      width: 300px;
+      margin: 5px;
+      float: left;
+    }
+
+    #container {
+      width: 940px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <!--此处省略若干行图片-->
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+    <img class="grid-item" src="./logo.jpg">
+    <img class="grid-item" src="./logo1.png">
+    <img class="grid-item" src="./201906251511272725.jpg">
+    <img class="grid-item" src="./bd_logo1.png">
+  </div>
+  
+</body>
+
+   <script>
+    $('#container').masonry({
+      // itemSelector : 默认值是 .item ，指定哪些子元素将用作布局中的项元素(选择器)
+      itemSelector: '.grid-item'
+    })
+  </script>
+
+</html>
+
