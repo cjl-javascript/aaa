@@ -1,0 +1,261 @@
+html {
+  font-size: 13.3333vw;
+}
+
+input,button{
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+.margin,.img{
+  width:7.5rem;
+  margin:0 auto;
+}
+.margin h3{
+  text-align: center;
+  font:700 .48rem/1 "";
+  padding-top:.4rem;
+}
+.swiper-container{
+  width: 7rem;
+  margin-top:.2rem;
+}
+.swiper-container img{
+  width: 7rem;
+  height: 5rem;
+}
+.buy{
+  height:2rem;
+  width:7rem;
+  margin:0 auto;
+  margin-top:.5rem;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.circle1{
+  position: absolute;
+  left: 4.86rem;
+  top:-.16rem;
+  width: .32rem;
+  height: .32rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.circle2{
+  position: absolute;
+  left: 4.86rem;
+  bottom:-.16rem;
+  width: .32rem;
+  height: .32rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.buy-l{
+  height:2rem;
+  width:5rem;
+  background:linear-gradient(45deg, rgba(253, 239, 237, 1) 0%, rgba(250, 216, 210, 1) 100%);
+  float: left;
+  border-radius: .2rem;
+}
+.pt{
+  font:700 .3rem/1 "";
+  text-indent:.5rem;
+  margin:.5rem 0;
+}
+.pb{
+  font:.26rem/1 "";
+  text-indent:.5rem;
+}
+.buy-r{
+  height:1.5rem;
+  width:2rem;
+  background: linear-gradient(180deg, rgba(240, 132, 113, 1) 0%, rgba(236, 105, 81, 1) 100%);
+  float: left;
+  padding-top:.5rem;
+  border-radius: .2rem;
+}
+.lj{
+  color: #fff;
+  text-align: center;
+  font:700 .32rem/1.5 "";
+}
+#zc{
+  /* height: 5.8rem; */
+  background:#fff;
+  padding-left:.45rem;
+  padding-right:.49rem;
+  padding-top:.2rem;
+}
+.ipt-n,.ipt-p{
+  width:6.56rem;
+  height:.94rem;
+  border-radius: .15rem;
+  text-indent: .4rem;
+  font:.36rem/.94rem "";
+  color:#000;
+  border:.01rem solid #dcdcdc;
+}
+.yzm{
+  overflow: hidden;
+  margin-top:.33rem;
+  display:flex;
+  justify-content: space-between;
+}
+.wap-code,.hqyzm{
+  width:3rem;
+  height:.94rem;
+  border-radius: .15rem;
+  font:.36rem/.94rem "";
+  
+}
+.wap-code{
+  text-indent: .4rem;
+  border:.01rem solid #dcdcdc;
+}
+.hqyzm{
+  background:rgb(249, 54, 14);
+  color:#fff;
+}
+.btn{
+  width:6.56rem;
+  height:.94rem;
+  background:rgb(249, 54, 14);
+  font:700 .36rem/.94rem "";
+  border-radius: .5rem;
+  color:#fff;
+  margin-top:.33rem;
+}
+.phone{
+  margin-top:.33rem;
+}
+.tips{
+  margin-top:.19rem;
+  /* font:.16rem/.28rem ""; */
+  padding:0 .2rem;
+}
+.img2{
+  margin-bottom:1rem;
+}
+h4{
+  font:700 .36rem/2 "";
+  text-indent: .4rem;
+}
+.yy{
+  height:1rem;
+  background: rgba(246, 40, 22, 0.98);
+  text-align: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right: 0;
+  background-attachment:fixed;
+}
+.yy2{
+  visibility: hidden;
+  height:1rem;
+}
+.yy span{
+  font:.48rem/1rem "";
+  color:#fff;
+  float: left;
+}
+.yy img{
+  width:.8rem;
+  height:.8rem;
+  float: left;
+  margin-left:2.3rem;
+  margin-top:.13rem;
+}
+.md{
+  display: block;
+  height:1rem;
+}
+
+/* 弹出框 */
+body{
+  position: relative;
+}
+#bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.close{
+  position: absolute;
+  top:.3rem;
+  left:45%;
+  z-index: 103;
+}
+.close img{
+  
+  width: 1rem;
+  height:1rem;
+}
+.zc{
+  width:7.54rem;
+  height: 10.76rem;
+  background:url("../img/yhryjg-18.png") center no-repeat;
+  background-size: 7.54rem 8.76rem;
+  margin:0 auto;
+  padding:0;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 102;
+}
+.name2{
+  margin-top:5.2rem;
+}
+.ipt-n2,.ipt-p2,.wap-code2,.btn2,.pg-tips,.t-cont2{
+  margin-left: 1.2rem;
+}
+.ipt-n2,.ipt-p2{
+  width:5.16rem;
+  height:.78rem;
+  font:.36rem/.7rem "";
+  text-indent: .1rem; 
+}
+.ipt-p2{
+  margin-bottom:.2rem;
+}
+input::placeholder{
+  color:#ccc;
+}
+.btn2{
+  width:5.16rem;
+  height:.78rem;
+  background:#ffe800;
+  font:.42rem/.8rem "";
+  color:#666;
+  margin-bottom: .1rem;
+}
+.yzm2{
+  overflow: hidden;
+}
+.wap-code2,.hqyzm2{
+  width:2.4rem;
+  height:.78rem;
+  font:.36rem/1 "";
+}
+.wap-code2{
+  text-indent: .1rem; 
+  float: left;
+}
+.hqyzm2{
+  height: .8rem;
+  background:#ffe800;
+  color:#666;
+  float: right;
+  margin-right:1.2rem;
+}
