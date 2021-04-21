@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>番剧の设定知多少</title>
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/style-ecy2.css">
+  <!-- <script src="./script/jquery-1.11.2.min.js"></script>
+  <script src="./script/common1.js"></script>
+  <script src="./script/layer/layer.js"></script> -->
+  <script src="../adm/script/jquery-1.11.2.min.js"></script>
+  <script src="../adm/script/common1.js"></script>
+  <script src="../adm/script/layer/layer.js"></script>
+</head>
+
+<body>
+  <div class="margin">
+    <div>
+      <img src="./img/ecy2_01.jpg" alt="" class="img">
+    </div>
+    <div class="qu1">
+      <img src="./img/ecy2_02.jpg" alt="" class="img">
+      <ul>
+        <li class="active">竹筒（たけづつ）</li>
+        <li class="active">卷轴（かんすぼん）</li>
+        <li class="active">竹轮（ちくわ）</li>
+      </ul>
+    </div>
+    <div class="qu2">
+      <img src="./img/ecy2_03.jpg" alt="" class="img">
+      <ul>
+        <li class="active">乔鲁诺·乔巴纳</li>
+        <li class="active">DIO</li>
+        <li class="active">承太郎</li>
+      </ul>
+    </div>
+    <div class="qu3">
+      <img src="./img/ecy2_04.jpg" alt="" class="img">
+      <ul>
+        <li class="active">鬼（おに）</li>
+        <li class="active">妖怪（ようかい）</li>
+        <li class="active">呪霊（じゅれい）</li>
+      </ul>
+    </div>
+    <div class="qu4">
+      <img src="./img/ecy2_05.jpg" alt="" class="img">
+      <ul>
+        <li class="active">九尾（きゅうび）</li>
+        <li class="active">两面宿傩 ( りょうめんすくな ) </li>
+        <li class="active">猫咪老师（ニャンコ せんせい）</li>
+      </ul>
+    </div>
+    
+    <!-- 注册 -->
+    <div id="res">
+      <img src="./img/ecy2_06.jpg" alt="" class="img">
+      <div id="zc">
+        <div class="name">
+          <input type="text" class="ipt-n" id="names"  placeholder="姓名">
+        </div>
+        <div class="phone">
+          <input type="text" class="ipt-p" id="mb" placeholder="电话">
+        </div>
+
+        <div id="code-control" class="yzm">
+          <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="请输入验证码">
+          <input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+        </div>
+        <input class="btn" type="button" value="领取礼包" id="btnsubmit">
+      </div>
+    </div>
+    <div>
+      <img src="./img/ecy2_07.jpg" alt="" class="img">
+    </div>
+    <div>
+      <img src="./img/ecy2_08.jpg" alt="" class="img">
+    </div>
+    <div style="width:80%;margin:0 auto; text-align:center;">
+      <span>Copyright 2006 by上海新世界进修中心 (黄浦区南京西路2-68号新世界商务楼16楼)
+        <br>Sakura International Japanese .Allright Reserved <a href="https://beian.miit.gov.cn"
+          style="text-decoration: none;color: #000;">沪ICP备08018177号-4 </a> </span>
+      <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102003839" target="_blank"><img
+          style="display: inline-block;" src="https://www.sakurajp.com.cn/template/All/images/beian.png">沪公网安备
+        31010102003839号</a>
+    </div>
+  </div>
+</body>
+<script>
+  // 选择
+  $(document).ready(function () {
+    $('li').removeClass('active')
+    $('li').click(function () {
+      $(this).addClass('active');
+      $(this).siblings("li").removeClass('active');
+    })
+
+  })
+  //不遮挡输入框
+  $('input[type="text"],textarea').on('click', function () {
+  var target = this;
+  setTimeout(function(){
+        target.scrollIntoViewIfNeeded();
+      },400);
+});
+</script>
+
+</html>
