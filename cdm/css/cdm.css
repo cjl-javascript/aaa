@@ -1,0 +1,136 @@
+input {
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+
+header{
+  height:1333px;
+  background:url('/templates/main/public/hangzhou/img/cdm-01.jpg')  center no-repeat;
+  background-size: 1280px 1333px;
+  width: 1280px;
+  margin:0 auto;
+  position: relative;
+}
+.img{
+  width: 782px;
+  margin-top: 444px;
+  margin-left: 188px;
+}
+.sel1{
+  position: absolute;
+  top:635px;
+  left:420px;
+}
+.sel2{
+  position: absolute;
+  top:820px;
+  left:420px;
+}
+.sel3{
+  position: absolute;
+  top:1000px;
+  left:420px;
+}
+label{
+  font:18px/18px "";
+  display: block;
+  margin-bottom:16px;
+  color: #495060;
+  float: left;
+  min-width: 150px;
+}
+label span{
+  content: "";
+  width:20px;
+  height:20px;
+  border-radius: 50%;
+  border: 2px solid #ef7b38 ;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top:-4px;
+}
+label b{
+  width:10px;
+  height:10px;
+  background:#ef7b38;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  display: none;
+}
+.sel label input{
+  display: none;
+}
+.sel label input:checked + span  b{
+  display: inline-block;
+}
+.sel label input:checked + span {
+  border: 2px solid #ef7b38 ;
+}
+.zc{
+  position: absolute;
+  top: 1150px;
+  left: 300px;
+  padding:20px 0;
+  overflow: hidden;
+}
+.ipt-n,.ipt-p{
+  width:150px;
+  height:40px;
+  border:2px solid #ccc;
+  font:20px/2 "";
+  text-indent: 10px; 
+  
+}
+.name,.phone{
+  float: left;
+}
+.phone{
+  margin-left: 20px;
+}
+.title{
+  font: 20px/1 "";
+}
+.btn{
+  width:175px;
+  height:58px;
+  background:url('/templates/main/public/hangzhou/img/cdm-03.png') no-repeat center;
+  margin-left:20px;
+  background-size: 175px 58px;
+  margin-top:-10px;
+}
+#footer {
+  width: 100%;
+}
+#footer {
+  display: table;
+  width: 1090px;
+  padding-top: 20px;
+  height: 80px;
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+}
+#footer span {
+  display: block;
+  clear: both;
+  font-family: "微软雅黑";
+  font-size: 12px;
+  line-height: 20px;
+  color: #000;
+  text-align: center;
+}
+.beizhu {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000;
+  text-align: center;
+}
