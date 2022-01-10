@@ -1,0 +1,94 @@
+
+input {
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+.zc{
+  margin:0 auto;
+  margin-top: 40px;
+}
+.ipt-n,.ipt-p,.cnt{
+  width:600px;
+  height:40px;
+  border:2px solid #aaa;
+  font:20px/2 "";
+  text-indent: 10px; 
+}
+.name,.phone,.msg{
+  width: 800px;
+  margin: 0 auto;
+}
+.msg{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.msg .title-m{
+  float: left;
+}
+.cnt{
+  width: 600px;
+  height: 200px;
+  max-width: 600px;
+  max-height: 200px;
+  float: left;
+  margin-left: 4px;
+}
+.phone{
+  margin-top:15px;
+}
+.ipt-p{
+  margin-bottom:15px;
+}
+input::placeholder{
+  color:#ccc;
+}
+.btn{
+  width:300px;
+  height:46px;
+  background:#f00;
+  font:28px/46px "";
+  color:#fff;
+  margin-bottom: 5px;
+  
+  margin:50px auto;
+  display: block;
+}
+.yzm{
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom:15px;
+  overflow: hidden;
+}
+.wap-code,.hqyzm{
+  width:130px;
+  height:40px;
+  font:20px/40px "";
+  /* margin-left:123px; */
+}
+.wap-code{
+  border:2px solid #aaa;
+  text-indent: 10px; 
+}
+.hqyzm{
+  height: 42px;
+  background:#f00;
+  color:#fff;
+  margin-left: 336px;
+}
+.btn:active,.hqyzm:active,.mfpg:active,.zixun3:active,.zixun2:active,.zixun:active{
+  opacity: 0.5;
+}
+.title{
+  font:22px/1.4 "";
+  margin-bottom: 10px;
+}
+.title2{
+  color: #f00;
+  font-size: 20px;
+}
+.tips{
+  font-size: 24px;
+  margin-left: 35%;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言板</title>
+  <link rel="stylesheet" href="./css/public.css">
+  <link rel="stylesheet" href="./css/style-lyb.css" media='screen and (min-width: 480px)'>
+  <link rel="stylesheet" href="./css/style-lybmb.css" media='screen and (max-width: 479px)'>
+  <!-- <script src="../adm/script/jquery-1.11.2.min.js"></script>
+  <script src="../adm/script/layer/layer.js"></script>
+  <script src="../adm/script/common1.js"></script> -->
+  <script src="./script/jquery-1.11.2.min.js"></script>
+  <script src="./script/common1.js"></script>
+  <script src="./script/layer/layer.js"></script>
+</head>
+
+<body>
+  <div class="margin">
+    <div class="logo">
+      <img src="./img/lyb-01.jpg" alt="" class='img'>
+    </div>
+    <div class="zc " name="tz">
+      <div class="name">
+        <span class="title">您的姓名：</span>
+        <input type="text" class="ipt-n names" id="names" οnfοcus="inputFocus()" placeholder="">
+        <span class="title2">*</span>
+      </div>
+      <div class="phone">
+        <span class="title">电话号码：</span>
+        <input type="text" class="ipt-p mbs" id="mb" οnfοcus="inputFocus()" placeholder="" maxlength="11">
+        <span class="title2">*</span>
+      </div>
+      <div id="code-control2" class="yzm">
+        <span class="title title-3">验&nbsp;&nbsp;证&nbsp;码： </span>
+        <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder=""
+          οnfοcus="inputFocus()">
+        <input type="button" id="btncode" class="fr hqyzm hqyzm" value="获取验证码" />
+      </div>
+      <div class='msg'>
+        <span class="title title-m">留言内容：</span>
+        <textarea name="" class="cnt" cols="30" rows="30"></textarea>
+      </div>
+      <span class="tips">(<span class="title2">*</span>)为必填项</span>
+      <input class="btn btn2" type="button" value="提交" id="btnsubmit">
+    </div>
+  </div>
+</body>
+
+</html>

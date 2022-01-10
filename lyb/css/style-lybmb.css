@@ -1,0 +1,103 @@
+html {
+  font-size: 13.3333vw;
+}
+input {
+  background: none;
+  outline: none;
+  border:none;
+  background:#fff;
+}
+.img{
+  width:2.35rem;
+  height: .55rem;
+}
+.margin{
+  width: 7.5rem;
+  margin:0 auto;
+}
+.zc{
+  margin:0 auto;
+  margin-top: .4rem;
+  padding:0 .3rem;
+}
+.ipt-n,.ipt-p,.cnt{
+  width:5rem;
+  height:.6rem;
+  border:.02rem solid #aaa;
+  font:.36rem/2 "";
+  text-indent: .1rem; 
+}
+.name,.phone,.msg{
+  width: 8rem;
+  margin: 0 auto;
+}
+.msg{
+  overflow: hidden;
+  margin-bottom: .2rem;
+}
+.msg .title-m{
+  float: left;
+}
+.cnt{
+  width: 5rem;
+  height: 4rem;
+  max-width: 5rem;
+  max-height: 4rem;
+  float: left;
+  margin-left: .04rem;
+}
+.phone{
+  margin-top:.5rem;
+}
+.ipt-p{
+  margin-bottom:.5rem;
+}
+input::placeholder{
+  color:#ccc;
+}
+.btn{
+  width:3rem;
+  height:.7rem;
+  background:#f00;
+  font:.36rem/.46rem "";
+  color:#fff;
+  margin-bottom: .05rem;
+  
+  margin:.5rem auto;
+  display: block;
+}
+.yzm{
+  margin-bottom:.5rem;
+  overflow: hidden;
+}
+.wap-code,.hqyzm{
+  width:2.3rem;
+  height:.6rem;
+  font:.36rem/.6rem "";
+  /* margin-left:123px; */
+}
+.wap-code{
+  border:.02px solid #aaa;
+  text-indent: .1rem; 
+}
+.hqyzm{
+  height: .62rem;
+  background:#f00;
+  color:#fff;
+  margin-left: .3rem;
+}
+.btn:active,.hqyzm:active,.mfpg:active,.zixun3:active,.zixun2:active,.zixun:active{
+  opacity: 0.5;
+}
+.title{
+  font:.36rem/1.4 "";
+  margin-bottom: .1rem;
+}
+.title2{
+  color: #f00;
+  font-size: .2rem;
+}
+.tips{
+  font-size: .24rem;
+  margin-left: 26%;
+}
