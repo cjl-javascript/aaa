@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/petals.css">
+</head>
+<body>
+  <div class="mod_orient_layer"></div>
+  <!-- petals -->
+  <div id="petals_container">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <i class="mode_toggle"></i>
+    <i class="miraitowa"></i>
+  </div>
+  <!-- Options Page -->
+  <div class="page" data-page="options">
+    <div class="option_container">
+      <button class="option_button animate green" data-open="game" data-close="options">ひらがな</button>
+      <button class="option_button animate green" data-open="game" data-close="options">カタカナ</button>
+      <button class="option_button animate green" data-open="game" data-close="options">ALL KANA</button>
+    </div>
+  </div>
+  <!-- Game Page -->
+  <div class="page hidden" data-page="game">
+    <div class="count_box">
+      <div class="score_cont">
+        <h3>機会<br><span class="chances_left">0</span></h3>
+        <h3 class="score_item">スコア<br><span class="score_label">0</span></h3>
+        <h3 class="score_item">最高のスコア<br><span class="high_score_label">0</span></h3>
+      </div>
+    </div>
+    <!-- Question Box -->
+    <div class="question_box">
+      <h1 class="question_box_letter" data-answer-id="">?</h1>
+    </div>
+    <!-- Answer Pad -->
+    <div class="answer_pad_cont">
+      <div class="answer_pad_item">
+        <div class="answer_pad_circle"></div>
+        <h2>a</h2>
+      </div>
+      <div class="answer_pad_item">
+        <div class="answer_pad_circle"></div>
+        <h2>i</h2>
+      </div>
+      <div class="answer_pad_item">
+        <div class="answer_pad_circle"></div>
+        <h2>u</h2>
+      </div>
+      <div class="answer_pad_item">
+        <div class="answer_pad_circle"></div>
+        <h2>e</h2>
+      </div>
+    </div>
+  </div>
+  <!-- Game Over Page -->
+  <div class="page hidden" data-page="game_over">
+    <i class="game_over_banner"></i>
+    <h1 class="game_over_text">すごいね！！<br><span class="game_over_score">0</span>分</h1>
+    <button data-open="options" data-close="game_over">もう一度</button>
+  </div>
+  <div class="torii"></div>
+</body>
+<script src="./script/main.js"></script>
+<script src="./script/petals.js"></script>
+<script src="./script/kanaList.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    registerSW();
+  });
+  async function registerSW() {
+    if ('serviceWorker' in navigator) {
+      try {
+        await navigator.serviceWorker.register('./sw.js');
+      } catch (e) {
+        console.log(`SW registration failed`);
+      }
+    }
+  }
+  </script>
+</html>
