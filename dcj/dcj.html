@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻牌召唤助学礼品</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/style-dcj.css">
+    <!-- <script src="./script/jquery-1.11.2.min.js"></script>
+    <script src="./script/common2.js"></script>
+    <script src="./script/layer/layer.js"></script>
+    <script src="./script/roatate.js"></script> -->
+    <script src="../adm/script/jquery-1.11.2.min.js"></script>
+    <script src="../adm/script/common2.js"></script>
+    <script src="../adm/script/layer/layer.js"></script>
+    <script src="../adm/script/roatate.js"></script>
+</head>
+
+<body>
+    <div class='margin'>
+        <div class="img01">
+            <img src="./img/dcj_01.jpg" alt="" class="img">
+        </div>
+        <div class="img021">
+            <img src="./img/dcj_021.jpg" alt="" class="img">
+        </div>
+        <div class="img022" style="position: relative;">
+            <img src="./img/dcj_022.jpg" alt="" class="img">
+            <div id="allParent" class="Y-content">
+                <div class="item i1">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_06.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                红蓝宝书口袋本
+                                
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i2">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_07.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                文化活动课1节
+                                
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i3">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_08.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                               
+                                3000元奖学金
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i4">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_09.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                日语外教课1节
+                                
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i5">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_10.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                一份小礼品
+                                
+                            </div>
+
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i6">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_06.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                红蓝宝书口袋本
+                                
+
+                            </div>
+
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i7">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_10.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                一份小礼品
+                               
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="item i8">
+                    <div class="parent">
+                        <div class="face">
+                            <div class="jpBox"
+                                style="background: url(./img/dcj_09.png) center no-repeat;width: 1.55rem;height: 1.49rem;background-size:1.55rem 1.49rem;">
+                                日语外教课1节
+                                
+                            </div>
+                        </div>
+                        <div class="back"><img src="./img/dcj_04.png" style="width: 100%;height: 100%"></div>
+                    </div>
+                </div>
+                <div class="selectBox" id="">
+
+                </div>
+            </div>
+
+            <!--提示框-->
+
+            <div id="tooltip"
+                style="display:none;position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);font-size: 18px;background-color: rgba(0,0,0,0.7);color: white;padding: 5px 10px;z-index: 1000;white-space: nowrap;width: 100%;height: 100%;">
+                <div class="jp">
+                    <!-- <div style="margin: 0 auto;margin-top: 3rem;" class="img-x"> </div>
+                        
+                     </div> -->
+                    <img src="https://3g.sakurajp.com.cn/lxm/img/dcj_12.jpg" class="img-jp img-jp12">
+                    <img src="https://3g.sakurajp.com.cn/lxm/img/dcj_13.jpg" class="img-jp img-jp13">
+                    <img src="https://3g.sakurajp.com.cn/lxm/img/dcj_14.jpg" class="img-jp img-jp14">
+                    <img src="https://3g.sakurajp.com.cn/lxm/img/dcj_15.jpg" class="img-jp img-jp15">
+                    <img src="https://3g.sakurajp.com.cn/lxm/img/dcj_16.jpg" class="img-jp img-jp16">
+                </div>
+                <div class="jp2" style="display: none;">
+                    <img src="./img/dcj_17.png" alt="" style="width:2.72rem;height: 0.72rem;margin:0 .7rem"
+                        class="sure">
+                    <img src="./img/dcj_18.png" alt="" style="width:2.72rem;height: 0.72rem;" class="again">
+                </div>
+                <div id='res'>
+                    <div id="zc">
+                        <p class="tips">留下您的联系方式即可领取奖品哦~</p>
+                        <div class="name">
+                            <input type="text" class="ipt-n" id="names" placeholder="请输入您的称呼">
+                        </div>
+                        <div class="phone">
+                            <input type="text" class="ipt-p" id="mb" placeholder="请输入您的电话">
+                        </div>
+
+                        <div id="code-control" class="yzm">
+                            <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6"
+                                placeholder="请输入验证码">
+                            <input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+
+                        </div>
+                        <input class="btn" type="button" value="查看奖品" id="btnsubmit">
+                        <p class="tips" style="color: cornflowerblue;">*提交后会有老师与您联系，确认奖品的使用方法。</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="img03">
+            <img src="./img/dcj_03.jpg" alt="" class="img">
+        </div>
+</body>
+<script type="text/javascript">
+    //提示框
+    function showTool(str) {
+        var ele = document.getElementById("tooltip");
+
+        // var con = document.getElementById("content");
+        // con.innerHTML = '';
+
+        setTimeout(function () { ele.style.display = ""; }, 1000);
+        
+    }
+    function hideTool(str) {
+        var ele = document.getElementById("tooltip");
+
+        // var con = document.getElementById("content");
+        // con.innerHTML = str;
+        ele.style.display = "none";
+
+    }
+    window.onload = function () {
+        var obj = $("#allParent").rotateEx({
+            maxNumCall: function () {
+                showTool("翻到了最大的数量啦");
+            },
+            clickAmtStart: function (o1, o2, o3) {
+                var text=o3.innerHTML.replace(/<[^>]+>/g,'').replace(/(^\s*)|(\s*$)/g, "")
+                showTool(text)            
+          
+                if (text === '红蓝宝书口袋本') {
+                    $('.img-jp13,.img-jp14,.img-jp15,.img-jp16').css({ 'display': 'none' })
+                    return false;
+                } 
+                 if (text === '文化活动课1节') {
+                    $('.img-jp12,.img-jp14,.img-jp15,.img-jp16').css({ 'display': 'none' })
+                    return false;
+                }
+                if (text === '3000元奖学金') {
+                    $('.img-jp12,.img-jp13,.img-jp15,.img-jp16').css({ 'display': 'none' })
+                    return false;
+                }
+                if (text === '日语外教课1节') {
+                    $('.img-jp12,.img-jp13,.img-jp14,.img-jp16').css({ 'display': 'none' })
+                    return false;
+                } 
+                if (text === '一份小礼品') {
+                    $('.img-jp12,.img-jp13,.img-jp14,.img-jp15').css({ 'display': 'none' })
+                    return false;
+                }
+                //    showTool();                 
+            },
+            clickAmtEnd: function (o1, o2) {
+                //o2显示所有奖品
+                // o2.allFace();
+            },
+            changeAmtCall: function (o1, o2) {
+                //随机修改奖品的位置
+                obj.reset();
+            }
+
+        });
+        $('.again').click(function () {
+            $('#tooltip').css('display', 'none')
+            location.reload();
+        })
+        $('.sure').click(function () {
+            $('#tooltip').css('display', 'none')
+        })
+        // var obj2 = $("#allParent2").rotateEx({
+        //     maxNum: 3,
+        //     maxNumCall: function () {
+        //         showTool("翻到了最大的数量啦");
+        //     },
+        //     clickAmtStart: function (o1, o2, o3) {
+        //         showTool(o3.innerText);
+        //     },
+        //     changeAmtCall: function (o1, o2) {
+        //         //随机修改奖品的位置
+        //         obj2.reset();
+        //     }
+        // });
+        // obj2.rotate.allBack();
+    }
+
+</script>
+</html>
