@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        p {
+            border: 1px solid black;
+            height: 50px;
+            width: 200px;
+        }
+        p:active{
+            background: #03C03C;
+        }
+        ul{
+            display: none;
+        }
+        img{
+            height: 50px;
+            width: 200px;
+        }
+        .box {
+            border: 1px solid black;
+            height: 50px;
+            width: 200px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function onMyLoad() {
+            let arr = document.querySelectorAll(".aaa");
+            let ig = document.querySelectorAll('.img');
+            console.log(arr.length)
+            console.log(ig.length)
+            let box = document.querySelector('.box');
+            for (let i = 0; i < arr.length; i++) {
+                for (let j=0 ; j<=i; j++)
+                // let j = i;
+                arr[i].onclick = function () {
+                    box.innerHTML = ig[j].innerHTML;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="onMyLoad()">
+    <ul>
+        <li class="img"><img src="./img/0.jpeg" alt="" ></li>
+        <li class="img"><img src="./img/1.jpeg" alt="" ></li>
+        <li class="img"><img src="./img/2.jpeg" alt="" ></li>
+        <li class="img"><img src="./img/3.jpeg" alt="" ></li>
+        <li class="img"><img src="./img/4.jpeg" alt="" ></li>
+    </ul>
+    <p class="aaa">111</p>
+    <p class="aaa"></p>
+    <p class="aaa"></p>
+    <p class="aaa"></p>
+    <p class="aaa"></p>
+    <div class="box"></div>
+</body>
+
+</html>
