@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* CSS Document */
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px "宋体";
+  word-wrap: break-word;
+  -webkit-appearance: none
+}
+
+a,
+u,
+s,
+del {
+  color: #666;
+  text-decoration: none
+}
+
+fieldset,
+a img,
+.bor0 {
+  border: 0;
+}
+
+i,
+em,
+b {
+  font-style: normal;
+  font-weight: 100;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/*table合并边框*/
+.ind2 {
+  text-indent: 2em;
+}
+
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+  outline: 0px;
+  -webkit-appearance: none;
+}
+
+/* 主页 */
+html {
+  font-size: 15.625vw;
+}
+
+input {
+  background: none;
+  outline: none;
+  border: none;
+  background: #fff;
+}
+
+.margin,
+.img {
+  width: 6.4rem;
+  margin: 0 auto;
+}
+
+.zc {
+  padding: .2rem .4rem;
+}
+
+.t-cont {
+  font: .28rem/1.2 "";
+
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.ipt-n,
+.ipt-p {
+  width: 100%;
+  height: .78rem;
+  border-bottom: .03rem solid #dcdcdc;
+  font: .32rem/.7rem "";
+  text-indent: .32rem;
+}
+
+.phone {
+  margin-top: .2rem;
+}
+
+.ipt-p {
+  margin-bottom: .36rem;
+}
+
+.btn {
+  width: 100%;
+  height: .7rem;
+  background: #7c8bbe;
+  font: 700 .48rem/.7rem "";
+  color: #fff;
+  border-radius: .38rem;
+  margin-bottom: .6rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.yzm {
+  margin-bottom: .2rem;
+  overflow: hidden;
+}
+
+.wap-code,
+.hqyzm {
+  width: 2.7rem;
+  height: .78rem;
+  font: .4rem/.78rem "";
+}
+
+.wap-code {
+  border-bottom: .03rem solid #dcdcdc;
+  text-indent: .32rem;
+  float: left;
+}
+
+.hqyzm {
+  border-radius: .28rem;
+  height: .8rem;
+  background: #7c8bbe;
+  color: #fff;
+  float: right;
+}
+
+.tips {
+  display: block;
+  margin-top: .2rem;
+  font-size: .16rem;
+}
+
+input[type='button']:active {
+  opacity: 0.5;
+}
