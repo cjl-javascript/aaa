@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>专门学校申请</title>
+  <meta name="keywords" content="日本留学，出国留学日本，留学日本，去日本留学，日本留学网，日本留学申请，日本出国留学，日本高等学校，日本专门高等学校" />
+  <link rel="stylesheet" href="./css/zmxx20230926.css">
+  <!-- <script src="./script/jquery-1.11.2.min.js"></script>
+  <script src="./script/commonYH.js"></script>
+  <script src="./script/layer/layer.js"></script> -->
+  <script src="../adm/script/jquery-1.11.2.min.js"></script>
+  <script src="../adm/script/commonYH.js"></script>
+  <script src="../adm/script/layer/layer.js"></script>
+</head>
+
+<body>
+  <div class="margin">
+    <div>
+      <img src="./img/zmxx-01.jpg" alt="" class="img">
+    </div>
+    <div id="img9">
+      <img src="./img/zmxx-09.jpg" alt="" class="img">
+    </div>
+    <!-- 注册 -->
+    <div class="zc " name="tz" id="zc">
+      <div class="name">
+        <input type="text" class="ipt-n names" id="names" οnfοcus="inputFocus()" placeholder="您的姓名（必填）">
+      </div>
+      <div class="phone">
+        <input type="text" class="ipt-p mbs" id="mb" οnfοcus="inputFocus()" placeholder="您的手机号码（必填）" maxlength="11">
+      </div>
+      <!-- <div class="qqwx">
+        <input type="text" class="ipt-q" id="wechat" οnfοcus="inputFocus()" placeholder="您的微信/QQ号（选填）" maxlength="30">
+      </div> -->
+      <div id="code-control" class="yzm">
+        <input type="tel" class="fl wap-code " name="wapCode" id="YZMcode" maxlength="6" placeholder="您的验证码"
+          οnfοcus="inputFocus()">
+        <input type="button" id="btncode" class="fr hqyzm" value="获取验证码" />
+      </div>
+      <input class="btn" type="button" value="点击获取" id="btnsubmit">
+      <div class="box" style="overflow:hidden ;position: absolute;bottom:0;left:.1rem">
+        <input type="checkbox" id="isCheckBox" checked="checked" style="width:.25rem;height:.25rem;vertical-align:top;float: left;margin-top: .12rem;
+      " />
+        <a href="./yhxx.html"
+          style="color:blue;font-size:.2rem;line-height: .3rem;vertical-align:top;float: left;margin-top: .1rem;cursor: pointer;">《用户信息协议》</a>
+      </div>
+    </div>
+    <div>
+      <img src="./img/zmxx-02.jpg" alt="" class="img">
+    </div>
+    <div>
+      <img src="./img/zmxx-03.jpg" alt="" class="img">
+    </div>
+    <div class="img4">
+      <img src="./img/zmxx-04.jpg" alt="" class="img">
+      <button class="tz1 tz">了解详情>></button>
+    </div>
+    <div>
+      <img src="./img/zmxx-05.jpg" alt="" class="img">
+    </div>
+    <div class="img6">
+      <img src="./img/zmxx-06.jpg" alt="" class="img">
+      <button class="tz1 tz">了解详情>></button>
+    </div>
+    <div>
+      <img src="./img/zmxx-07.jpg" alt="" class="img">
+    </div>
+    <div class="img8">
+      <img src="./img/zmxx-08.jpg" alt="" class="img">
+      <a class="tz1" href="#img9">了解详情>></a>
+    </div>
+    <div class="bg">
+
+    </div>
+    <div class="box1">
+      <div class="box2">
+        <div>
+          <img src="./img/zmxx-10.jpg" alt="" class="img10">
+        </div>
+        <!-- 注册 -->
+        <div class="zc2 " name="tz">
+          <div class="name2">
+            <input type="text" class="ipt-n2 names2" id="names2" οnfοcus="inputFocus()" placeholder="您的姓名（必填）">
+          </div>
+          <div class="phone2">
+            <input type="text" class="ipt-p2 mbs2" id="mb2" οnfοcus="inputFocus()" placeholder="您的手机号码（必填）" maxlength="11">
+          </div>
+          <!-- <div class="qqwx2 qqwx">
+            <input type="text" class="ipt-q2" id="wechat2" οnfοcus="inputFocus()" placeholder="您的微信/QQ号（选填）" maxlength="30">
+          </div> -->
+          <div id="code-control" class="yzm2 yzm">
+            <input type="tel" class="fl2 wap-code2 " name="wapCode2" id="YZMcode2" maxlength="6" placeholder="您的验证码"
+              οnfοcus="inputFocus()">
+            <input type="button" id="btncode2" class="fr2 hqyzm2" value="获取验证码" />
+          </div>
+          <input class="btn2" type="button" value="点击获取" id="btnsubmit2">
+          <div class="box" style="overflow:hidden ;position: absolute;bottom:0;left:.1rem">
+            <input type="checkbox" id="isCheckBox" checked="checked" style="width:.25rem;height:.25rem;vertical-align:top;float: left;margin-top: .12rem;
+          " />
+            <a href="./yhxx.html"
+              style="color:blue;font-size:.2rem;line-height: .3rem;vertical-align:top;float: left;margin-top: .1rem;cursor: pointer;">《用户信息协议》</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+  function componentDidMount() {
+    document.querySelector('.box1').style.height = `${document.querySelector('.box2').offsetHeight + 8}px`;
+  }
+  //点击页面出现遮罩层
+  $(document).ready(function () {
+    $(".tz").on("click", function () {
+      $(".bg,.box1").css("display", "block"); //点击页面出现遮罩层
+      $('body').css("touch-action", "none");//禁止滑动
+      componentDidMount();
+    })
+    $(".bg").on("click", function () {
+      $(".bg,.box1").css("display", "none");//点击遮罩层，遮罩层消失
+      $('body').css("touch-action", "auto");//取消禁止滑动
+    })
+  })
+</script>
+
+</html>
