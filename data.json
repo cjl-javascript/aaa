@@ -1,9 +1,44 @@
 {
-  "totalClicks": 1,
+  "totalClicks": 2,
   "uniqueVisitors": [
     "visitor_145349fb_19b699e6580"
   ],
   "clickHistory": [
+    {
+      "time": "2025/12/30 13:30:34",
+      "timestamp": 1767072634413,
+      "visitorId": "visitor_145349fb_19b699e6580",
+      "date": "Tue Dec 30 2025",
+      "source": "main_page_p_",
+      "clientInfo": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Sa",
+        "language": "zh-CN",
+        "languages": [
+          "zh-CN",
+          "zh",
+          "en"
+        ],
+        "platform": "Win32",
+        "screen": {
+          "width": 1440,
+          "height": 900,
+          "colorDepth": 24
+        },
+        "window": {
+          "width": 636,
+          "height": 736
+        },
+        "timezone": "Asia/Shanghai",
+        "cookies": true,
+        "online": true,
+        "doNotTrack": null,
+        "maxTouchPoints": 0
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "language": "zh-CN",
+      "platform": "Win32",
+      "pageUrl": "https://3g.sakurajp.com.cn/lxm/ryspsk1015.html"
+    },
     {
       "time": "2025/12/30 13:30:31",
       "timestamp": 1767072631551,
@@ -42,5 +77,5 @@
   ],
   "lastSync": "2025-12-30T02:06:21.499Z",
   "created": "2025-12-30T02:06:21.499Z",
-  "lastUpdate": "2025-12-30T05:30:31.551Z"
+  "lastUpdate": "2025-12-30T05:30:34.413Z"
 }
