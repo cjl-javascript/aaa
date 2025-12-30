@@ -1,10 +1,20 @@
 {
-  "totalClicks": 5,
+  "totalClicks": 6,
   "uniqueVisitors": [
     "visitor_145349fb_19b699e6580",
     "visitor_3cbbabe9_19b699aac4f"
   ],
   "clickHistory": [
+    {
+      "time": "2025/12/30 13:51:51",
+      "timestamp": 1767073911403,
+      "visitorId": "visitor_3cbbabe9_19b699aac4f",
+      "date": "Tue Dec 30 2025",
+      "userAgent": "Mozilla/5.0 (Linux; U; Android 16; zh-cn; 24117RK2CC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.119 Mobile Safari/537.36 XiaoMi/MiuiBrowser/20.2.60915",
+      "language": "zh-CN",
+      "platform": "Linux aarch64",
+      "source": "main_page"
+    },
     {
       "time": "2025/12/30 13:51:44",
       "timestamp": 1767073904733,
