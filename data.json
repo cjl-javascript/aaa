@@ -1,9 +1,19 @@
 {
-  "totalClicks": 2,
+  "totalClicks": 3,
   "uniqueVisitors": [
     "visitor_145349fb_19b699e6580"
   ],
   "clickHistory": [
+    {
+      "time": "2026/1/8 13:40:17",
+      "timestamp": 1767850817412,
+      "visitorId": "visitor_145349fb_19b699e6580",
+      "date": "Thu Jan 08 2026",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "language": "zh-CN",
+      "platform": "Win32",
+      "source": "main_page"
+    },
     {
       "time": "2026/1/8 13:39:42",
       "timestamp": 1767850782421,
