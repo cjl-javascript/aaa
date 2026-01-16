@@ -1,10 +1,20 @@
 {
-  "totalClicks": 8,
+  "totalClicks": 9,
   "uniqueVisitors": [
     "visitor_145349fb_19b699e6580",
     "visitor_145349fb_19bc52f28c9"
   ],
   "clickHistory": [
+    {
+      "time": "2026/1/16 14:54:35",
+      "timestamp": 1768546475057,
+      "visitorId": "visitor_145349fb_19bc52f28c9",
+      "date": "Fri Jan 16 2026",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "language": "zh-CN",
+      "platform": "Win32",
+      "source": "main_page"
+    },
     {
       "time": "2026/1/16 14:26:13",
       "timestamp": 1768544773933,
