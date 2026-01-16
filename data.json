@@ -1,61 +1,7 @@
 {
-  "totalClicks": 5,
-  "uniqueVisitors": [
-    "visitor_145349fb_19bc52f28c9",
-    "stat_visitor_1cb7e951_19bc4e5964c"
-  ],
-  "clickHistory": [
-    {
-      "time": "2026/1/16 15:18:36",
-      "timestamp": 1768547916672,
-      "visitorId": "visitor_145349fb_19bc52f28c9",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Win32",
-      "source": "main_page"
-    },
-    {
-      "time": "2026/1/16 15:01:25",
-      "timestamp": 1768546885142,
-      "visitorId": "stat_visitor_1cb7e951_19bc4e5964c",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Linux; Android 16; 24117RK2CC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.115 Mobile Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Linux aarch64",
-      "source": "main_page"
-    },
-    {
-      "time": "2026/1/16 15:01:10",
-      "timestamp": 1768546870516,
-      "visitorId": "stat_visitor_1cb7e951_19bc4e5964c",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Linux; Android 16; 24117RK2CC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.115 Mobile Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Linux aarch64",
-      "source": "main_page"
-    },
-    {
-      "time": "2026/1/16 15:01:00",
-      "timestamp": 1768546860818,
-      "visitorId": "stat_visitor_1cb7e951_19bc4e5964c",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Linux; Android 16; 24117RK2CC Build/BP2A.250605.031.A3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.115 Mobile Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Linux aarch64",
-      "source": "main_page"
-    },
-    {
-      "time": "2026/1/16 15:00:12",
-      "timestamp": 1768546812887,
-      "visitorId": "visitor_145349fb_19bc52f28c9",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Win32",
-      "source": "main_page"
-    }
-  ],
-  "lastSync": "2026-01-16T06:56:49.085Z",
-  "created": "2026-01-16T06:56:49.085Z"
+  "totalClicks": 0,
+  "uniqueVisitors": [],
+  "clickHistory": [],
+  "lastSync": "2026-01-16T07:18:54.460Z",
+  "created": "2026-01-16T07:18:54.460Z"
 }
