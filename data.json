@@ -1,20 +1,7 @@
 {
-  "totalClicks": 1,
-  "uniqueVisitors": [
-    "visitor_145349fb_19bc52f28c9"
-  ],
-  "clickHistory": [
-    {
-      "time": "2026/1/16 18:14:23",
-      "timestamp": 1768558463715,
-      "visitorId": "visitor_145349fb_19bc52f28c9",
-      "date": "Fri Jan 16 2026",
-      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
-      "language": "zh-CN",
-      "platform": "Win32",
-      "source": "main_page"
-    }
-  ],
-  "lastSync": "2026-01-16T08:45:39.094Z",
-  "created": "2026-01-16T08:45:39.094Z"
+  "totalClicks": 0,
+  "uniqueVisitors": [],
+  "clickHistory": [],
+  "lastSync": "2026-01-16T10:14:36.065Z",
+  "created": "2026-01-16T10:14:36.065Z"
 }
