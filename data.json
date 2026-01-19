@@ -1,7 +1,22 @@
 {
-  "totalClicks": 0,
-  "uniqueVisitors": [],
-  "clickHistory": [],
+  "totalClicks": 1,
+  "uniqueVisitors": [
+    "visitor_145349fb_19bc52f28c9"
+  ],
+  "clickHistory": [
+    {
+      "time": "2026/1/19 16:06:37",
+      "timestamp": 1768809997610,
+      "visitorId": "visitor_145349fb_19bc52f28c9",
+      "date": "Mon Jan 19 2026",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "language": "zh-CN",
+      "platform": "Win32",
+      "source": "main_page",
+      "browser": "chrome",
+      "isWeChat": false
+    }
+  ],
   "lastSync": "2026-01-19T07:44:48.159Z",
   "created": "2026-01-19T07:44:48.159Z"
 }
