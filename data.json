@@ -1,9 +1,42 @@
 {
-  "totalClicks": 6,
+  "totalClicks": 7,
   "uniqueVisitors": [
     "visitor_145349fb_19bc52f28c9"
   ],
   "clickHistory": [
+    {
+      "time": "2026/1/19 15:30:12",
+      "timestamp": 1768807812767,
+      "visitorId": "visitor_145349fb_19bc52f28c9",
+      "date": "Mon Jan 19 2026",
+      "clientInfo": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Sa",
+        "language": "zh-CN",
+        "languages": [
+          "zh-CN",
+          "zh",
+          "en"
+        ],
+        "platform": "Win32",
+        "screen": {
+          "width": 1440,
+          "height": 900,
+          "colorDepth": 24
+        },
+        "window": {
+          "width": 997,
+          "height": 712
+        },
+        "timezone": "Asia/Shanghai",
+        "cookies": true,
+        "online": true,
+        "doNotTrack": null,
+        "maxTouchPoints": 0
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+      "language": "zh-CN",
+      "platform": "Win32"
+    },
     {
       "time": "2026/1/19 15:30:11",
       "timestamp": 1768807811480,
@@ -121,5 +154,5 @@
   ],
   "lastSync": "2026-01-19T01:48:33.622Z",
   "created": "2026-01-19T01:48:33.622Z",
-  "lastUpdate": "2026-01-19T07:30:11.480Z"
+  "lastUpdate": "2026-01-19T07:30:12.767Z"
 }
