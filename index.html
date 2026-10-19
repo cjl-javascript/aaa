@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语视频闪卡 - Japanese Video Flashcards</title>
+    <!-- 引入 Tailwind CSS 框架 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入外部字体 -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <!-- 引入自定义样式表 -->
+    <link rel="stylesheet" href="./css/style1015.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden">
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="w-full max-w-sm mx-auto flex flex-col h-full">
+        <!-- 标题和搜索框 -->
+        <header class="text-center mb-4 pt-4">
+            <h1 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">日语单词目录</h1>
+            <p class="text-md text-gray-500 dark:text-gray-400 mb-4">选择或搜索单词开始学习</p>
+            <div class="relative">
+                <input type="search" id="search-input" placeholder="搜索单词、读音或意思..." class="w-full p-3 pl-10 text-md border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </header>
+        <!-- 单词列表 -->
+        <main class="flex-grow w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-y-auto mt-4">
+             <p id="no-results" class="text-center text-gray-500 p-8 hidden">未找到匹配的单词</p>
+            <ul id="word-list" class="divide-y divide-gray-200 dark:divide-gray-700">
+                <!-- 单词将动态插入此处 -->
+            </ul>
+        </main>
+    </div>
+
+    <!-- Flashcard Screen (Initially hidden) -->
+    <div id="flashcard-screen" class="w-full max-w-sm mx-auto flex flex-col h-full hidden">
+        <!-- 标题 -->
+        <header class="text-center mb-4 relative">
+             <button id="back-to-home-btn" class="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">日语视频闪卡</h1>
+            <p class="text-sm text-gray-500 dark:text-gray-400">点击卡片或按钮来学习</p>
+        </header>
+
+        <!-- 进度条 -->
+        <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-4">
+            <div id="progress-bar" class="bg-indigo-500 h-2.5 rounded-full transition-all duration-300"></div>
+        </div>
+
+        <!-- 闪卡区域 -->
+        <main id="flashcard-container" class="scene flex-grow w-full h-full min-h-0">
+            <div id="flashcard" class="flashcard cursor-pointer rounded-2xl shadow-lg bg-white dark:bg-gray-800">
+                <!-- 卡片正面 -->
+                <div class="card-face card-face--front p-6">
+                    <div class="w-full aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden">
+                        <video id="video-player" class="w-full h-full object-cover" controls playsinline muted loop poster="https://placehold.co/600x400/e2e8f0/334155?text=视频加载中..."></video>
+                    </div>
+                    <h2 id="word-display" class="text-5xl font-bold tracking-wider">...</h2>
+                </div>
+                <!-- 卡片背面 -->
+                <div class="card-face card-face--back p-6 text-center">
+                    <div class="flex-grow flex flex-col justify-center items-center">
+                        <p class="text-gray-500 dark:text-gray-400 text-lg">读音</p>
+                        <h3 id="reading-display" class="text-3xl font-semibold mb-4 text-indigo-500 dark:text-indigo-400">...</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg">意思</p>
+                        <h3 id="meaning-display" class="text-3xl font-semibold mb-6">...</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg">例句</p>
+                        <p id="example-display" class="text-xl px-4">...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- 卡片计数 -->
+        <div id="card-counter" class="text-center text-gray-500 dark:text-gray-400 my-4">1 / 10</div>
+
+        <!-- 控制按钮 -->
+        <footer class="w-full grid grid-cols-3 gap-4">
+            <button id="prev-btn" class="p-4 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button id="flip-btn" class="p-4 bg-indigo-500 text-white rounded-xl shadow-md flex items-center justify-center font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">翻转</button>
+            <button id="next-btn" class="p-4 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </footer>
+    </div>
+
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="./script/script.js" defer></script>
+</body>
+</html>
+

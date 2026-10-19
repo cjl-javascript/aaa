@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日语视频闪卡 - Japanese Video Flashcards</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/style1015.css">
+  <!-- 在 ryspsk1015.html 的 <head> 标签内或页面底部添加 -->
+  <script>
+    // ========== 点击统计逻辑 ==========
+    // 使用统计页面的 GitHub 配置（需提前在统计页面中配置）
+    const CONFIG_STORAGE_KEY = 'link_counter_github_config';
+    const LOCAL_DATA_KEY = 'link_counter_local_data';
+    const TARGET_URL = 'https://3g.sakurajp.com.cn/lxm/ryspsk1015.html'; // 当前页面URL
+
+    // 加载已保存的 GitHub 配置
+    let githubConfig = JSON.parse(localStorage.getItem(CONFIG_STORAGE_KEY));
+    // 记录点击函数
+    async function recordClickFromMainPage() {
+      if (!githubConfig) {
+        console.log('未找到 GitHub 配置，点击未记录');
+        return;
+      }
+
+      try {
+        // 获取当前数据
+        const data = await fetchDataFromGitHub();
+
+        // 更新点击数据
+        const visitorId = getVisitorId();
+        const now = new Date();
+        const clickTime = now.toLocaleString('zh-CN');
+        const today = now.toDateString();
+
+        // 更新统计数据
+        data.totalClicks = (data.totalClicks || 0) + 1;
+        // 更新独立访客
+        if (!data.uniqueVisitors) data.uniqueVisitors = [];
+        if (!data.uniqueVisitors.includes(visitorId)) {
+          data.uniqueVisitors.push(visitorId);
+        }
+
+        // 添加点击记录
+        if (!data.clickHistory) data.clickHistory = [];
+        data.clickHistory.unshift({
+          time: clickTime,
+          timestamp: now.getTime(),
+          visitorId: visitorId,
+          date: today,
+          userAgent: navigator.userAgent,
+          language: navigator.language,
+          platform: navigator.platform,
+          source: 'main_page'
+        });
+
+        // 限制历史记录数量
+        if (data.clickHistory.length > 1000) {
+          data.clickHistory = data.clickHistory.slice(0, 1000);
+        }
+        // 保存回 GitHub
+        await saveDataToGitHub(data);
+
+        console.log('点击已记录到 GitHub');
+      } catch (error) {
+        console.error('记录点击失败:', error);
+        // 尝试保存到本地作为备份
+        saveToLocalStorage();
+      }
+    }
+    // GitHub API 相关函数
+    async function fetchDataFromGitHub() {
+      const url = `https://api.github.com/repos/${githubConfig.repoOwner}/${githubConfig.repoName}/contents/data.json`;
+      const response = await fetch(url, {
+        headers: {
+          'Authorization': `token ${githubConfig.token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+
+      if (response.status === 404) {
+        return createInitialData();
+      }
+
+      if (!response.ok) {
+        throw new Error(`GitHub API 错误: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return JSON.parse(atob(data.content));
+    }
+    async function saveDataToGitHub(data) {
+      const url = `https://api.github.com/repos/${githubConfig.repoOwner}/${githubConfig.repoName}/contents/data.json`;
+
+      // 先获取文件SHA（如果需要更新）
+      let sha = null;
+      try {
+        const existing = await fetch(url, {
+          headers: {
+            'Authorization': `token ${githubConfig.token}`,
+            'Accept': 'application/vnd.github.v3+json'
+          }
+        });
+        if (existing.ok) {
+          const existingData = await existing.json();
+          sha = existingData.sha;
+        }
+      } catch (e) {
+        // 文件可能不存在
+      }
+      const content = btoa(JSON.stringify(data, null, 2));
+
+      const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${githubConfig.token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `点击记录更新: ${data.totalClicks} 次点击`,
+          content: content,
+          sha: sha,
+          branch: 'master'
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`保存失败: ${response.status}`);
+      }
+    }
+    function createInitialData() {
+      return {
+        totalClicks: 0,
+        uniqueVisitors: [],
+        clickHistory: [],
+        lastSync: new Date().toISOString(),
+        created: new Date().toISOString()
+      };
+    }
+
+    function getVisitorId() {
+      let visitorId = localStorage.getItem('link_counter_visitor_id');
+      if (!visitorId) {
+        visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem('link_counter_visitor_id', visitorId);
+      }
+      return visitorId;
+    }
+    function saveToLocalStorage() {
+      const localData = JSON.parse(localStorage.getItem(LOCAL_DATA_KEY) || '{"clicks": 0}');
+      localData.clicks = (localData.clicks || 0) + 1;
+      localData.lastClick = new Date().toISOString();
+      localStorage.setItem(LOCAL_DATA_KEY, JSON.stringify(localData));
+    }
+
+    // ========== 页面加载时自动记录一次访问 ==========
+    document.addEventListener('DOMContentLoaded', function () {
+      // 延迟执行，避免影响页面加载
+      setTimeout(() => {
+        recordClickFromMainPage();
+      }, 1000);
+    });
+    // ========== 监听页面点击事件 ==========
+    // 如果你希望每次用户与页面交互都记录，可以添加以下代码
+    document.addEventListener('click', function (e) {
+      // 避免重复记录或过于频繁的记录
+      if (!e.target.closest('button') && !e.target.closest('video')) {
+        return; // 只记录按钮点击和视频播放等主要交互
+      }
+
+      // 防抖：避免过于频繁的记录
+      if (window.clickDebounce) clearTimeout(window.clickDebounce);
+      window.clickDebounce = setTimeout(() => {
+        recordClickFromMainPage();
+      }, 5000);
+    });
+    // 发送访问消息给统计页面
+    function notifyStatisticsPage() {
+      try {
+        // 尝试向父页面或opener发送消息
+        if (window.opener) {
+          window.opener.postMessage({
+            type: 'page_visit',
+            timestamp: Date.now(),
+            url: window.location.href,
+            device: /Mobile|Android|iPhone|iPad|iPod/.test(navigator.userAgent) ? 'mobile' : 'desktop'
+          }, '*');
+        }
+        // 存储在本地，供统计页面读取
+        const recentVisits = JSON.parse(localStorage.getItem('recent_page_visits') || '[]');
+        recentVisits.push({
+          timestamp: Date.now(),
+          url: window.location.href
+        });
+        localStorage.setItem('recent_page_visits', JSON.stringify(recentVisits.slice(-10))); // 保留最近10条
+      } catch (e) {
+        console.log('通知统计页面失败:', e.message);
+      }
+    }
+    // 在页面加载和用户交互时调用
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(notifyStatisticsPage, 1000);
+    });
+  </script>
+</head>
+
+<body
+  class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden">
+
+  <!-- Home Screen -->
+  <div id="home-screen" class="w-full max-w-sm mx-auto flex flex-col h-full">
+    <!-- 标题和搜索框 -->
+    <header class="text-center mb-4 pt-4">
+      <h1 class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">日语单词目录</h1>
+      <p class="text-md text-gray-500 dark:text-gray-400 mb-4">选择或搜索单词开始学习</p>
+      <div class="relative">
+        <input type="search" id="search-input" placeholder="搜索单词、读音或意思..."
+          class="w-full p-3 pl-10 text-md border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+    </header>
+    <!-- 单词列表 -->
+    <main class="flex-grow w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-y-auto mt-4">
+      <p id="no-results" class="text-center text-gray-500 p-8 hidden">未找到匹配的单词</p>
+      <ul id="word-list" class="divide-y divide-gray-200 dark:divide-gray-700">
+        <!-- 单词将动态插入此处 -->
+      </ul>
+    </main>
+  </div>
+
+  <!-- Flashcard Screen (Initially hidden) -->
+  <div id="flashcard-screen" class="w-full max-w-sm mx-auto flex flex-col h-full hidden">
+    <!-- 标题 -->
+    <header class="text-center mb-4 relative">
+      <button id="back-to-home-btn"
+        class="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">日语视频闪卡</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400">点击卡片或按钮来学习</p>
+    </header>
+
+    <!-- 进度条 -->
+    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-4">
+      <div id="progress-bar" class="bg-indigo-500 h-2.5 rounded-full transition-all duration-300"></div>
+    </div>
+
+    <!-- 闪卡区域 -->
+    <main id="flashcard-container" class="scene flex-grow w-full h-full min-h-0">
+      <div id="flashcard" class="flashcard cursor-pointer rounded-2xl shadow-lg bg-white dark:bg-gray-800">
+        <!-- 卡片正面 -->
+        <div class="card-face card-face--front p-6">
+          <div class="w-full aspect-video bg-gray-200 dark:bg-gray-700 rounded-lg mb-4 overflow-hidden">
+            <video id="video-player" class="w-full h-full object-cover" controls playsinline loop preload="metadata"
+              autoplay oncontextmenu="return false;"></video>
+          </div>
+          <h2 id="word-display" class="text-5xl font-bold tracking-wider">...</h2>
+        </div>
+        <!-- 卡片背面 -->
+        <div class="card-face card-face--back p-6 text-center">
+          <div class="flex-grow flex flex-col justify-center items-center">
+            <!-- <p class="text-gray-500 dark:text-gray-400 text-lg">读音</p> -->
+            <!-- <h3 id="reading-display" class="text-3xl font-semibold mb-4 text-indigo-500 dark:text-indigo-400">...</h3> -->
+            <h2 id="word-display2" class="text-5xl font-bold tracking-wider">...</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">意思</p>
+            <h3 id="meaning-display" class="text-3xl font-semibold mb-6">...</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-lg">例句</p>
+            <p id="example-display" class="text-xl px-4">...</p>
+            <p id="example-display2" class="text-xl px-4">...</p><br>
+            <p id="example-display3" class="text-xl px-4">...</p>
+            <p id="example-display4" class="text-xl px-4">...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 卡片计数 -->
+    <div id="card-counter" class="text-center text-gray-500 dark:text-gray-400 my-4">1 / 10</div>
+
+    <!-- 控制按钮 -->
+    <footer class="w-full grid grid-cols-3 gap-4">
+      <button id="prev-btn"
+        class="p-4 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button id="flip-btn"
+        class="p-4 bg-indigo-500 text-white rounded-xl shadow-md flex items-center justify-center font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">翻转</button>
+      <button id="next-btn"
+        class="p-4 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </footer>
+  </div>
+
+</body>
+<!-- 引入外部 JavaScript 文件 -->
+<!-- <script src="./script/riyu.js" defer></script>
+<script src="./script/jquery.min.js"></script> -->
+<script src="/adm/script/riyu.js"></script>
+<script src="/adm/script/jquery-1.11.2.min.js"></script>
+
+<script>
+  const video = document.getElementById('video-player');
+
+  // 禁用右键菜单
+  video.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    return false;
+  });
+
+  // 禁用F12、Ctrl+Shift+I等开发者工具快捷键
+  document.addEventListener('keydown', (e) => {
+    // 禁用 F12
+    if (e.key === 'F12') e.preventDefault();
+
+    // 禁用 Ctrl+Shift+I (Windows/Linux)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') e.preventDefault();
+
+    // 禁用 Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') e.preventDefault();
+
+    // 禁用 Ctrl+U (查看源代码)
+    if (e.ctrlKey && e.key === 'u') e.preventDefault();
+
+    // 禁用 Ctrl+S (保存页面)
+    if (e.ctrlKey && e.key === 's') e.preventDefault();
+  });
+</script>
+
+</html>
