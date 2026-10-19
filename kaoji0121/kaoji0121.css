@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* CSS Document */
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px "宋体";
+  word-wrap: break-word;
+}
+
+a,
+u,
+s,
+del {
+  color: #666;
+  text-decoration: none
+}
+
+fieldset,
+a img,
+.bor0 {
+  border: 0;
+}
+
+i,
+em,
+b {
+  font-style: normal;
+  font-weight: 100;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/*table合并边框*/
+.ind2 {
+  text-indent: 2em;
+}
+
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+input:focus{
+  outline: none;
+}
+/* 主页 */
+html {
+  font-size: calc(1000vw/64);
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+.margin,
+.img {
+  width: 6.4rem;
+  margin: 0 auto;
+}
+.zc{
+  background-color: black;
+  width: 5.9rem;
+  padding-left: .5rem;
+  position: relative;
+  padding-bottom: .4rem;
+}
+.mc{
+  font-size: .28rem;
+  line-height: .52rem;
+  color: #fff;
+  float: left;
+  margin-right: .2rem;
+}
+.ipt-n,.ipt-p,.wap-code{
+  width: 4.5rem;
+  height: .48rem;
+  font-size: .28rem;
+  line-height: .52rem;
+  text-indent: .2rem;
+  border-radius: .3rem;
+  border: 0.01rem solid #333;
+  float: right;
+}
+.phone{
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}
+.yzm{
+  position: relative;
+}
+.name,.phone,.yzm{
+  width: 5.5rem;
+  overflow: hidden;
+}
+.hqyzm{
+  position: absolute;
+  right:0;
+  bottom:0;
+  font-size: .26rem;
+  line-height: .46rem;
+  width: 1.6rem;
+  height: .52rem;
+  border: 0.01rem solid #333;
+  border-radius: .3rem;
+  text-align: center;
+}
+.btn{
+  display: block;
+  background: #b50d0d;
+  width: 4rem;
+  font-size: .36rem;
+  line-height: .46rem;
+  color: #fff;
+  border-radius: .3rem;
+  border: none;
+  margin: 0 auto;
+  margin-top: .2rem;
+}
+.bg {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+}
+body{
+  position: relative;
+}
+.box1{
+  width: 6.5rem;
+  background: linear-gradient(to bottom, #f5f0ef, #e0b2b2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 102;
+  border-radius: .5rem;
+  padding:.1rem 0 .5rem 0;
+  display: none;
+}
+.box1 p{
+  font-size: .48rem;
+  line-height: .56rem;
+  text-align: center;
+  color: #b50d0d;
+}
+.box2{
+  width: 6.36rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-bottom: .2rem;
+}
+.zc2{
+  width: 5.5rem;
+  padding-left: .5rem;
+  position: relative;
+  padding-bottom: .4rem;
+  padding-top: .2rem;
+}
+.mc2{
+  font-size: .28rem;
+  line-height: .52rem;
+  float: left;
+  margin-right: .2rem;
+}
+.ipt-n2,.ipt-p2,.wap-code2{
+  width: 4.5rem;
+  height: .48rem;
+  font-size: .28rem;
+  line-height: .52rem;
+  text-indent: .2rem;
+  border-radius: .3rem;
+  border: 0.01rem solid #333;
+  float: right;
+}
+.name2,.phone2,.yzm2{
+  width: 5.5rem;
+  overflow: hidden;
+}
+.phone2{
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+}
+.yzm2{
+  position: relative;
+}
+.hqyzm2{
+  position: absolute;
+  right:0;
+  bottom:0;
+  font-size: .26rem;
+  line-height: .46rem;
+  width: 1.6rem;
+  height: .52rem;
+  border: 0.01rem solid #333;
+  border-radius: .3rem;
+  text-align: center;
+}
+.btn2{
+  display: block;
+  background: #b50d0d;
+  width: 4rem;
+  font-size: .36rem;
+  line-height: .46rem;
+  color: #fff;
+  border-radius: .3rem;
+  border: none;
+  margin: 0 auto;
+  margin-top: .2rem;
+}
